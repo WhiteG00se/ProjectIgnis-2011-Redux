@@ -12,8 +12,10 @@
 			"should_read": true
 		},
 		{
-			"repo_name": "2011 Redux Forbidden & Limited Card List",
-			"repo_path": "./expansions/lflist",
+			"repo_name": "2011 Redux",
+			"repo_path": "./Redux/modded",
+			"data_path": ".",
+			"script_path": "script",
 			"lflist_path": ".",
 			"should_update": false,
 			"should_read": true,
