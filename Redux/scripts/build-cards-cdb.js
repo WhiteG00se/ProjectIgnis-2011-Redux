@@ -27,6 +27,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       'Affected by "Yata-Garasu": will skip next Draw Phase with 2 or more cards in hand',
       3078576,
     );
+  const magicalScientistTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      'You can only use this effect of "Magical Scientist" once per turn. Special Summon 1 Level 6 or lower Fusion Monster from your Extra Deck in face-up Attack or Defense Position. That Fusion Monster cannot attack your opponent\'s Life Points directly, and is returned to your Extra Deck at the end of the turn.',
+      34206604,
+    );
   db.close();
 
   if (Number(cyberSteinTextResult.changes) !== 1) {
@@ -34,5 +40,8 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(yataGarasuTextResult.changes) !== 1) {
     throw new Error("Expected to update Yata-Garasu text once");
+  }
+  if (Number(magicalScientistTextResult.changes) !== 1) {
+    throw new Error("Expected to update Magical Scientist text once");
   }
 };
