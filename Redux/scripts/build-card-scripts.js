@@ -4,6 +4,7 @@ const { copyFileInRedux } = require("./utils");
 
 const cardScripts = [
   path.join("official", "c69015963.lua"), // Cyber-Stein
+  path.join("official", "c3078576.lua"), // Yata-Garasu
   path.join("pre-errata", "c511003012.lua"), // Witch of the Black Forest
   path.join("pre-errata", "c511002631.lua"), // Sangan
 ];
