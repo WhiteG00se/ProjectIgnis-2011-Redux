@@ -12,12 +12,12 @@
 			"should_read": true
 		},
 		{
-			"url": "https://github.com/ProjectIgnis/LFLists",
-			"repo_name": "Forbidden & Limited Card Lists",
-			"repo_path": "./repositories/lflists",
+			"repo_name": "2011 Redux Forbidden & Limited Card List",
+			"repo_path": "./expansions/lflist",
 			"lflist_path": ".",
-			"should_update": true,
-			"should_read": true
+			"should_update": false,
+			"should_read": true,
+			"not_git_repo": true
 		},
 		{
 			"url": "https://github.com/ProjectIgnis/Puzzles",
