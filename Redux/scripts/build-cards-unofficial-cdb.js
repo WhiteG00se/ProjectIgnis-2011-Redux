@@ -40,6 +40,13 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
       'If this card is Special Summoned: Draw 1 card. You can only use this effect of "Destiny HERO - Disk Commander" once per turn.',
       511003116,
     ); // Destiny HERO - Disk Commander (Pre-Errata)
+  const imperialOrderTextResult = db
+    .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
+    .run(
+      "Negate all Spell effects on the field. Once per turn, during your End Phase, you can pay 1700 LP or destroy this card.",
+      "Pay 1700 LP?",
+      511002996,
+    ); // Imperial Order (Pre-Errata)
   db.close();
 
   if (Number(makyuraStatsResult.changes) !== 1) {
@@ -58,5 +65,8 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
     throw new Error(
       "Expected to update Destiny HERO - Disk Commander (Pre-Errata) text once",
     );
+  }
+  if (Number(imperialOrderTextResult.changes) !== 1) {
+    throw new Error("Expected to update Imperial Order (Pre-Errata) text once");
   }
 };
