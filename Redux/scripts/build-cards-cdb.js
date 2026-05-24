@@ -61,6 +61,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "Select 2 cards from your Deck",
       74191942,
     );
+  const blackLusterSoldierTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by banishing 1 LIGHT and 1 DARK monster from your GY. Once per turn, you can activate 1 of these effects.\r\n● Target 1 face-up monster on the field; banish it. This card cannot attack the turn this effect is activated.\r\n● If this attacking card destroys an opponent's monster by battle: It can make a second attack in a row, but it cannot inflict battle damage with that attack.",
+      72989439,
+    );
   db.close();
 
   if (Number(lastWillTextResult.changes) !== 1) {
@@ -83,5 +89,10 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(painfulChoiceTextResult.changes) !== 1) {
     throw new Error("Expected to update Painful Choice text once");
+  }
+  if (Number(blackLusterSoldierTextResult.changes) !== 1) {
+    throw new Error(
+      "Expected to update Black Luster Soldier - Envoy of the Beginning text once",
+    );
   }
 };

@@ -10,6 +10,7 @@ Banned cards were nerfed to be unbanned, the only banned cards are alternate win
 
 | Cardname                  | Limit  | Changes                                                                                           |
 | ------------------------- | ------ | ------------------------------------------------------------------------------------------------- |
+| Black Luster Soldier - Envoy of the Beginning | 1 | Banish effect can only target a face-up monster; its second attack cannot inflict battle damage |
 | Change of Heart           | 0 => 1 | Discard 1 card as cost; cannot conduct the Battle Phase during the turn it is activated           |
 | Chaos Emperor Dragon - Envoy of the End | 0 => 1 | Summon cost is 2 LIGHT and 2 DARK monsters; effect triggers only when Special Summoned from the hand, costs half LP, destroys other cards on the field, and makes both players gain 300 LP per destroyed card |
 | Cyber-Stein               | 0 => 1 | Once per turn; pay half LP instead of 5000 LP; summoned Fusion Monster enters in Defense Position |

@@ -10,6 +10,7 @@ const cardScripts = [
   path.join("official", "c3078576.lua"), // Yata-Garasu
   path.join("official", "c34206604.lua"), // Magical Scientist
   path.join("official", "c74191942.lua"), // Painful Choice
+  path.join("official", "c72989439.lua"), // Black Luster Soldier - Envoy of the Beginning
   path.join("pre-errata", "c511003012.lua"), // Witch of the Black Forest
   path.join("pre-errata", "c511002631.lua"), // Sangan
   path.join("pre-errata", "c511003019.lua"), // Mind Master
