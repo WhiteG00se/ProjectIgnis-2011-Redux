@@ -78,10 +78,12 @@ const limitChanges = new Map([
   ["46052429", 2], // Advanced Ritual Art
   ["14087893", 2], // Book of Moon
   ["48976825", 2], // Burial from a Different Dimension
+  ["81674782", 2], // Dimensional Fissure
   ["67723438", 2], // Emergency Teleport
   ["73915051", 2], // Scapegoat
   ["3136426", 0], // Level Limit - Area B
   ["27174286", 2], // Return from the Different Dimension
+  ["30241314", 2], // Macro Cosmos
   ["46652477", 3], // The Transmigration Prophecy
   ["64697231", 0], // Trap Dustshoot
   ["17078030", 0], // Wall of Revealing Light
