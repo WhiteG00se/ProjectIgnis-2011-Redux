@@ -3,6 +3,7 @@ const path = require("path");
 const { copyFileInRedux } = require("./utils");
 
 const cardScripts = [
+  path.join("official", "c4031928.lua"), // Change of Heart
   path.join("official", "c69015963.lua"), // Cyber-Stein
   path.join("official", "c3078576.lua"), // Yata-Garasu
   path.join("official", "c34206604.lua"), // Magical Scientist

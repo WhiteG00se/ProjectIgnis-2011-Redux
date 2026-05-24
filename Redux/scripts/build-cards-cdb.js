@@ -13,6 +13,13 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   });
 
   const db = new DatabaseSync(output);
+  const changeOfHeartTextResult = db
+    .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
+    .run(
+      "Discard 1 card, then target 1 monster your opponent controls; take control of it until the End Phase. You cannot conduct your Battle Phase the turn you activate this card.",
+      "Cannot conduct your Battle Phase this turn",
+      4031928,
+    );
   const cyberSteinTextResult = db
     .prepare("UPDATE texts SET desc = ? WHERE id = ?")
     .run(
@@ -35,6 +42,9 @@ module.exports = function buildCardsDb({ reduxRoot }) {
     );
   db.close();
 
+  if (Number(changeOfHeartTextResult.changes) !== 1) {
+    throw new Error("Expected to update Change of Heart text once");
+  }
   if (Number(cyberSteinTextResult.changes) !== 1) {
     throw new Error("Expected to update Cyber-Stein text once");
   }
