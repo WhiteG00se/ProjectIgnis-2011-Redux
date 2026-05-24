@@ -11,6 +11,10 @@ const cardScripts = [
   path.join("official", "c34206604.lua"), // Magical Scientist
   path.join("official", "c74191942.lua"), // Painful Choice
   path.join("official", "c72989439.lua"), // Black Luster Soldier - Envoy of the Beginning
+  path.join("official", "c40044918.lua"), // Elemental HERO Stratos
+  path.join("pre-errata", "c511001039.lua"), // Dark Magician of Chaos
+  path.join("pre-errata", "c511000229.lua"), // Dark Strike Fighter
+  path.join("pre-errata", "c511000818.lua"), // Sinister Serpent
   path.join("pre-errata", "c511003012.lua"), // Witch of the Black Forest
   path.join("pre-errata", "c511002631.lua"), // Sangan
   path.join("pre-errata", "c511003019.lua"), // Mind Master

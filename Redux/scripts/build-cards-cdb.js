@@ -67,6 +67,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by banishing 1 LIGHT and 1 DARK monster from your GY. Once per turn, you can activate 1 of these effects.\r\n● Target 1 face-up monster on the field; banish it. This card cannot attack the turn this effect is activated.\r\n● If this attacking card destroys an opponent's monster by battle: It can make a second attack in a row, but it cannot inflict battle damage with that attack.",
       72989439,
     );
+  const elementalHeroStratosTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      'When this card is Normal or Special Summoned: You can activate 1 of these effects.\r\n\u25cf Destroy Spells/Traps on the field, up to the number of "HERO" monsters you control, except this card.\r\n\u25cf Add 1 "HERO" monster from your Deck to your hand.\r\nYou can only use this effect of "Elemental HERO Stratos" once per turn.',
+      40044918,
+    );
   db.close();
 
   if (Number(lastWillTextResult.changes) !== 1) {
@@ -94,5 +100,8 @@ module.exports = function buildCardsDb({ reduxRoot }) {
     throw new Error(
       "Expected to update Black Luster Soldier - Envoy of the Beginning text once",
     );
+  }
+  if (Number(elementalHeroStratosTextResult.changes) !== 1) {
+    throw new Error("Expected to update Elemental HERO Stratos text once");
   }
 };

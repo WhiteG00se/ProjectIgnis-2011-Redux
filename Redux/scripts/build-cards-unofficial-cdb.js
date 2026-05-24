@@ -54,6 +54,24 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
       "Destroy other cards and gain LP",
       511000819,
     ); // Chaos Emperor Dragon - Envoy of the End (Pre-Errata)
+  const darkMagicianOfChaosTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      'When this card is Normal or Special Summoned: You can target 1 Spell in your Graveyard; add it to your hand. You can only use this effect of "Dark Magician of Chaos" once per turn. Banish any monster this card destroys by battle, instead of sending it to the Graveyard. If this face-up card would leave the field, banish it instead.',
+      511001039,
+    ); // Dark Magician of Chaos (Pre-Errata)
+  const darkStrikeFighterTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      '1 Tuner + 1+ non-Tuner monsters\r\nYou can Tribute 1 monster; inflict damage to your opponent equal to the Tributed monster\'s Level on the field x 200. You can only use this effect of "Dark Strike Fighter" once per turn.',
+      511000229,
+    ); // Dark Strike Fighter (Pre-Errata)
+  const sinisterSerpentTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      'During your Standby Phase, if there is a "Sinister Serpent" in your Graveyard: You can add this card from your Graveyard to your hand. You can only use this effect of "Sinister Serpent" once per turn.',
+      511000818,
+    ); // Sinister Serpent (Pre-Errata)
   db.close();
 
   if (Number(makyuraStatsResult.changes) !== 1) {
@@ -80,5 +98,14 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
     throw new Error(
       "Expected to update Chaos Emperor Dragon - Envoy of the End (Pre-Errata) text once",
     );
+  }
+  if (Number(darkMagicianOfChaosTextResult.changes) !== 1) {
+    throw new Error("Expected to update Dark Magician of Chaos (Pre-Errata) text once");
+  }
+  if (Number(darkStrikeFighterTextResult.changes) !== 1) {
+    throw new Error("Expected to update Dark Strike Fighter (Pre-Errata) text once");
+  }
+  if (Number(sinisterSerpentTextResult.changes) !== 1) {
+    throw new Error("Expected to update Sinister Serpent (Pre-Errata) text once");
   }
 };
