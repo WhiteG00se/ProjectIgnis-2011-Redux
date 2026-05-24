@@ -54,6 +54,13 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       'You can only use this effect of "Magical Scientist" once per turn. Special Summon 1 Level 6 or lower Fusion Monster from your Extra Deck in face-up Attack or Defense Position. That Fusion Monster cannot attack your opponent\'s Life Points directly, and is returned to your Extra Deck at the end of the turn.',
       34206604,
     );
+  const painfulChoiceTextResult = db
+    .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
+    .run(
+      'Pay half your LP; select 2 cards from your Deck and show them to your opponent. Your opponent selects 1 card among them. Add that card to your hand and discard the remaining card to the Graveyard. You can only activate 1 "Painful Choice" per turn.',
+      "Select 2 cards from your Deck",
+      74191942,
+    );
   db.close();
 
   if (Number(lastWillTextResult.changes) !== 1) {
@@ -73,5 +80,8 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(magicalScientistTextResult.changes) !== 1) {
     throw new Error("Expected to update Magical Scientist text once");
+  }
+  if (Number(painfulChoiceTextResult.changes) !== 1) {
+    throw new Error("Expected to update Painful Choice text once");
   }
 };
