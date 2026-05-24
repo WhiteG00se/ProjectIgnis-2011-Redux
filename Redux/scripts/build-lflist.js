@@ -4,6 +4,7 @@ const path = require("path");
 const { copyFileInRedux } = require("./utils");
 
 const limitChanges = new Map([
+  ["69015963", 1], // Cyber-Stein
   ["33184167", 3], // Tribe-Infecting Virus
   ["34853266", 1], // Tsukuyomi
   ["511002992", 1], // Rescue Cat

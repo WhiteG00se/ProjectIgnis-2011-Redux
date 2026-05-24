@@ -2,6 +2,7 @@ const path = require("path");
 
 const buildCardsDb = require("./build-cards-cdb");
 const buildCardsUnofficialDb = require("./build-cards-unofficial-cdb");
+const buildCardScripts = require("./build-card-scripts");
 const buildLflist = require("./build-lflist");
 const { cleanDirectory } = require("./utils");
 
@@ -12,6 +13,7 @@ const buildTargets = [
   buildLflist,
   buildCardsDb,
   buildCardsUnofficialDb,
+  buildCardScripts,
 ];
 
 cleanDirectory(reduxRoot, moddedDir);
@@ -21,4 +23,4 @@ for (const buildTarget of buildTargets) {
   buildTarget({ reduxRoot });
 }
 
-console.log(`Built ${buildTargets.length} Redux file(s) into ${moddedDir}`);
+console.log(`Built ${buildTargets.length} Redux target(s) into ${moddedDir}`);
