@@ -1,6 +1,10 @@
 # ProjectIgnis-2011-Redux
 
-This is a fork of Project Ignis: EDOPro, with a custom banned list and custom errata for a format centered around the formats before XYZs were introduced.
+This is a fork of Project Ignis: EDOPro.<br>
+The banned list and erratas are custom for a format centered around the formats before XYZs were introduced.<br>
+In TCG, the first XYZ monsters were released on 08.07.2011, so the cutoff is 24.06.2011.<br>
+Banned cards were nerfed to be unbanned, the only banned cards are alternate win conditions (Exodia, Final Countdown, Burn).<br>
+[Googlesheet with Card DB and Banlist](https://docs.google.com/spreadsheets/d/1NCD4u_KRdl6T0fOKFnFGOmMbWwV9U_HEFP6O4gS5jf8/edit?gid=1008737686#gid=1008737686)
 
 ### Prerequisites for WindBot Ignite (AI):
 
