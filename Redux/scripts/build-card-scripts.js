@@ -8,6 +8,7 @@ const cardScripts = [
   path.join("official", "c34206604.lua"), // Magical Scientist
   path.join("pre-errata", "c511003012.lua"), // Witch of the Black Forest
   path.join("pre-errata", "c511002631.lua"), // Sangan
+  path.join("pre-errata", "c511003019.lua"), // Mind Master
 ];
 
 module.exports = function buildCardScripts({ reduxRoot }) {

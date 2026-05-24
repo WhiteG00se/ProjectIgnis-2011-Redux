@@ -13,6 +13,7 @@ Banned cards were nerfed to be unbanned, the only banned cards are alternate win
 | Cyber-Stein               | 0 => 1 | Once per turn; pay half LP instead of 5000 LP; summoned Fusion Monster enters in Defense Position |
 | Magical Scientist         | 0 => 1 | Once per turn; no LP cost                                                                         |
 | Makyura the Destructor    | 0 => 3 | Buffed ATK/DEF to 1900/1900 (from 1600/1200)                                                      |
+| Mind Master               | 0 => 3 | Once per turn                                                                                     |
 | Yata-Garasu               | 0 => 1 | Skips the opponent's next Draw Phase only if they have 2 or more cards in hand during it          |
 | Witch of the Black Forest | 0 => 1 | Once per turn; searches monsters with 600 or less DEF instead of 1500 or less DEF                 |
 | Sangan                    | 1 => 2 | Once per turn                                                                                     |

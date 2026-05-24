@@ -8,6 +8,7 @@ const limitChanges = new Map([
   ["69015963", 1], // Cyber-Stein
   ["3078576", 1], // Yata-Garasu
   ["34206604", 1], // Magical Scientist
+  ["511003019", 3], // Mind Master (Pre-Errata)
   ["33184167", 3], // Tribe-Infecting Virus
   ["34853266", 1], // Tsukuyomi
   ["511002992", 1], // Rescue Cat
