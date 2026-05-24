@@ -3,6 +3,7 @@ const path = require("path");
 const { copyFileInRedux } = require("./utils");
 
 const cardScripts = [
+  path.join("official", "c85602018.lua"), // Last Will
   path.join("official", "c23557835.lua"), // Dimension Fusion
   path.join("official", "c4031928.lua"), // Change of Heart
   path.join("official", "c69015963.lua"), // Cyber-Stein

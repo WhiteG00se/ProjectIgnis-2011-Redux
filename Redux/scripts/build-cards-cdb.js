@@ -13,6 +13,13 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   });
 
   const db = new DatabaseSync(output);
+  const lastWillTextResult = db
+    .prepare("UPDATE texts SET desc = ?, str2 = ? WHERE id = ?")
+    .run(
+      'If a monster on your side of the field was sent to your Graveyard this turn, you can Special Summon 1 monster with an ATK of 1500 points or less from your Deck once during this turn. Then shuffle your Deck. You can only activate 1 "Last Will" per turn. You cannot conduct your Battle Phase the turn you activate this card.',
+      "Cannot conduct your Battle Phase this turn",
+      85602018,
+    );
   const changeOfHeartTextResult = db
     .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
     .run(
@@ -49,6 +56,9 @@ module.exports = function buildCardsDb({ reduxRoot }) {
     );
   db.close();
 
+  if (Number(lastWillTextResult.changes) !== 1) {
+    throw new Error("Expected to update Last Will text once");
+  }
   if (Number(changeOfHeartTextResult.changes) !== 1) {
     throw new Error("Expected to update Change of Heart text once");
   }

@@ -4,6 +4,7 @@ const path = require("path");
 const { copyFileInRedux } = require("./utils");
 
 const limitChanges = new Map([
+  ["85602018", 1], // Last Will
   ["23557835", 1], // Dimension Fusion
   ["4031928", 1], // Change of Heart
   ["511003012", 1], // Witch of the Black Forest (Pre-Errata)
