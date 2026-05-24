@@ -26,6 +26,7 @@ Banned cards were nerfed to be unbanned, the only banned cards are alternate win
 | Makyura the Destructor    | 0 => 3 | Buffed ATK/DEF to 1900/1900 (from 1600/1200)                                                      |
 | Mind Master               | 0 => 3 | Once per turn                                                                                     |
 | Painful Choice            | 0 => 1 | Once per turn; pay half LP; select 2 cards from the Deck instead of 5                            |
+| Ring of Destruction       | 0 => 1 | Pay 1500 LP; both players gain LP equal to the destroyed monster's original ATK instead of taking damage |
 | Sinister Serpent          | 0 => 1 | Once per turn                                                                                     |
 | Solemn Warning            | 2 => 1 | Pay 1000 LP instead of 2000 LP                                                                    |
 | Yata-Garasu               | 0 => 1 | Skips the opponent's next Draw Phase only if they have 2 or more cards in hand during it          |

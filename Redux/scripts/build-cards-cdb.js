@@ -86,6 +86,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "When a monster(s) would be Summoned, OR when a Spell/Trap Card, or monster effect, is activated that includes an effect that Special Summons a monster(s): Pay 1000 LP; negate the Summon or activation, and if you do, destroy it.",
       84749824,
     );
+  const ringOfDestructionTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      'During your opponent\'s turn: Pay 1500 LP; target 1 face-up monster your opponent controls whose ATK is less than or equal to their LP; destroy that face-up monster, and if you do, both players gain LP equal to its original ATK. You can only activate 1 "Ring of Destruction" per turn.',
+      83555666,
+    );
   db.close();
 
   if (Number(lastWillTextResult.changes) !== 1) {
@@ -122,5 +128,8 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(solemnWarningTextResult.changes) !== 1) {
     throw new Error("Expected to update Solemn Warning text once");
+  }
+  if (Number(ringOfDestructionTextResult.changes) !== 1) {
+    throw new Error("Expected to update Ring of Destruction text once");
   }
 };
