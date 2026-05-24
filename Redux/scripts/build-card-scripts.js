@@ -13,6 +13,7 @@ const cardScripts = [
   path.join("pre-errata", "c511003012.lua"), // Witch of the Black Forest
   path.join("pre-errata", "c511002631.lua"), // Sangan
   path.join("pre-errata", "c511003019.lua"), // Mind Master
+  path.join("pre-errata", "c511003116.lua"), // Destiny HERO - Disk Commander
 ];
 
 module.exports = function buildCardScripts({ reduxRoot }) {

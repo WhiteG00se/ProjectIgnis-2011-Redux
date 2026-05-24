@@ -34,6 +34,12 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
       'You can only use this effect of "Mind Master" once per turn. You can pay 800 LP and Tribute 1 Psychic-Type monster; Special Summon 1 Level 4 or lower Psychic-Type monster from your Deck in face-up Attack Position.',
       511003019,
     ); // Mind Master (Pre-Errata)
+  const diskCommanderTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      'If this card is Special Summoned: Draw 1 card. You can only use this effect of "Destiny HERO - Disk Commander" once per turn.',
+      511003116,
+    ); // Destiny HERO - Disk Commander (Pre-Errata)
   db.close();
 
   if (Number(makyuraStatsResult.changes) !== 1) {
@@ -47,5 +53,10 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   }
   if (Number(mindMasterTextResult.changes) !== 1) {
     throw new Error("Expected to update Mind Master (Pre-Errata) text once");
+  }
+  if (Number(diskCommanderTextResult.changes) !== 1) {
+    throw new Error(
+      "Expected to update Destiny HERO - Disk Commander (Pre-Errata) text once",
+    );
   }
 };

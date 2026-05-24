@@ -12,6 +12,7 @@ Banned cards were nerfed to be unbanned, the only banned cards are alternate win
 | ------------------------- | ------ | ------------------------------------------------------------------------------------------------- |
 | Change of Heart           | 0 => 1 | Discard 1 card as cost; cannot conduct the Battle Phase during the turn it is activated           |
 | Cyber-Stein               | 0 => 1 | Once per turn; pay half LP instead of 5000 LP; summoned Fusion Monster enters in Defense Position |
+| Destiny HERO - Disk Commander | 0 => 3 | Once per turn; draws 1 card instead of 2; triggers when Special Summoned from any location     |
 | Dimension Fusion          | 0 => 1 | Once per turn; pay half LP instead of 2000 LP; cannot conduct the Battle Phase during the turn it is activated |
 | Last Will                 | 0 => 1 | Once per turn; cannot conduct the Battle Phase during the turn it is activated                         |
 | Magical Scientist         | 0 => 1 | Once per turn; no LP cost                                                                         |

@@ -13,6 +13,7 @@ const limitChanges = new Map([
   ["34206604", 1], // Magical Scientist
   ["74191942", 1], // Painful Choice
   ["511003019", 3], // Mind Master (Pre-Errata)
+  ["511003116", 3], // Destiny HERO - Disk Commander (Pre-Errata)
   ["33184167", 3], // Tribe-Infecting Virus
   ["34853266", 1], // Tsukuyomi
   ["511002992", 1], // Rescue Cat
