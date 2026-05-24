@@ -10,6 +10,9 @@ customization only:
 - limit the playable card pool
 - apply custom card erratas
 
+In ProjectIgnis / EDOPro, `.lflist.conf` files hold the combined forbidden /
+limited list data and the allowed card-pool data for a format.
+
 Do not change the ProjectIgnis client, engine, or software behavior unless the
 user explicitly asks for that. Treat this as a card-pool and card-data project,
 not a client development project.
