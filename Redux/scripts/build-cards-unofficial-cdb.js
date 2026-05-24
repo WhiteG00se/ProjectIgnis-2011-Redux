@@ -47,6 +47,13 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
       "Pay 1700 LP?",
       511002996,
     ); // Imperial Order (Pre-Errata)
+  const chaosEmperorDragonTextResult = db
+    .prepare("UPDATE texts SET desc = ?, str2 = ? WHERE id = ?")
+    .run(
+      "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by banishing 2 LIGHT and 2 DARK monsters from your GY. If this card is Special Summoned from your hand: You can pay half your LP; destroy all other cards on the field, then both players gain 300 LP for each card destroyed by this effect.",
+      "Destroy other cards and gain LP",
+      511000819,
+    ); // Chaos Emperor Dragon - Envoy of the End (Pre-Errata)
   db.close();
 
   if (Number(makyuraStatsResult.changes) !== 1) {
@@ -68,5 +75,10 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   }
   if (Number(imperialOrderTextResult.changes) !== 1) {
     throw new Error("Expected to update Imperial Order (Pre-Errata) text once");
+  }
+  if (Number(chaosEmperorDragonTextResult.changes) !== 1) {
+    throw new Error(
+      "Expected to update Chaos Emperor Dragon - Envoy of the End (Pre-Errata) text once",
+    );
   }
 };

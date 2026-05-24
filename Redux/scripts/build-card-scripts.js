@@ -15,6 +15,7 @@ const cardScripts = [
   path.join("pre-errata", "c511003019.lua"), // Mind Master
   path.join("pre-errata", "c511003116.lua"), // Destiny HERO - Disk Commander
   path.join("pre-errata", "c511002996.lua"), // Imperial Order
+  path.join("pre-errata", "c511000819.lua"), // Chaos Emperor Dragon - Envoy of the End
 ];
 
 module.exports = function buildCardScripts({ reduxRoot }) {
