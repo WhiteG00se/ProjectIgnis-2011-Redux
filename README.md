@@ -8,6 +8,10 @@ Banned cards were nerfed to be unbanned, the only banned cards are alternate win
 
 ## Errata
 
+| Cardname               | Limit  | Changes                                        |
+| ---------------------- | ------ | ---------------------------------------------- |
+| Makyura the Destructor | 0 => 3 | Buffed ATK/DEF to 1900/1900 (from 1600/1200) |
+
 ## Development workflow
 
 Custom format data is built from immutable baseline files rather than edited
