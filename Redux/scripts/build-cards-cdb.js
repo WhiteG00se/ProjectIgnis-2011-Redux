@@ -27,6 +27,13 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "Cannot conduct your Battle Phase this turn",
       4031928,
     );
+  const darkHoleTextResult = db
+    .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
+    .run(
+      "Destroy all monsters on the field. You cannot conduct your Battle Phase the turn you activate this card.",
+      "Cannot conduct your Battle Phase this turn",
+      53129443,
+    );
   const dimensionFusionTextResult = db
     .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
     .run(
@@ -73,6 +80,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       'When this card is Normal or Special Summoned: You can activate 1 of these effects.\r\n\u25cf Destroy Spells/Traps on the field, up to the number of "HERO" monsters you control, except this card.\r\n\u25cf Add 1 "HERO" monster from your Deck to your hand.\r\nYou can only use this effect of "Elemental HERO Stratos" once per turn.',
       40044918,
     );
+  const solemnWarningTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      "When a monster(s) would be Summoned, OR when a Spell/Trap Card, or monster effect, is activated that includes an effect that Special Summons a monster(s): Pay 1000 LP; negate the Summon or activation, and if you do, destroy it.",
+      84749824,
+    );
   db.close();
 
   if (Number(lastWillTextResult.changes) !== 1) {
@@ -80,6 +93,9 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(changeOfHeartTextResult.changes) !== 1) {
     throw new Error("Expected to update Change of Heart text once");
+  }
+  if (Number(darkHoleTextResult.changes) !== 1) {
+    throw new Error("Expected to update Dark Hole text once");
   }
   if (Number(dimensionFusionTextResult.changes) !== 1) {
     throw new Error("Expected to update Dimension Fusion text once");
@@ -103,5 +119,8 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(elementalHeroStratosTextResult.changes) !== 1) {
     throw new Error("Expected to update Elemental HERO Stratos text once");
+  }
+  if (Number(solemnWarningTextResult.changes) !== 1) {
+    throw new Error("Expected to update Solemn Warning text once");
   }
 };

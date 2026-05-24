@@ -6,12 +6,14 @@ const cardScripts = [
   path.join("official", "c85602018.lua"), // Last Will
   path.join("official", "c23557835.lua"), // Dimension Fusion
   path.join("official", "c4031928.lua"), // Change of Heart
+  path.join("official", "c53129443.lua"), // Dark Hole
   path.join("official", "c69015963.lua"), // Cyber-Stein
   path.join("official", "c3078576.lua"), // Yata-Garasu
   path.join("official", "c34206604.lua"), // Magical Scientist
   path.join("official", "c74191942.lua"), // Painful Choice
   path.join("official", "c72989439.lua"), // Black Luster Soldier - Envoy of the Beginning
   path.join("official", "c40044918.lua"), // Elemental HERO Stratos
+  path.join("official", "c84749824.lua"), // Solemn Warning
   path.join("pre-errata", "c511001039.lua"), // Dark Magician of Chaos
   path.join("pre-errata", "c511000229.lua"), // Dark Strike Fighter
   path.join("pre-errata", "c511000818.lua"), // Sinister Serpent
