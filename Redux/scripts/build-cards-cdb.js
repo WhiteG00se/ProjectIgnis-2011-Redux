@@ -92,6 +92,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       'During your opponent\'s turn: Pay 1500 LP; target 1 face-up monster your opponent controls whose ATK is less than or equal to their LP; destroy that face-up monster, and if you do, both players gain LP equal to its original ATK. You can only activate 1 "Ring of Destruction" per turn.',
       83555666,
     );
+  const gatewayOfTheSixTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      'Each time a "Six Samurai" monster(s) is Normal or Special Summoned, place 1 Bushido Counter on this card. You can remove Bushido Counters from your field to activate these effects.\n\u25cf2 Counters: Target 1 "Six Samurai" or "Shien" Effect Monster; that target gains 500 ATK until the end of this turn.\n\u25cf4 Counters: Add 1 "Six Samurai" monster from your Deck or GY to your hand.\n\u25cf6 Counters: Target 1 "Shien" Effect Monster in your GY; Special Summon that target.',
+      27970830,
+    );
   db.close();
 
   if (Number(lastWillTextResult.changes) !== 1) {
@@ -131,5 +137,8 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(ringOfDestructionTextResult.changes) !== 1) {
     throw new Error("Expected to update Ring of Destruction text once");
+  }
+  if (Number(gatewayOfTheSixTextResult.changes) !== 1) {
+    throw new Error("Expected to update Gateway of the Six text once");
   }
 };

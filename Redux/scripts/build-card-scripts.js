@@ -15,6 +15,7 @@ const cardScripts = [
   path.join("official", "c40044918.lua"), // Elemental HERO Stratos
   path.join("official", "c84749824.lua"), // Solemn Warning
   path.join("official", "c83555666.lua"), // Ring of Destruction
+  path.join("official", "c27970830.lua"), // Gateway of the Six
   path.join("pre-errata", "c511001039.lua"), // Dark Magician of Chaos
   path.join("pre-errata", "c511000229.lua"), // Dark Strike Fighter
   path.join("pre-errata", "c511000818.lua"), // Sinister Serpent
