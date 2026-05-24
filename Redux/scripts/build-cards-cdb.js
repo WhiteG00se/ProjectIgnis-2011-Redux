@@ -20,6 +20,13 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "Cannot conduct your Battle Phase this turn",
       4031928,
     );
+  const dimensionFusionTextResult = db
+    .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
+    .run(
+      'Pay half your LP. Both players Special Summon as many of their banished monsters as possible. You can only activate 1 "Dimension Fusion" per turn. You cannot conduct your Battle Phase the turn you activate this card.',
+      "Cannot conduct your Battle Phase this turn",
+      23557835,
+    );
   const cyberSteinTextResult = db
     .prepare("UPDATE texts SET desc = ? WHERE id = ?")
     .run(
@@ -44,6 +51,9 @@ module.exports = function buildCardsDb({ reduxRoot }) {
 
   if (Number(changeOfHeartTextResult.changes) !== 1) {
     throw new Error("Expected to update Change of Heart text once");
+  }
+  if (Number(dimensionFusionTextResult.changes) !== 1) {
+    throw new Error("Expected to update Dimension Fusion text once");
   }
   if (Number(cyberSteinTextResult.changes) !== 1) {
     throw new Error("Expected to update Cyber-Stein text once");
