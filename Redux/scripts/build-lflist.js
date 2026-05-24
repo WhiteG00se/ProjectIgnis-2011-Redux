@@ -4,6 +4,24 @@ const path = require("path");
 const { copyFileInRedux } = require("./utils");
 
 const limitChanges = new Map([
+  ["33184167", 3], // Tribe-Infecting Virus
+  ["34853266", 1], // Tsukuyomi
+  ["511002992", 1], // Rescue Cat
+  ["31560081", 2], // Magician of Faith
+  ["511000818", 1], // Sinister Serpent
+  ["20663556", 1], // Substitoad
+  ["93369354", 3], // Fishborg Blaster
+  ["511000229", 1], // Dark Strike Fighter
+  ["511002994", 1], // Goyo Guardian
+  ["42703248", 1], // Giant Trunade
+  ["46411259", 2], // Metamorphosis
+  ["29762407", 3], // Temple of the Kings
+  ["69243953", 2], // Butterfly Dagger - Elma
+  ["70828912", 1], // Premature Burial
+  ["35316708", 1], // Time Seal
+  ["83555666", 1], // Ring of Destruction
+  ["423705", 0], // Gearfried the Iron Knight
+  ["21593987", 3], // Makyura the Destructor (Pre-Errata)
   ["511001039", 1], // Dark Magician of Chaos
   ["35027493", 1], // Deck Devastation Virus
   ["54974237", 1], // Eradicator Epidemic Virus
