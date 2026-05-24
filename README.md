@@ -12,6 +12,8 @@ Banned cards were nerfed to be unbanned, the only banned cards are alternate win
 | ---------------------- | ------ | ------------------------------------------------------------------------------------------------- |
 | Makyura the Destructor | 0 => 3 | Buffed ATK/DEF to 1900/1900 (from 1600/1200)                                                      |
 | Cyber-Stein            | 0 => 1 | Once per turn; pay half LP instead of 5000 LP; summoned Fusion Monster enters in Defense Position |
+| Witch of the Black Forest | 0 => 1 | Once per turn; searches monsters with 600 or less DEF instead of 1500 or less DEF              |
+| Sangan                 | 1 => 2 | Once per turn                                                                                      |
 
 ## Development workflow
 

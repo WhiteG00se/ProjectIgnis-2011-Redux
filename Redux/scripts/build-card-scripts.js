@@ -4,6 +4,8 @@ const { copyFileInRedux } = require("./utils");
 
 const cardScripts = [
   path.join("official", "c69015963.lua"), // Cyber-Stein
+  path.join("pre-errata", "c511003012.lua"), // Witch of the Black Forest
+  path.join("pre-errata", "c511002631.lua"), // Sangan
 ];
 
 module.exports = function buildCardScripts({ reduxRoot }) {

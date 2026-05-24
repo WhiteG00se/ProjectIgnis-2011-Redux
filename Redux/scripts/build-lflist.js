@@ -4,6 +4,7 @@ const path = require("path");
 const { copyFileInRedux } = require("./utils");
 
 const limitChanges = new Map([
+  ["511003012", 1], // Witch of the Black Forest (Pre-Errata)
   ["69015963", 1], // Cyber-Stein
   ["33184167", 3], // Tribe-Infecting Virus
   ["34853266", 1], // Tsukuyomi
