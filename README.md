@@ -6,6 +6,38 @@ In TCG, the first XYZ monsters were released on 08.07.2011, so the cutoff is 24.
 Banned cards were nerfed to be unbanned, the only banned cards are alternate win conditions (Exodia, Final Countdown, Burn).<br>
 [Googlesheet with Card DB and Banlist](https://docs.google.com/spreadsheets/d/1NCD4u_KRdl6T0fOKFnFGOmMbWwV9U_HEFP6O4gS5jf8/edit?gid=1008737686#gid=1008737686)
 
+## Development workflow
+
+Custom format data is built from immutable baseline files rather than edited
+directly in EDOPro's active files. This makes card-pool and errata changes
+reviewable in Git through the build scripts that apply them.
+
+Development requires [Node.js LTS 22](https://nodejs.org/).
+
+The Redux folders have three roles:
+
+- `Redux\vanilla`: original baseline inputs, including the list and card
+  databases required by selected pre-errata cards. Do not edit these after they
+  have been captured.
+- `Redux\scripts`: readable build and transformation scripts. Implement format
+  changes here.
+- `Redux\modded`: generated EDOPro input files. Do not edit these directly.
+
+Run the build from the repository root with Node.js:
+
+```powershell
+node .\Redux\scripts\build.js
+```
+
+The build recreates `Redux\modded`, copies the vanilla inputs, and applies any
+declared transformations. EDOPro reads the generated folder through
+`config\configs.json`; the local `2011 Redux` entry is readable but not
+auto-updated.
+
+The LF list is both the forbidden / limited list and the format card pool.
+Its selected passcodes are intentional, including pre-errata card versions.
+Project guidance and implementation rules can be found in `AGENTS.md`.
+
 ### Prerequisites for WindBot Ignite (AI):
 
 - Windows: install .NET Framework 4 if you don't have it. This ships with Windows 10.

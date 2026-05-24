@@ -13,10 +13,11 @@ customization only:
 In ProjectIgnis / EDOPro, `.lflist.conf` files hold the combined forbidden /
 limited list data and the allowed card-pool data for a format.
 
-# Redux Workflow
+# Development Workflow
 
-Custom project files live under `Redux/`:
+The custom format is built from project-owned inputs under `Redux/`:
 
+- Use [Node.js LTS 22](https://nodejs.org/) for the Redux build scripts.
 - `Redux/vanilla/` contains baseline source snapshots. Treat these as immutable
   after they are intentionally added.
 - `Redux/scripts/` contains the readable build / transformation scripts. Future
@@ -26,8 +27,27 @@ Custom project files live under `Redux/`:
   `config/configs.json`. Do not hand-edit generated files here; update the
   scripts and rebuild instead.
 
-The build copies baseline databases and the LF list from `Redux/vanilla/` into
-`Redux/modded/`, then applies transformations declared in `Redux/scripts/`.
+Run the build from the repository root:
+
+```powershell
+node .\Redux\scripts\build.js
+```
+
+The build deletes and recreates `Redux/modded/`, copies baseline databases and
+the LF list from `Redux/vanilla/`, and then applies transformations declared in
+`Redux/scripts/`. The EDOPro local repo entry in `config/configs.json` reads
+`./Redux/modded` for `.cdb` data, scripts, and the `.lflist.conf`; it must stay
+local-only with updates disabled.
+
+For new Redux changes:
+
+1. Do not edit files in `Redux/modded/` by hand.
+2. Do not edit the baseline in `Redux/vanilla/` when making a format change.
+3. Express LF list, database, and future effect-script changes in
+   `Redux/scripts/`, then rebuild.
+4. Verify generated output after the build, and verify behavior in EDOPro when
+   runtime load order or effect behavior matters.
+
 Legacy / pre-errata cards may come from supplemental baseline databases such as
 `cards-unofficial.cdb`, not only `cards.cdb`.
 
