@@ -72,6 +72,12 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
       'During your Standby Phase, if there is a "Sinister Serpent" in your Graveyard: You can add this card from your Graveyard to your hand. You can only use this effect of "Sinister Serpent" once per turn.',
       511000818,
     ); // Sinister Serpent (Pre-Errata)
+  const brionacTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      '1 Tuner + 1+ non-Tuner monsters\r\nYou can discard any number of cards, then target an equal number of cards on the field; return them to the hand. You can only use this effect of "Brionac, Dragon of the Ice Barrier" once per turn.',
+      511002993,
+    ); // Brionac, Dragon of the Ice Barrier (Pre-Errata)
   db.close();
 
   if (Number(makyuraStatsResult.changes) !== 1) {
@@ -107,5 +113,8 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   }
   if (Number(sinisterSerpentTextResult.changes) !== 1) {
     throw new Error("Expected to update Sinister Serpent (Pre-Errata) text once");
+  }
+  if (Number(brionacTextResult.changes) !== 1) {
+    throw new Error("Expected to update Brionac, Dragon of the Ice Barrier (Pre-Errata) text once");
   }
 };

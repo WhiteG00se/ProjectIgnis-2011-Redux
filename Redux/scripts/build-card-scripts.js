@@ -27,6 +27,7 @@ const cardScripts = [
   path.join("pre-errata", "c511003116.lua"), // Destiny HERO - Disk Commander
   path.join("pre-errata", "c511002996.lua"), // Imperial Order
   path.join("pre-errata", "c511000819.lua"), // Chaos Emperor Dragon - Envoy of the End
+  path.join("pre-errata", "c511002993.lua"), // Brionac, Dragon of the Ice Barrier
 ];
 
 module.exports = function buildCardScripts({ reduxRoot }) {

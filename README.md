@@ -40,6 +40,7 @@ Custom erratas (check below); custom banned list (check in-game)<br>
 | Mind Master | 0&nbsp;=&gt;&nbsp;3 | Once per turn |
 | Makyura | 0&nbsp;=&gt;&nbsp;3 | ATK/DEF: 1600/1200 to 1900/1900 |
 | Black Luster Soldier | 1 | Face-up banish only; second attack deals no damage |
+| Brionac, Dragon of the Ice Barrier | 1 | Once per turn |
 | Dark Hole | 1 | Skip your Battle Phase |
 | Gateway of the Six | 1 | Only 1 counter per summon |
 | Stratos | 1 | Once per turn |
