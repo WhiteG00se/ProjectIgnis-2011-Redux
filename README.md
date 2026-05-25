@@ -41,7 +41,7 @@ Custom erratas (check below); custom banned list (check in-game)<br>
 | Makyura | 0&nbsp;=&gt;&nbsp;3 | ATK/DEF: 1600/1200 to 1900/1900 |
 | Black Luster Soldier | 1 | Face-up banish only; second attack deals no damage |
 | Dark Hole | 1 | Skip your Battle Phase |
-| Gateway of the Six | 1 | "Six Samurai" summons place 1 counter |
+| Gateway of the Six | 1 | Only 1 counter per summon |
 | Stratos | 1 | Once per turn |
 | Sangan | 1&nbsp;=&gt;&nbsp;2 | Once per turn |
 | Solemn Warning | 2&nbsp;=&gt;&nbsp;1 | Cost reduced to 1000 LP |
