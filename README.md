@@ -28,7 +28,7 @@ Custom erratas (check below); custom banned list (check in-game)<br>
 | Dark Hole | 1 | No battle phase this turn |
 | DMOC | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
 | Dark Strike Fighter | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
-| Disk Commander | 0&nbsp;=&gt;&nbsp;3 | Once per turn; draws 1 card instead of 2; triggers when Special Summoned from any location |
+| Disk Commander | 0&nbsp;=&gt;&nbsp;3 | Once per turn; draws 1 card instead of 2; when special summoned from anywhere |
 | Dimension Fusion | 0&nbsp;=&gt;&nbsp;1 | Once per turn; pay half LP instead of 2000 LP; cannot conduct the Battle Phase during the turn it is activated |
 | Stratos | 1 | Once per turn |
 | Gateway of the Six | 1 | Places 1 Bushido Counter for each "Six Samurai" summon event instead of 2 |
