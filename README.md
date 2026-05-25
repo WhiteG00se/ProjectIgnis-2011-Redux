@@ -1,40 +1,54 @@
-# ProjectIgnis-2011-Redux
+## ProjectIgnis-2011-Redux
 
-This is a fork of Project Ignis: EDOPro.<br>
-The banned list and erratas are custom for a format centered around the formats before XYZs were introduced.<br>
-In TCG, the first XYZ monsters were released on 08.07.2011, so the cutoff is 24.06.2011.<br>
-Banned cards were nerfed to be unbanned, the only banned cards are alternate win conditions (Exodia, Final Countdown, Burn).<br>
-[Googlesheet with Card DB and Banlist](https://docs.google.com/spreadsheets/d/1NCD4u_KRdl6T0fOKFnFGOmMbWwV9U_HEFP6O4gS5jf8/edit?gid=1008737686#gid=1008737686)
+This is a fork of Project Ignis<br>
+The cardpool cuts off on 24.06.2011 (last TCG release before XYZs)<br>
+Custom erratas (check below); custom banned list (check in-game)<br>
+[Googlesheet with cardpool](https://docs.google.com/spreadsheets/d/1NCD4u_KRdl6T0fOKFnFGOmMbWwV9U_HEFP6O4gS5jf8/edit?gid=1008737686#gid=1008737686)
 
-## Errata
+<details>
+<summary><strong><big>How to install</big></strong></summary>
 
-| Cardname                  | Limit  | Changes                                                                                           |
-| ------------------------- | ------ | ------------------------------------------------------------------------------------------------- |
-| Black Luster Soldier - Envoy of the Beginning | 1 | Banish effect can only target a face-up monster; its second attack cannot inflict battle damage |
-| Change of Heart           | 0 => 1 | Discard 1 card as cost; cannot conduct the Battle Phase during the turn it is activated           |
-| Chaos Emperor Dragon - Envoy of the End | 0 => 1 | Summon cost is 2 LIGHT and 2 DARK monsters; effect triggers only when Special Summoned from the hand, costs half LP, destroys other cards on the field, and makes both players gain 300 LP per destroyed card |
-| Cyber-Stein               | 0 => 1 | Once per turn; pay half LP instead of 5000 LP; summoned Fusion Monster enters in Defense Position |
-| Dark Hole                 | 1      | Cannot conduct the Battle Phase during the turn it is activated                                    |
-| Dark Magician of Chaos    | 0 => 1 | Once per turn                                                                                     |
-| Dark Strike Fighter       | 0 => 1 | Once per turn                                                                                     |
-| Destiny HERO - Disk Commander | 0 => 3 | Once per turn; draws 1 card instead of 2; triggers when Special Summoned from any location     |
-| Dimension Fusion          | 0 => 1 | Once per turn; pay half LP instead of 2000 LP; cannot conduct the Battle Phase during the turn it is activated |
-| Elemental HERO Stratos    | 1      | Once per turn                                                                                     |
-| Gateway of the Six        | 1      | Places 1 Bushido Counter for each "Six Samurai" summon event instead of 2                        |
-| Imperial Order            | 0 => 1 | Maintenance occurs during your End Phase instead of your Standby Phase; optionally pay 1700 LP instead of 700 LP |
-| Last Will                 | 0 => 1 | Once per turn; cannot conduct the Battle Phase during the turn it is activated                         |
-| Magical Scientist         | 0 => 1 | Once per turn; no LP cost                                                                         |
-| Makyura the Destructor    | 0 => 3 | Buffed ATK/DEF to 1900/1900 (from 1600/1200)                                                      |
-| Mind Master               | 0 => 3 | Once per turn                                                                                     |
-| Painful Choice            | 0 => 1 | Once per turn; pay half LP; select 2 cards from the Deck instead of 5                            |
-| Ring of Destruction       | 0 => 1 | Pay 1500 LP; both players gain LP equal to the destroyed monster's original ATK instead of taking damage |
-| Sinister Serpent          | 0 => 1 | Once per turn                                                                                     |
-| Solemn Warning            | 2 => 1 | Pay 1000 LP instead of 2000 LP                                                                    |
-| Yata-Garasu               | 0 => 1 | Skips the opponent's next Draw Phase only if they have 2 or more cards in hand during it          |
-| Witch of the Black Forest | 0 => 1 | Once per turn; searches monsters with 600 or less DEF instead of 1500 or less DEF                 |
-| Sangan                    | 1 => 2 | Once per turn                                                                                     |
+- Pick a download method:
+  - Clone this repository with Git (easier updates).
+  - Download the ZIP from GitHub and extract it.
+- Run `EDOPro.exe`.
 
-## Development workflow
+</details>
+
+<details>
+<summary><strong><big>Errata</big></strong></summary>
+
+<!-- prettier-ignore -->
+| Cardname | Limit | Changes |
+| --- | --- | --- |
+| Black Luster Soldier | 1 | Banish only face-up monsters; second attack cannot inflict damage |
+| Change of Heart | 0&nbsp;=&gt;&nbsp;1 | Discard 1; no battle phase this turn |
+| Chaos Emperor Dragon | 0&nbsp;=&gt;&nbsp;1 | Banish 2 LIGHT and 2 DARK monsters; only when Special Summoned from the hand, costs half LP, destroys other cards on the field, heals both for 300 LP per destroyed card |
+| Cyber-Stein | 0&nbsp;=&gt;&nbsp;1 | Once per turn; pay half LP (instead of 5000 LP); summons in Defense Position |
+| Dark Hole | 1 | No battle phase this turn |
+| DMOC | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
+| Dark Strike Fighter | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
+| Disk Commander | 0&nbsp;=&gt;&nbsp;3 | Once per turn; draws 1 card instead of 2; triggers when Special Summoned from any location |
+| Dimension Fusion | 0&nbsp;=&gt;&nbsp;1 | Once per turn; pay half LP instead of 2000 LP; cannot conduct the Battle Phase during the turn it is activated |
+| Stratos | 1 | Once per turn |
+| Gateway of the Six | 1 | Places 1 Bushido Counter for each "Six Samurai" summon event instead of 2 |
+| Imperial Order | 0&nbsp;=&gt;&nbsp;1 | Maintenance occurs during your End Phase instead of your Standby Phase; optionally pay 1700 LP instead of 700 LP |
+| Last Will | 0&nbsp;=&gt;&nbsp;1 | Once per turn; cannot conduct the Battle Phase during the turn it is activated |
+| Magical Scientist | 0&nbsp;=&gt;&nbsp;1 | Once per turn; no LP cost |
+| Makyura | 0&nbsp;=&gt;&nbsp;3 | Buffed ATK/DEF to 1900/1900 (from 1600/1200) |
+| Mind Master | 0&nbsp;=&gt;&nbsp;3 | Once per turn |
+| Painful Choice | 0&nbsp;=&gt;&nbsp;1 | Once per turn; pay half LP; select 2 cards from the Deck instead of 5 |
+| Ring of Destruction | 0&nbsp;=&gt;&nbsp;1 | Pay 1500 LP; both players gain LP equal to the destroyed monster's original ATK instead of taking damage |
+| Sinister Serpent | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
+| Solemn Warning | 2&nbsp;=&gt;&nbsp;1 | Pay 1000 LP instead of 2000 LP |
+| Yata-Garasu | 0&nbsp;=&gt;&nbsp;1 | Skips the opponent's next Draw Phase only if they have 2 or more cards in hand during it |
+| Witch of the Black Forest | 0&nbsp;=&gt;&nbsp;1 | Once per turn; searches monsters with 600 or less DEF instead of 1500 or less DEF |
+| Sangan | 1&nbsp;=&gt;&nbsp;2 | Once per turn |
+
+</details>
+
+<details>
+<summary><strong><big>Development workflow</big></strong></summary>
 
 Custom format data is built from immutable baseline files rather than edited
 directly in EDOPro's active files. This makes card-pool and errata changes
@@ -66,7 +80,10 @@ The LF list is both the forbidden / limited list and the format card pool.
 Its selected passcodes are intentional, including pre-errata card versions.
 Project guidance and implementation rules can be found in `AGENTS.md`.
 
-# Project Ignis: EDOPro Original README
+</details>
+
+<details>
+<summary><strong><big>Project Ignis: EDOPro Original README</big></strong></summary>
 
 All assets for the game, except card images. See LICENSE and COPYING in each folder for proper credits, copyright, and rules for redistribution.
 On Windows, please do not put your game install in Program Files, Downloads, or any other location that might be read-only or require admin permissions.
@@ -248,25 +265,27 @@ The program will automatically try smaller MSAA values if the driver does not su
 Only options not directly configurable in-game are listed here.
 Configurations listed as "boolean" accept either 0 for 'disabled' or 1 for 'enabled'.
 
-| Name          | Purpose                                                                                                                                                                                         | Example                               |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| driver_type   | graphic driver used for rendering. Valid values are: opengl, d3d9, d3d9on12, ogles1, ogles2, default. The availability of those values is listed in the table below.                            |                                       |
-| useWayland    | Linux only. 1 = use experimental wayland device; 0 = use x11 device.                                                                                                                            |                                       |
-| textfont      | path to the font used for texts and its size                                                                                                                                                    | fonts/NotoSansJP-Regular.otf 12       |
-| numfont       | path to the font used for numbers                                                                                                                                                               | fonts/NotoSansJP-Regular.otf          |
+<!-- prettier-ignore -->
+| Name | Purpose | Example |
+| --- | --- | --- |
+| driver_type | graphic driver used for rendering. Valid values are: opengl, d3d9, d3d9on12, ogles1, ogles2, default. The availability of those values is listed in the table below. | |
+| useWayland | Linux only. 1 = use experimental wayland device; 0 = use x11 device. | |
+| textfont | path to the font used for texts and its size | fonts/NotoSansJP-Regular.otf 12 |
+| numfont | path to the font used for numbers | fonts/NotoSansJP-Regular.otf |
 | fallbackFonts | path to the fonts to be used as fallback for missing characters (each font and its **must** be contained in double quotes `"`, the game ships with a `bundled` font that will always be loaded) | "fonts/fallback1.otf 15" "bundled 12" |
 
 If a character cannot be found in the supplied font, it will not be displayed. The shipped font supports all characters that appear on Yu-Gi-Oh! cards in Latin alphabets and Japanese.
 
 ### supported values for driver_type based on the system
 
-|               |            opengl             | d3d9 |            d3d9on12            |               ogles1                |              ogles2              | default |
-| ------------- | :---------------------------: | :--: | :----------------------------: | :---------------------------------: | :------------------------------: | :-----: |
-| Windows       |               X               |  X   | X (If supported by the driver) |   X (If supported by the driver)    |  X (If supported by the driver)  |  d3d9   |
-| Linux Wayland | X (Only if LibGLx is present) |      |                                | X (only if libGLESv1_CM is present) |                X                 | ogles2  |
-| Linux X11     |               X               |      |                                | X (only if libGLESv1_CM is present) | X (only if libGLESv2 is present) | opengl  |
-| MacOS         |               X               |      |                                |                                     |                                  | opengl  |
-| Android       |                               |      |                                |                  X                  |                X                 | ogles2  |
+<!-- prettier-ignore -->
+| | opengl | d3d9 | d3d9on12 | ogles1 | ogles2 | default |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| Windows | X | X | X (If supported by the driver) | X (If supported by the driver) | X (If supported by the driver) | d3d9 |
+| Linux Wayland | X (Only if LibGLx is present) | | | X (only if libGLESv1_CM is present) | X | ogles2 |
+| Linux X11 | X | | | X (only if libGLESv1_CM is present) | X (only if libGLESv2 is present) | opengl |
+| MacOS | X | | | | | opengl |
+| Android | | | | X | X | ogles2 |
 
 ### configs.json
 
@@ -308,7 +327,10 @@ Used on macOS and Linux as additional search paths for Mono, required to run Win
 
 </details>
 
-## Copyright notice and license
+</details>
+
+<details>
+<summary><strong><big>Copyright notice and license</big></strong></summary>
 
 Copyright (C) 2020 Project Ignis contributors. See version history and author credit line for each file.
 
@@ -326,3 +348,5 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ```
+
+</details>
