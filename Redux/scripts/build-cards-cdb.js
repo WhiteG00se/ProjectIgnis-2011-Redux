@@ -104,6 +104,13 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       'Each time a "Six Samurai" monster(s) is Normal or Special Summoned, place 1 Bushido Counter on this card. You can remove Bushido Counters from your field to activate these effects.\n\u25cf2 Counters: Target 1 "Six Samurai" or "Shien" Effect Monster; that target gains 500 ATK until the end of this turn.\n\u25cf4 Counters: Add 1 "Six Samurai" monster from your Deck or GY to your hand.\n\u25cf6 Counters: Target 1 "Shien" Effect Monster in your GY; Special Summon that target.',
       27970830,
     );
+  const trishulaTextResult = db
+    .prepare("UPDATE texts SET desc = ?, str2 = ? WHERE id = ?")
+    .run(
+      "1 Tuner + 2+ non-Tuner monsters\nWhen this card is Synchro Summoned: You can banish up to 2 cards your opponent controls and up to 1 card from their GY.",
+      "Banish up to 2 cards from the field?",
+      52687916,
+    );
   db.close();
 
   if (Number(lastWillTextResult.changes) !== 1) {
@@ -149,5 +156,8 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(gatewayOfTheSixTextResult.changes) !== 1) {
     throw new Error("Expected to update Gateway of the Six text once");
+  }
+  if (Number(trishulaTextResult.changes) !== 1) {
+    throw new Error("Expected to update Trishula, Dragon of the Ice Barrier text once");
   }
 };
