@@ -94,6 +94,7 @@ const limitChanges = new Map([
   ["64697231", 0], // Trap Dustshoot
   ["17078030", 0], // Wall of Revealing Light
   ["84749824", 1], // Solemn Warning
+  ["82732705", 2], // Skill Drain
 ]);
 
 module.exports = function buildLflist({ reduxRoot }) {

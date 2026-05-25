@@ -45,6 +45,7 @@ Custom erratas (check below); custom banned list (check in-game)<br>
 | Stratos | 1 | Once per turn |
 | Sangan | 1&nbsp;=&gt;&nbsp;2 | Once per turn |
 | Solemn Warning | 2&nbsp;=&gt;&nbsp;1 | Cost reduced to 1000 LP |
+| Skill Drain | 3&nbsp;=&gt;&nbsp;2 | No LP cost |
 
 </details>
 

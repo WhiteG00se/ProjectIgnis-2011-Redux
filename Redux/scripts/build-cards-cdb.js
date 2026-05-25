@@ -86,6 +86,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "When a monster(s) would be Summoned, OR when a Spell/Trap Card, or monster effect, is activated that includes an effect that Special Summons a monster(s): Pay 1000 LP; negate the Summon or activation, and if you do, destroy it.",
       84749824,
     );
+  const skillDrainTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      "Negate the effects of all face-up monsters while they are face-up on the field (but their effects can still be activated).",
+      82732705,
+    );
   const ringOfDestructionTextResult = db
     .prepare("UPDATE texts SET desc = ? WHERE id = ?")
     .run(
@@ -134,6 +140,9 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(solemnWarningTextResult.changes) !== 1) {
     throw new Error("Expected to update Solemn Warning text once");
+  }
+  if (Number(skillDrainTextResult.changes) !== 1) {
+    throw new Error("Expected to update Skill Drain text once");
   }
   if (Number(ringOfDestructionTextResult.changes) !== 1) {
     throw new Error("Expected to update Ring of Destruction text once");
