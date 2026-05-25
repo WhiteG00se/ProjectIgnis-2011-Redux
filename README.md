@@ -21,28 +21,28 @@ Custom erratas (check below); custom banned list (check in-game)<br>
 <!-- prettier-ignore -->
 | Cardname | Limit | Changes |
 | --- | --- | --- |
-| Black Luster Soldier | 1 | Banish only face-up monsters; second attack cannot inflict damage |
-| Change of Heart | 0&nbsp;=&gt;&nbsp;1 | Discard 1; no battle phase this turn |
-| Chaos Emperor Dragon | 0&nbsp;=&gt;&nbsp;1 | Banish 2 LIGHT and 2 DARK monsters; only when Special Summoned from the hand, costs half LP, destroys other cards on the field, heals both for 300 LP per destroyed card |
-| Cyber-Stein | 0&nbsp;=&gt;&nbsp;1 | Once per turn; pay half LP (instead of 5000 LP); summons in Defense Position |
-| Dark Hole | 1 | No battle phase this turn |
+| Black Luster Soldier | 1 | Face-up banish only; second attack deals no damage |
+| Change of Heart | 0&nbsp;=&gt;&nbsp;1 | Discard 1; skip your Battle Phase |
+| Chaos Emperor Dragon | 0&nbsp;=&gt;&nbsp;1 | Banish 2 LIGHT + 2 DARK; hand Special Summon only; half LP; destroy other cards; both gain 300 LP per card |
+| Cyber-Stein | 0&nbsp;=&gt;&nbsp;1 | Once per turn; half LP; summon in Defense |
+| Dark Hole | 1 | Skip your Battle Phase |
 | DMOC | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
 | Dark Strike Fighter | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
-| Disk Commander | 0&nbsp;=&gt;&nbsp;3 | Once per turn; draws 1 card instead of 2; when special summoned from anywhere |
-| Dimension Fusion | 0&nbsp;=&gt;&nbsp;1 | Once per turn; pay half LP instead of 2000 LP; cannot conduct the Battle Phase during the turn it is activated |
+| Disk Commander | 0&nbsp;=&gt;&nbsp;3 | Once per turn; draw 1 on any Special Summon |
+| Dimension Fusion | 0&nbsp;=&gt;&nbsp;1 | Once per turn; half LP; skip your Battle Phase |
 | Stratos | 1 | Once per turn |
-| Gateway of the Six | 1 | Places 1 Bushido Counter for each "Six Samurai" summon event instead of 2 |
-| Imperial Order | 0&nbsp;=&gt;&nbsp;1 | Maintenance occurs during your End Phase instead of your Standby Phase; optionally pay 1700 LP instead of 700 LP |
-| Last Will | 0&nbsp;=&gt;&nbsp;1 | Once per turn; cannot conduct the Battle Phase during the turn it is activated |
+| Gateway of the Six | 1 | "Six Samurai" summons place 1 counter |
+| Imperial Order | 0&nbsp;=&gt;&nbsp;1 | End Phase upkeep; optional 1700 LP |
+| Last Will | 0&nbsp;=&gt;&nbsp;1 | Once per turn; skip your Battle Phase |
 | Magical Scientist | 0&nbsp;=&gt;&nbsp;1 | Once per turn; no LP cost |
-| Makyura | 0&nbsp;=&gt;&nbsp;3 | Buffed ATK/DEF to 1900/1900 (from 1600/1200) |
+| Makyura | 0&nbsp;=&gt;&nbsp;3 | ATK/DEF: 1600/1200 to 1900/1900 |
 | Mind Master | 0&nbsp;=&gt;&nbsp;3 | Once per turn |
-| Painful Choice | 0&nbsp;=&gt;&nbsp;1 | Once per turn; pay half LP; select 2 cards from the Deck instead of 5 |
-| Ring of Destruction | 0&nbsp;=&gt;&nbsp;1 | Pay 1500 LP; both players gain LP equal to the destroyed monster's original ATK instead of taking damage |
+| Painful Choice | 0&nbsp;=&gt;&nbsp;1 | Once per turn; half LP; select 2 cards |
+| Ring of Destruction | 0&nbsp;=&gt;&nbsp;1 | Pay 1500 LP; both gain destroyed monster's ATK as LP |
 | Sinister Serpent | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
-| Solemn Warning | 2&nbsp;=&gt;&nbsp;1 | Pay 1000 LP instead of 2000 LP |
-| Yata-Garasu | 0&nbsp;=&gt;&nbsp;1 | Skips the opponent's next Draw Phase only if they have 2 or more cards in hand during it |
-| Witch of the Black Forest | 0&nbsp;=&gt;&nbsp;1 | Once per turn; searches monsters with 600 or less DEF instead of 1500 or less DEF |
+| Solemn Warning | 2&nbsp;=&gt;&nbsp;1 | Cost reduced to 1000 LP |
+| Yata-Garasu | 0&nbsp;=&gt;&nbsp;1 | Skips Draw Phase only with 2+ cards in hand |
+| Witch of the Black Forest | 0&nbsp;=&gt;&nbsp;1 | Once per turn; searches DEF 600 or less |
 | Sangan | 1&nbsp;=&gt;&nbsp;2 | Once per turn |
 
 </details>
