@@ -110,6 +110,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       'If you control a face-up Level 3 or lower WATER monster: You can discard 1 card; Special Summon this card from your Graveyard. You can only use this effect of "Fishborg Blaster" once per turn. If this card is used as a Synchro Material Monster, all other Synchro Material Monsters must be WATER.',
       93369354,
     );
+  const butterflyDaggerElmaTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      "The equipped monster gains 800 ATK/DEF. When this card is destroyed and sent to the Graveyard while equipped: You can return this card to the hand.",
+      69243953,
+    );
   db.close();
 
   if (Number(lastWillTextResult.changes) !== 1) {
@@ -158,5 +164,8 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(fishborgBlasterTextResult.changes) !== 1) {
     throw new Error("Expected to update Fishborg Blaster text once");
+  }
+  if (Number(butterflyDaggerElmaTextResult.changes) !== 1) {
+    throw new Error("Expected to update Butterfly Dagger - Elma text once");
   }
 };
