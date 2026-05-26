@@ -8,6 +8,8 @@ const errataMarkers = new Map([
   [69243953, "⬆️"], // Butterfly Dagger - Elma
   [4031928, "⬇️"], // Change of Heart
   [69015963, "♻️"], // Cyber-Stein
+  [3897065, "⬇️"], // Super Vehicroid - Stealth Union
+  [76263644, "⬇️"], // Destiny End Dragoon
   [53129443, "⬇️"], // Dark Hole
   [23557835, "⬇️"], // Dimension Fusion
   [40044918, "⬇️"], // Elemental HERO Stratos
@@ -65,6 +67,18 @@ module.exports = function buildCardsDb({ reduxRoot }) {
     .run(
       '(This card is not treated as a "Cyber" card.)\nIf this card is Normal or Special Summoned, or flipped face-up: You can pay half your LP; Special Summon 1 Fusion Monster from your Extra Deck in face-up Attack or Defense Position, but it cannot inflict battle damage until your next End Phase.',
       69015963,
+    );
+  const superVehicroidStealthUnionTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      '"Truckroid" + "Expressroid" + "Drillroid" + "Stealthroid"\r\nMust first be Fusion Summoned.\r\nOnce per turn: You can target 1 face-up non-Machine monster on the field; equip that target to this card. While equipped with a monster by this effect, this card can attack all monsters your opponent controls, once each. If this card attacks, its original ATK is halved until the end of the Damage Step. If this card attacks a Defense Position monster, inflict piercing battle damage.\r\n\r\n* The above text is unofficial and describes the card\'s functionality in the OCG.',
+      3897065,
+    );
+  const destinyEndDragoonTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      '"Destiny HERO - Plasma" + "Destiny HERO - Dogma"\nMust first be Fusion Summoned using the above Fusion Materials. Once per turn: You can target 1 monster your opponent controls; destroy that target, and if it was face-up, inflict damage to your opponent equal to the ATK it had on the field. You cannot conduct your Battle Phase the turn you activate this effect. Once per turn, during your Standby Phase, if this card is in your GY: You can banish 1 "Destiny HERO" card from your GY; Special Summon this card.',
+      76263644,
     );
   const yataGarasuTextResult = db
     .prepare("UPDATE texts SET desc = ?, str1 = ?, str2 = ? WHERE id = ?")
@@ -155,6 +169,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(cyberSteinTextResult.changes) !== 1) {
     throw new Error("Expected to update Cyber-Stein text once");
+  }
+  if (Number(superVehicroidStealthUnionTextResult.changes) !== 1) {
+    throw new Error("Expected to update Super Vehicroid - Stealth Union text once");
+  }
+  if (Number(destinyEndDragoonTextResult.changes) !== 1) {
+    throw new Error("Expected to update Destiny End Dragoon text once");
   }
   if (Number(yataGarasuTextResult.changes) !== 1) {
     throw new Error("Expected to update Yata-Garasu text once");

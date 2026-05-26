@@ -51,9 +51,11 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `2` [Sangan](https://yugioh.fandom.com/wiki/Sangan) | ⬇️ Once per turn |
 | `2` [Skill Drain](https://yugioh.fandom.com/wiki/Skill_Drain) | ⬆️ No LP cost |
 | `3` [Butterfly Dagger - Elma](https://yugioh.fandom.com/wiki/Butterfly_Dagger_-_Elma) | ⬆️ Equipped monster gains 800 ATK/DEF |
+| `3` [Destiny End Dragoon](https://yugioh.fandom.com/wiki/Destiny_End_Dragoon) | ⬇️ Must first be Fusion Summoned |
 | `3` [Destiny HERO - Disk Commander](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Disk_Commander) | 🔄 Once per turn; draw 1 on any Special Summon |
 | `3` [Makyura the Destructor](https://yugioh.fandom.com/wiki/Makyura_the_Destructor) | ⬆️ ATK/DEF: 1600/1200 to 1900/1900 |
 | `3` [Mind Master](https://yugioh.fandom.com/wiki/Mind_Master) | ⬇️ Once per turn |
+| `3` [Super Vehicroid - Stealth Union](https://yugioh.fandom.com/wiki/Super_Vehicroid_-_Stealth_Union) | ⬇️ Must first be Fusion Summoned |
 
 </details>
 
