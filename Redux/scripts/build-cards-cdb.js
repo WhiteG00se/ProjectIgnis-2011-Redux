@@ -99,10 +99,9 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       27970830,
     );
   const trishulaTextResult = db
-    .prepare("UPDATE texts SET desc = ?, str2 = ? WHERE id = ?")
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
     .run(
-      "1 Tuner + 2+ non-Tuner monsters\nWhen this card is Synchro Summoned: You can banish up to 2 cards your opponent controls and up to 1 card from their GY.",
-      "Banish up to 2 cards from the field?",
+      '1 Tuner + 2+ non-Tuner monsters\nWhen this card is Synchro Summoned: You can banish up to 1 card each from your opponent\'s hand, field, and GY. (The card in the hand is chosen at random.) You can only use this effect of "Trishula, Dragon of the Ice Barrier" once per turn.',
       52687916,
     );
   const fishborgBlasterTextResult = db

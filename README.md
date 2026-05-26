@@ -43,7 +43,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `1` [Ring of Destruction](https://yugioh.fandom.com/wiki/Ring_of_Destruction) | 🔄 Pay 1500 LP; both gain destroyed monster's ATK as LP |
 | `1` [Sinister Serpent](https://yugioh.fandom.com/wiki/Sinister_Serpent) | ⬇️ Once per turn |
 | `1` [Solemn Warning](https://yugioh.fandom.com/wiki/Solemn_Warning) | ⬆️ Cost reduced to 1000 LP |
-| `1` [Trishula, Dragon of the Ice Barrier](https://yugioh.fandom.com/wiki/Trishula,_Dragon_of_the_Ice_Barrier) | ⬇️ Banish up to 2 cards from field; no hand banish |
+| `1` [Trishula, Dragon of the Ice Barrier](https://yugioh.fandom.com/wiki/Trishula,_Dragon_of_the_Ice_Barrier) | ⬇️ Once per turn |
 | `1` [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | ⬇️ Once per turn; searches DEF 600 or less |
 | `1` [Yata-Garasu](https://yugioh.fandom.com/wiki/Yata-Garasu) | ⬇️ Skips Draw Phase unless opponent has 1 or fewer cards in hand |
 | `2` [Sangan](https://yugioh.fandom.com/wiki/Sangan) | ⬇️ Once per turn |
