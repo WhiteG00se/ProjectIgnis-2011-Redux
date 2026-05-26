@@ -44,7 +44,7 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   const cyberSteinTextResult = db
     .prepare("UPDATE texts SET desc = ? WHERE id = ?")
     .run(
-      '(This card is not treated as a "Cyber" card.)\nYou can only use this effect of "Cyber-Stein" once per turn. You can pay half your LP; Special Summon 1 Fusion Monster from your Extra Deck in Defense Position.',
+      '(This card is not treated as a "Cyber" card.)\nIf this card is Normal or Special Summoned, or flipped face-up: You can pay half your LP; Special Summon 1 Fusion Monster from your Extra Deck in face-up Attack or Defense Position, but it cannot inflict battle damage until your next End Phase.',
       69015963,
     );
   const yataGarasuTextResult = db
@@ -58,7 +58,7 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   const magicalScientistTextResult = db
     .prepare("UPDATE texts SET desc = ? WHERE id = ?")
     .run(
-      'You can only use this effect of "Magical Scientist" once per turn. Special Summon 1 Level 6 or lower Fusion Monster from your Extra Deck in face-up Attack or Defense Position. That Fusion Monster cannot attack your opponent\'s Life Points directly, and is returned to your Extra Deck at the end of the turn.',
+      'If this card is Normal or Special Summoned, or flipped face-up: You can Special Summon 1 Level 6 or lower Fusion Monster from your Extra Deck in face-up Attack or Defense Position, but it cannot inflict battle damage until your next End Phase.',
       34206604,
     );
   const painfulChoiceTextResult = db
