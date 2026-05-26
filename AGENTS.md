@@ -40,6 +40,12 @@ the LF list from `Redux/vanilla/`, and then applies transformations declared in
 `./Redux/modded` for `.cdb` data, scripts, and the `.lflist.conf`; it must stay
 local-only with updates disabled.
 
+On Windows in Codex, a sandboxed build may report `EPERM` while deleting a
+generated `.cdb` file in `Redux/modded/`, even when EDOPro is not running. If
+the build fails at `fs.rmSync` / `unlink` there, rerun the same build with
+approval to replace generated output before diagnosing it as a client file
+lock.
+
 For new Redux changes:
 
 1. Do not edit files in `Redux/modded/` by hand.
