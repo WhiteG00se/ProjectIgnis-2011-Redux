@@ -3,7 +3,7 @@
 This is a fork of Project Ignis<br>
 The cardpool cuts off on 24.06.2011 (last TCG release before XYZs)<br>
 By default, cards use their latest Master Rule 1 version / errata.<br>
-Custom erratas (check below); custom banned list (check in-game)<br>
+Custom erratas and custom banned list (check below)<br>
 [Googlesheet with cardpool](https://docs.google.com/spreadsheets/d/1NCD4u_KRdl6T0fOKFnFGOmMbWwV9U_HEFP6O4gS5jf8/edit?gid=1008737686#gid=1008737686)
 
 <details>
@@ -19,37 +19,205 @@ Custom erratas (check below); custom banned list (check in-game)<br>
 <details>
 <summary><strong><big>Errata</big></strong></summary>
 
-<!-- Sorted by old limit, new limit, similar changes, then card name A-Z. -->
+Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimited. Errata: `⬇️ nerf`; `⬆️ buff`; `🔄 rework`.
+
+<!-- ORDER BY Cardname-->
 <!-- prettier-ignore -->
-| Cardname | Limit | Changes |
-| --- | --- | --- |
-| Cyber-Stein | 0&nbsp;=&gt;&nbsp;1 | Once per turn; half LP; summon in Defense |
-| Magical Scientist | 0&nbsp;=&gt;&nbsp;1 | Once per turn; no LP cost |
-| Dimension Fusion | 0&nbsp;=&gt;&nbsp;1 | Once per turn; half LP; skip your Battle Phase |
-| Last Will | 0&nbsp;=&gt;&nbsp;1 | Once per turn; skip your Battle Phase |
-| Dark Strike Fighter | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
-| DMOC | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
-| Fishborg Blaster | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
-| Painful Choice | 0&nbsp;=&gt;&nbsp;1 | Once per turn; half LP; select 2 cards |
-| Sinister Serpent | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
-| Witch of the Black Forest | 0&nbsp;=&gt;&nbsp;1 | Once per turn; searches DEF 600 or less |
-| Change of Heart | 0&nbsp;=&gt;&nbsp;1 | Discard 1; skip your Battle Phase |
-| Chaos Emperor Dragon | 0&nbsp;=&gt;&nbsp;1 | Banish 2 LIGHT + 2 DARK; hand Special Summon only; half LP; destroy other cards; both gain 300 LP per card |
-| Imperial Order | 0&nbsp;=&gt;&nbsp;1 | End Phase upkeep; optional 1700 LP |
-| Ring of Destruction | 0&nbsp;=&gt;&nbsp;1 | Pay 1500 LP; both gain destroyed monster's ATK as LP |
-| Yata-Garasu | 0&nbsp;=&gt;&nbsp;1 | Skips Draw Phase only with 2+ cards in hand |
-| Disk Commander | 0&nbsp;=&gt;&nbsp;3 | Once per turn; draw 1 on any Special Summon |
-| Mind Master | 0&nbsp;=&gt;&nbsp;3 | Once per turn |
-| Makyura | 0&nbsp;=&gt;&nbsp;3 | ATK/DEF: 1600/1200 to 1900/1900 |
-| Black Luster Soldier | 1 | Face-up banish only; second attack deals no damage |
-| Brionac | 1 | Once per turn |
-| Dark Hole | 1 | Skip your Battle Phase |
-| Gateway of the Six | 1 | Only 1 counter per summon |
-| Stratos | 1 | Once per turn |
-| Trishula | 1 | Banish up to 2 cards from field; no hand banish |
-| Sangan | 1&nbsp;=&gt;&nbsp;2 | Once per turn |
-| Solemn Warning | 2&nbsp;=&gt;&nbsp;1 | Cost reduced to 1000 LP |
-| Skill Drain | 3&nbsp;=&gt;&nbsp;2 | No LP cost |
+| Cardname | Changes |
+| --- | --- |
+| `1` Black Luster Soldier - Envoy of the Beginning | ⬇️ Face-up banish only; second attack deals no damage |
+| `1` Brionac, Dragon of the Ice Barrier | ⬇️ Once per turn |
+| `1` Change of Heart | ⬇️ Discard 1; skip your Battle Phase |
+| `1` Chaos Emperor Dragon - Envoy of the End | 🔄 Banish 2 LIGHT + 2 DARK; hand Special Summon only; half LP; destroy other cards; both gain 300 LP per card |
+| `1` Cyber-Stein | 🔄 Once per turn; half LP; summon in Defense |
+| `1` Dark Hole | ⬇️ Skip your Battle Phase |
+| `1` Dark Magician of Chaos | ⬇️ Once per turn |
+| `1` Dark Strike Fighter | ⬇️ Once per turn |
+| `3` Destiny HERO - Disk Commander | 🔄 Once per turn; draw 1 on any Special Summon |
+| `1` Dimension Fusion | ⬇️ Once per turn; half LP; skip your Battle Phase |
+| `1` Elemental HERO Stratos | ⬇️ Once per turn |
+| `1` Fishborg Blaster | ⬇️ Once per turn |
+| `1` Gateway of the Six | ⬇️ Only 1 counter per summon |
+| `1` Imperial Order | ⬇️ End Phase upkeep; optional 1700 LP |
+| `1` Last Will | ⬇️ Once per turn; skip your Battle Phase |
+| `1` Magical Scientist | 🔄 Once per turn; no LP cost |
+| `3` Makyura the Destructor | ⬆️ ATK/DEF: 1600/1200 to 1900/1900 |
+| `3` Mind Master | ⬇️ Once per turn |
+| `1` Painful Choice | ⬇️ Once per turn; half LP; select 2 cards |
+| `1` Ring of Destruction | 🔄 Pay 1500 LP; both gain destroyed monster's ATK as LP |
+| `2` Sangan | ⬇️ Once per turn |
+| `1` Sinister Serpent | ⬇️ Once per turn |
+| `2` Skill Drain | ⬆️ No LP cost |
+| `1` Solemn Warning | ⬆️ Cost reduced to 1000 LP |
+| `1` Trishula, Dragon of the Ice Barrier | ⬇️ Banish up to 2 cards from field; no hand banish |
+| `1` Witch of the Black Forest | ⬇️ Once per turn; searches DEF 600 or less |
+| `1` Yata-Garasu | ⬇️ Skips Draw Phase only with 2+ cards in hand |
+
+</details>
+
+<details>
+<summary><strong><big>Banned List</big></strong></summary>
+
+Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimited. Errata: `⬇️ nerf`; `⬆️ buff`; `🔄 rework`.
+
+<!-- ORDER BY Redux, Mar 2011, Sep 2011, Cardname -->
+<!-- prettier-ignore -->
+| Cardname | Mar 2011 | Redux | Sep 2011 | Errata |
+| --- | :---: | :---: | :---: | :---: |
+| Brain Control | `0` | `0` | `0` |  |
+| Card of Safe Return | `0` | `0` | `0` |  |
+| Cold Wave | `0` | `0` | `0` |  |
+| Confiscation | `0` | `0` | `0` |  |
+| Crush Card Virus | `0` | `0` | `0` |  |
+| Cyber Jar | `0` | `0` | `0` |  |
+| Delinquent Duo | `0` | `0` | `0` |  |
+| Exchange of the Spirit | `0` | `0` | `0` |  |
+| Fiber Jar | `0` | `0` | `0` |  |
+| Graceful Charity | `0` | `0` | `0` |  |
+| Harpie's Feather Duster | `0` | `0` | `0` |  |
+| Last Turn | `0` | `0` | `0` |  |
+| Mass Driver | `0` | `0` | `0` |  |
+| Mirage of Nightmare | `0` | `0` | `0` |  |
+| Pot of Greed | `0` | `0` | `0` |  |
+| Raigeki | `0` | `0` | `0` |  |
+| Snatch Steal | `0` | `0` | `0` |  |
+| The Forceful Sentry | `0` | `0` | `0` |  |
+| Thousand-Eyes Restrict | `0` | `0` | `0` |  |
+| Victory Dragon | `0` | `0` | `0` |  |
+| Royal Oppression | `1` | `0` | `0` |  |
+| Exodia the Forbidden One | `1` | `0` | `1` |  |
+| Level Limit - Area B | `1` | `0` | `1` |  |
+| Monster Reborn | `1` | `0` | `1` |  |
+| Trap Dustshoot | `1` | `0` | `1` |  |
+| Wall of Revealing Light | `1` | `0` | `1` |  |
+| Final Countdown | `3` | `0` | `3` |  |
+| Gearfried the Iron Knight | `3` | `0` | `3` |  |
+| Change of Heart | `0` | `1` | `0` | ⬇️ |
+| Chaos Emperor Dragon - Envoy of the End | `0` | `1` | `0` | 🔄 |
+| Cyber-Stein | `0` | `1` | `0` | 🔄 |
+| Dark Magician of Chaos | `0` | `1` | `0` | ⬇️ |
+| Dark Strike Fighter | `0` | `1` | `0` | ⬇️ |
+| Dimension Fusion | `0` | `1` | `0` | ⬇️ |
+| Goyo Guardian | `0` | `1` | `0` |  |
+| Imperial Order | `0` | `1` | `0` | ⬇️ |
+| Last Will | `0` | `1` | `0` | ⬇️ |
+| Magical Scientist | `0` | `1` | `0` | 🔄 |
+| Painful Choice | `0` | `1` | `0` | ⬇️ |
+| Premature Burial | `0` | `1` | `0` |  |
+| Rescue Cat | `0` | `1` | `0` |  |
+| Ring of Destruction | `0` | `1` | `0` | 🔄 |
+| Sinister Serpent | `0` | `1` | `0` | ⬇️ |
+| Substitoad | `0` | `1` | `0` |  |
+| Time Seal | `0` | `1` | `0` |  |
+| Tsukuyomi | `0` | `1` | `0` |  |
+| Witch of the Black Forest | `0` | `1` | `0` | ⬇️ |
+| Yata-Garasu | `0` | `1` | `0` | ⬇️ |
+| Black Luster Soldier - Envoy of the Beginning | `0` | `1` | `1` | ⬇️ |
+| Heavy Storm | `0` | `1` | `1` |  |
+| Giant Trunade | `1` | `1` | `0` |  |
+| Black Whirlwind | `1` | `1` | `1` |  |
+| Blackwing - Gale the Whirlwind | `1` | `1` | `1` |  |
+| Blackwing - Kalut the Moon Shadow | `1` | `1` | `1` |  |
+| Brionac, Dragon of the Ice Barrier | `1` | `1` | `1` | ⬇️ |
+| Card Destruction | `1` | `1` | `1` |  |
+| Ceasefire | `1` | `1` | `1` |  |
+| Charge of the Light Brigade | `1` | `1` | `1` |  |
+| Dark Armed Dragon | `1` | `1` | `1` |  |
+| Dark Hole | `1` | `1` | `1` | ⬇️ |
+| Elemental HERO Stratos | `1` | `1` | `1` | ⬇️ |
+| Future Fusion | `1` | `1` | `1` |  |
+| Gateway of the Six | `1` | `1` | `1` | ⬇️ |
+| Gorz the Emissary of Darkness | `1` | `1` | `1` |  |
+| Honest | `1` | `1` | `1` |  |
+| Infernity Launcher | `1` | `1` | `1` |  |
+| Limiter Removal | `1` | `1` | `1` |  |
+| Magical Explosion | `1` | `1` | `1` |  |
+| Marshmallon | `1` | `1` | `1` |  |
+| Mind Control | `1` | `1` | `1` |  |
+| Mirror Force | `1` | `1` | `1` |  |
+| Morphing Jar | `1` | `1` | `1` |  |
+| Neo-Spacian Grand Mole | `1` | `1` | `1` |  |
+| Solemn Judgment | `1` | `1` | `1` |  |
+| Torrential Tribute | `1` | `1` | `1` |  |
+| Mind Crush | `1` | `1` | `2` |  |
+| Swords of Revealing Light | `1` | `1` | `2` |  |
+| Chain Strike | `2` | `1` | `2` |  |
+| Magic Cylinder | `2` | `1` | `2` |  |
+| Ojama Trio | `2` | `1` | `2` |  |
+| Royal Tribute | `2` | `1` | `2` |  |
+| Solemn Warning | `2` | `1` | `2` | ⬆️ |
+| Mystical Space Typhoon | `2` | `1` | `3` |  |
+| Fishborg Blaster | `3` | `1` | `0` | ⬇️ |
+| Legendary Six Samurai - Shi En | `3` | `1` | `1` |  |
+| Primal Seed | `3` | `1` | `1` |  |
+| Shien's Smoke Signal | `3` | `1` | `1` |  |
+| T.G. Hyper Librarian | `3` | `1` | `1` |  |
+| Trishula, Dragon of the Ice Barrier | `3` | `1` | `1` | ⬇️ |
+| Morphing Jar #2 | `3` | `1` | `2` |  |
+| Black Rose Dragon | `3` | `1` | `3` |  |
+| Deck Devastation Virus | `3` | `1` | `3` |  |
+| E - Emergency Call | `3` | `1` | `3` |  |
+| Eradicator Epidemic Virus | `3` | `1` | `3` |  |
+| Gladiator Beast War Chariot | `3` | `1` | `3` |  |
+| Superancient Deepsea King Coelacanth | `3` | `1` | `3` |  |
+| Symbol of Heritage | `3` | `1` | `3` |  |
+| Butterfly Dagger - Elma | `0` | `2` | `0` |  |
+| Magician of Faith | `0` | `2` | `0` |  |
+| Metamorphosis | `0` | `2` | `0` |  |
+| Advanced Ritual Art | `1` | `2` | `1` |  |
+| Book of Moon | `1` | `2` | `1` |  |
+| Burial from a Different Dimension | `1` | `2` | `1` |  |
+| Dandylion | `1` | `2` | `1` |  |
+| Emergency Teleport | `1` | `2` | `1` |  |
+| Foolish Burial | `1` | `2` | `1` |  |
+| Gladiator Beast Bestiari | `1` | `2` | `1` |  |
+| Lumina, Lightsworn Summoner | `1` | `2` | `1` |  |
+| Mezuki | `1` | `2` | `1` |  |
+| Necroface | `1` | `2` | `1` |  |
+| Night Assailant | `1` | `2` | `1` |  |
+| One for One | `1` | `2` | `1` |  |
+| Plaguespreader Zombie | `1` | `2` | `1` |  |
+| Reasoning | `1` | `2` | `1` |  |
+| Reinforcement of the Army | `1` | `2` | `1` |  |
+| Return from the Different Dimension | `1` | `2` | `1` |  |
+| Sangan | `1` | `2` | `1` | ⬇️ |
+| Scapegoat | `1` | `2` | `1` |  |
+| Call of the Haunted | `1` | `2` | `2` |  |
+| Necro Gardna | `1` | `2` | `2` |  |
+| Lonefire Blossom | `2` | `2` | `1` |  |
+| Archlord Kristya | `2` | `2` | `2` |  |
+| Bottomless Trap Hole | `2` | `2` | `2` |  |
+| Destiny HERO - Malicious | `2` | `2` | `2` |  |
+| Pot of Avarice | `3` | `2` | `1` |  |
+| Dimensional Fissure | `3` | `2` | `3` |  |
+| Macro Cosmos | `3` | `2` | `3` |  |
+| Skill Drain | `3` | `2` | `3` | ⬆️ |
+| Destiny HERO - Disk Commander | `0` | `3` | `0` | 🔄 |
+| Makyura the Destructor | `0` | `3` | `0` | ⬆️ |
+| Temple of the Kings | `0` | `3` | `0` |  |
+| Tribe-Infecting Virus | `0` | `3` | `0` |  |
+| Mind Master | `1` | `3` | `0` | ⬇️ |
+| Allure of Darkness | `1` | `3` | `1` |  |
+| Left Arm of the Forbidden One | `1` | `3` | `1` |  |
+| Left Leg of the Forbidden One | `1` | `3` | `1` |  |
+| Monster Gate | `1` | `3` | `1` |  |
+| Right Arm of the Forbidden One | `1` | `3` | `1` |  |
+| Right Leg of the Forbidden One | `1` | `3` | `1` |  |
+| The Transmigration Prophecy | `1` | `3` | `1` |  |
+| Destiny Draw | `1` | `3` | `2` |  |
+| Summoner Monk | `1` | `3` | `2` |  |
+| Tragoedia | `1` | `3` | `2` |  |
+| Gravity Bind | `1` | `3` | `3` |  |
+| Debris Dragon | `2` | `3` | `1` |  |
+| Card Trooper | `2` | `3` | `2` |  |
+| Magical Stone Excavation | `2` | `3` | `2` |  |
+| Icarus Attack | `2` | `3` | `3` |  |
+| Judgment Dragon | `2` | `3` | `3` |  |
+| Megamorph | `2` | `3` | `3` |  |
+| Overload Fusion | `2` | `3` | `3` |  |
+| Spirit Reaper | `2` | `3` | `3` |  |
+| Formula Synchron | `3` | `3` | `1` |  |
+| Dewloren, Tiger King of the Ice Barrier | `3` | `3` | `2` |  |
 
 </details>
 
