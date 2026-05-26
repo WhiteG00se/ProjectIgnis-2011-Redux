@@ -45,7 +45,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `1` [Solemn Warning](https://yugioh.fandom.com/wiki/Solemn_Warning) | ⬆️ Cost reduced to 1000 LP |
 | `1` [Trishula, Dragon of the Ice Barrier](https://yugioh.fandom.com/wiki/Trishula,_Dragon_of_the_Ice_Barrier) | ⬇️ Banish up to 2 cards from field; no hand banish |
 | `1` [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | ⬇️ Once per turn; searches DEF 600 or less |
-| `1` [Yata-Garasu](https://yugioh.fandom.com/wiki/Yata-Garasu) | ⬇️ Skips Draw Phase only with 2+ cards in hand |
+| `1` [Yata-Garasu](https://yugioh.fandom.com/wiki/Yata-Garasu) | ⬇️ Skips Draw Phase unless opponent has 1 or fewer cards in hand |
 | `2` [Sangan](https://yugioh.fandom.com/wiki/Sangan) | ⬇️ Once per turn |
 | `2` [Skill Drain](https://yugioh.fandom.com/wiki/Skill_Drain) | ⬆️ No LP cost |
 | `3` [Destiny HERO - Disk Commander](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Disk_Commander) | 🔄 Once per turn; draw 1 on any Special Summon |

@@ -50,9 +50,9 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   const yataGarasuTextResult = db
     .prepare("UPDATE texts SET desc = ?, str1 = ?, str2 = ? WHERE id = ?")
     .run(
-      "Cannot be Special Summoned. During the End Phase of the turn this card was Normal Summoned or flipped face-up: Return it to the hand. If this card inflicts battle damage to your opponent: If they have 2 or more cards in their hand during the Draw Phase of their next turn, skip that Draw Phase.",
-      "Skip your opponent's next Draw Phase if they have 2 or more cards in their hand",
-      'Affected by "Yata-Garasu": will skip next Draw Phase with 2 or more cards in hand',
+      "Cannot be Special Summoned. During the End Phase of the turn this card was Normal Summoned or flipped face-up: Return it to the hand. If this card inflicts battle damage to your opponent: Skip their next Draw Phase, unless they have 1 or fewer cards in their hand during that Draw Phase.",
+      "Skip your opponent's next Draw Phase unless they have 1 or fewer cards in their hand",
+      'Affected by "Yata-Garasu": will skip next Draw Phase unless you have 1 or fewer cards in hand',
       3078576,
     );
   const magicalScientistTextResult = db

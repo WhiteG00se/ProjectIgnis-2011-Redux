@@ -21,7 +21,7 @@ function s.skipcon(e)
 	return Duel.GetFieldGroupCount(e:GetLabel(),LOCATION_HAND,0)>=2
 end
 function s.skipop(e,tp,eg,ep,ev,re,r,rp)
-	--Skip next Draw Phase only while the opponent has at least 2 cards in hand
+	--Skip next Draw Phase unless the opponent has 1 or fewer cards in hand
 	local e1=Effect.CreateEffect(e:GetHandler())
 	e1:SetDescription(aux.Stringid(id,1))
 	e1:SetType(EFFECT_TYPE_FIELD)
