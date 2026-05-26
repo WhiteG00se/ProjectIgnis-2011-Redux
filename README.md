@@ -21,203 +21,203 @@ Custom erratas and custom banned list (check below)<br>
 
 Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimited. Errata: `⬇️ nerf`; `⬆️ buff`; `🔄 rework`.
 
-<!-- ORDER BY Cardname-->
+<!-- ORDER BY Redux Limit, Cardname-->
 <!-- prettier-ignore -->
 | Cardname | Changes |
 | --- | --- |
-| `1` Black Luster Soldier - Envoy of the Beginning | ⬇️ Face-up banish only; second attack deals no damage |
-| `1` Brionac, Dragon of the Ice Barrier | ⬇️ Once per turn |
-| `1` Change of Heart | ⬇️ Discard 1; skip your Battle Phase |
-| `1` Chaos Emperor Dragon - Envoy of the End | 🔄 Banish 2 LIGHT + 2 DARK; hand Special Summon only; half LP; destroy other cards; both gain 300 LP per card |
-| `1` Cyber-Stein | 🔄 Once per turn; half LP; summon in Defense |
-| `1` Dark Hole | ⬇️ Skip your Battle Phase |
-| `1` Dark Magician of Chaos | ⬇️ Once per turn |
-| `1` Dark Strike Fighter | ⬇️ Once per turn |
-| `3` Destiny HERO - Disk Commander | 🔄 Once per turn; draw 1 on any Special Summon |
-| `1` Dimension Fusion | ⬇️ Once per turn; half LP; skip your Battle Phase |
-| `1` Elemental HERO Stratos | ⬇️ Once per turn |
-| `1` Fishborg Blaster | ⬇️ Once per turn |
-| `1` Gateway of the Six | ⬇️ Only 1 counter per summon |
-| `1` Imperial Order | ⬇️ End Phase upkeep; optional 1700 LP |
-| `1` Last Will | ⬇️ Once per turn; skip your Battle Phase |
-| `1` Magical Scientist | 🔄 Once per turn; no LP cost |
-| `3` Makyura the Destructor | ⬆️ ATK/DEF: 1600/1200 to 1900/1900 |
-| `3` Mind Master | ⬇️ Once per turn |
-| `1` Painful Choice | ⬇️ Once per turn; half LP; select 2 cards |
-| `1` Ring of Destruction | 🔄 Pay 1500 LP; both gain destroyed monster's ATK as LP |
-| `2` Sangan | ⬇️ Once per turn |
-| `1` Sinister Serpent | ⬇️ Once per turn |
-| `2` Skill Drain | ⬆️ No LP cost |
-| `1` Solemn Warning | ⬆️ Cost reduced to 1000 LP |
-| `1` Trishula, Dragon of the Ice Barrier | ⬇️ Banish up to 2 cards from field; no hand banish |
-| `1` Witch of the Black Forest | ⬇️ Once per turn; searches DEF 600 or less |
-| `1` Yata-Garasu | ⬇️ Skips Draw Phase only with 2+ cards in hand |
+| `1` [Black Luster Soldier - Envoy of the Beginning](https://yugioh.fandom.com/wiki/Black_Luster_Soldier_-_Envoy_of_the_Beginning) | ⬇️ Face-up banish only; second attack deals no damage |
+| `1` [Brionac, Dragon of the Ice Barrier](https://yugioh.fandom.com/wiki/Brionac,_Dragon_of_the_Ice_Barrier) | ⬇️ Once per turn |
+| `1` [Change of Heart](https://yugioh.fandom.com/wiki/Change_of_Heart) | ⬇️ Discard 1; skip your Battle Phase |
+| `1` [Chaos Emperor Dragon - Envoy of the End](https://yugioh.fandom.com/wiki/Chaos_Emperor_Dragon_-_Envoy_of_the_End) | 🔄 Banish 2 LIGHT + 2 DARK; hand Special Summon only; half LP; destroy other cards; both gain 300 LP per card |
+| `1` [Cyber-Stein](https://yugioh.fandom.com/wiki/Cyber-Stein) | 🔄 Once per turn; half LP; summon in Defense |
+| `1` [Dark Hole](https://yugioh.fandom.com/wiki/Dark_Hole) | ⬇️ Skip your Battle Phase |
+| `1` [Dark Magician of Chaos](https://yugioh.fandom.com/wiki/Dark_Magician_of_Chaos) | ⬇️ Once per turn |
+| `1` [Dark Strike Fighter](https://yugioh.fandom.com/wiki/Dark_Strike_Fighter) | ⬇️ Once per turn |
+| `1` [Dimension Fusion](https://yugioh.fandom.com/wiki/Dimension_Fusion) | ⬇️ Once per turn; half LP; skip your Battle Phase |
+| `1` [Elemental HERO Stratos](https://yugioh.fandom.com/wiki/Elemental_HERO_Stratos) | ⬇️ Once per turn |
+| `1` [Fishborg Blaster](https://yugioh.fandom.com/wiki/Fishborg_Blaster) | ⬇️ Once per turn |
+| `1` [Gateway of the Six](https://yugioh.fandom.com/wiki/Gateway_of_the_Six) | ⬇️ Only 1 counter per summon |
+| `1` [Imperial Order](https://yugioh.fandom.com/wiki/Imperial_Order) | ⬇️ End Phase upkeep; optional 1700 LP |
+| `1` [Last Will](https://yugioh.fandom.com/wiki/Last_Will) | ⬇️ Once per turn; skip your Battle Phase |
+| `1` [Magical Scientist](https://yugioh.fandom.com/wiki/Magical_Scientist) | 🔄 Once per turn; no LP cost |
+| `1` [Painful Choice](https://yugioh.fandom.com/wiki/Painful_Choice) | ⬇️ Once per turn; half LP; select 2 cards |
+| `1` [Ring of Destruction](https://yugioh.fandom.com/wiki/Ring_of_Destruction) | 🔄 Pay 1500 LP; both gain destroyed monster's ATK as LP |
+| `1` [Sinister Serpent](https://yugioh.fandom.com/wiki/Sinister_Serpent) | ⬇️ Once per turn |
+| `1` [Solemn Warning](https://yugioh.fandom.com/wiki/Solemn_Warning) | ⬆️ Cost reduced to 1000 LP |
+| `1` [Trishula, Dragon of the Ice Barrier](https://yugioh.fandom.com/wiki/Trishula,_Dragon_of_the_Ice_Barrier) | ⬇️ Banish up to 2 cards from field; no hand banish |
+| `1` [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | ⬇️ Once per turn; searches DEF 600 or less |
+| `1` [Yata-Garasu](https://yugioh.fandom.com/wiki/Yata-Garasu) | ⬇️ Skips Draw Phase only with 2+ cards in hand |
+| `2` [Sangan](https://yugioh.fandom.com/wiki/Sangan) | ⬇️ Once per turn |
+| `2` [Skill Drain](https://yugioh.fandom.com/wiki/Skill_Drain) | ⬆️ No LP cost |
+| `3` [Destiny HERO - Disk Commander](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Disk_Commander) | 🔄 Once per turn; draw 1 on any Special Summon |
+| `3` [Makyura the Destructor](https://yugioh.fandom.com/wiki/Makyura_the_Destructor) | ⬆️ ATK/DEF: 1600/1200 to 1900/1900 |
+| `3` [Mind Master](https://yugioh.fandom.com/wiki/Mind_Master) | ⬇️ Once per turn |
 
 </details>
 
 <details>
 <summary><strong><big>Banned List</big></strong></summary>
 
-Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimited. Errata: `⬇️ nerf`; `⬆️ buff`; `🔄 rework`.
+Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimited. Errata: `⬇️ nerf`; `⬆️ buff`; `🔄 rework`.
 
 <!-- ORDER BY Redux, Mar 2011, Sep 2011, Cardname -->
 <!-- prettier-ignore -->
 | Cardname | Mar 2011 | Redux | Sep 2011 | Errata |
 | --- | :---: | :---: | :---: | :---: |
-| Brain Control | `0` | `0` | `0` |  |
-| Card of Safe Return | `0` | `0` | `0` |  |
-| Cold Wave | `0` | `0` | `0` |  |
-| Confiscation | `0` | `0` | `0` |  |
-| Crush Card Virus | `0` | `0` | `0` |  |
-| Cyber Jar | `0` | `0` | `0` |  |
-| Delinquent Duo | `0` | `0` | `0` |  |
-| Exchange of the Spirit | `0` | `0` | `0` |  |
-| Fiber Jar | `0` | `0` | `0` |  |
-| Graceful Charity | `0` | `0` | `0` |  |
-| Harpie's Feather Duster | `0` | `0` | `0` |  |
-| Last Turn | `0` | `0` | `0` |  |
-| Mass Driver | `0` | `0` | `0` |  |
-| Mirage of Nightmare | `0` | `0` | `0` |  |
-| Pot of Greed | `0` | `0` | `0` |  |
-| Raigeki | `0` | `0` | `0` |  |
-| Snatch Steal | `0` | `0` | `0` |  |
-| The Forceful Sentry | `0` | `0` | `0` |  |
-| Thousand-Eyes Restrict | `0` | `0` | `0` |  |
-| Victory Dragon | `0` | `0` | `0` |  |
-| Royal Oppression | `1` | `0` | `0` |  |
-| Exodia the Forbidden One | `1` | `0` | `1` |  |
-| Level Limit - Area B | `1` | `0` | `1` |  |
-| Monster Reborn | `1` | `0` | `1` |  |
-| Trap Dustshoot | `1` | `0` | `1` |  |
-| Wall of Revealing Light | `1` | `0` | `1` |  |
-| Final Countdown | `3` | `0` | `3` |  |
-| Gearfried the Iron Knight | `3` | `0` | `3` |  |
-| Change of Heart | `0` | `1` | `0` | ⬇️ |
-| Chaos Emperor Dragon - Envoy of the End | `0` | `1` | `0` | 🔄 |
-| Cyber-Stein | `0` | `1` | `0` | 🔄 |
-| Dark Magician of Chaos | `0` | `1` | `0` | ⬇️ |
-| Dark Strike Fighter | `0` | `1` | `0` | ⬇️ |
-| Dimension Fusion | `0` | `1` | `0` | ⬇️ |
-| Goyo Guardian | `0` | `1` | `0` |  |
-| Imperial Order | `0` | `1` | `0` | ⬇️ |
-| Last Will | `0` | `1` | `0` | ⬇️ |
-| Magical Scientist | `0` | `1` | `0` | 🔄 |
-| Painful Choice | `0` | `1` | `0` | ⬇️ |
-| Premature Burial | `0` | `1` | `0` |  |
-| Rescue Cat | `0` | `1` | `0` |  |
-| Ring of Destruction | `0` | `1` | `0` | 🔄 |
-| Sinister Serpent | `0` | `1` | `0` | ⬇️ |
-| Substitoad | `0` | `1` | `0` |  |
-| Time Seal | `0` | `1` | `0` |  |
-| Tsukuyomi | `0` | `1` | `0` |  |
-| Witch of the Black Forest | `0` | `1` | `0` | ⬇️ |
-| Yata-Garasu | `0` | `1` | `0` | ⬇️ |
-| Black Luster Soldier - Envoy of the Beginning | `0` | `1` | `1` | ⬇️ |
-| Heavy Storm | `0` | `1` | `1` |  |
-| Giant Trunade | `1` | `1` | `0` |  |
-| Black Whirlwind | `1` | `1` | `1` |  |
-| Blackwing - Gale the Whirlwind | `1` | `1` | `1` |  |
-| Blackwing - Kalut the Moon Shadow | `1` | `1` | `1` |  |
-| Brionac, Dragon of the Ice Barrier | `1` | `1` | `1` | ⬇️ |
-| Card Destruction | `1` | `1` | `1` |  |
-| Ceasefire | `1` | `1` | `1` |  |
-| Charge of the Light Brigade | `1` | `1` | `1` |  |
-| Dark Armed Dragon | `1` | `1` | `1` |  |
-| Dark Hole | `1` | `1` | `1` | ⬇️ |
-| Elemental HERO Stratos | `1` | `1` | `1` | ⬇️ |
-| Future Fusion | `1` | `1` | `1` |  |
-| Gateway of the Six | `1` | `1` | `1` | ⬇️ |
-| Gorz the Emissary of Darkness | `1` | `1` | `1` |  |
-| Honest | `1` | `1` | `1` |  |
-| Infernity Launcher | `1` | `1` | `1` |  |
-| Limiter Removal | `1` | `1` | `1` |  |
-| Magical Explosion | `1` | `1` | `1` |  |
-| Marshmallon | `1` | `1` | `1` |  |
-| Mind Control | `1` | `1` | `1` |  |
-| Mirror Force | `1` | `1` | `1` |  |
-| Morphing Jar | `1` | `1` | `1` |  |
-| Neo-Spacian Grand Mole | `1` | `1` | `1` |  |
-| Solemn Judgment | `1` | `1` | `1` |  |
-| Torrential Tribute | `1` | `1` | `1` |  |
-| Mind Crush | `1` | `1` | `2` |  |
-| Swords of Revealing Light | `1` | `1` | `2` |  |
-| Chain Strike | `2` | `1` | `2` |  |
-| Magic Cylinder | `2` | `1` | `2` |  |
-| Ojama Trio | `2` | `1` | `2` |  |
-| Royal Tribute | `2` | `1` | `2` |  |
-| Solemn Warning | `2` | `1` | `2` | ⬆️ |
-| Mystical Space Typhoon | `2` | `1` | `3` |  |
-| Fishborg Blaster | `3` | `1` | `0` | ⬇️ |
-| Legendary Six Samurai - Shi En | `3` | `1` | `1` |  |
-| Primal Seed | `3` | `1` | `1` |  |
-| Shien's Smoke Signal | `3` | `1` | `1` |  |
-| T.G. Hyper Librarian | `3` | `1` | `1` |  |
-| Trishula, Dragon of the Ice Barrier | `3` | `1` | `1` | ⬇️ |
-| Morphing Jar #2 | `3` | `1` | `2` |  |
-| Black Rose Dragon | `3` | `1` | `3` |  |
-| Deck Devastation Virus | `3` | `1` | `3` |  |
-| E - Emergency Call | `3` | `1` | `3` |  |
-| Eradicator Epidemic Virus | `3` | `1` | `3` |  |
-| Gladiator Beast War Chariot | `3` | `1` | `3` |  |
-| Superancient Deepsea King Coelacanth | `3` | `1` | `3` |  |
-| Symbol of Heritage | `3` | `1` | `3` |  |
-| Butterfly Dagger - Elma | `0` | `2` | `0` |  |
-| Magician of Faith | `0` | `2` | `0` |  |
-| Metamorphosis | `0` | `2` | `0` |  |
-| Advanced Ritual Art | `1` | `2` | `1` |  |
-| Book of Moon | `1` | `2` | `1` |  |
-| Burial from a Different Dimension | `1` | `2` | `1` |  |
-| Dandylion | `1` | `2` | `1` |  |
-| Emergency Teleport | `1` | `2` | `1` |  |
-| Foolish Burial | `1` | `2` | `1` |  |
-| Gladiator Beast Bestiari | `1` | `2` | `1` |  |
-| Lumina, Lightsworn Summoner | `1` | `2` | `1` |  |
-| Mezuki | `1` | `2` | `1` |  |
-| Necroface | `1` | `2` | `1` |  |
-| Night Assailant | `1` | `2` | `1` |  |
-| One for One | `1` | `2` | `1` |  |
-| Plaguespreader Zombie | `1` | `2` | `1` |  |
-| Reasoning | `1` | `2` | `1` |  |
-| Reinforcement of the Army | `1` | `2` | `1` |  |
-| Return from the Different Dimension | `1` | `2` | `1` |  |
-| Sangan | `1` | `2` | `1` | ⬇️ |
-| Scapegoat | `1` | `2` | `1` |  |
-| Call of the Haunted | `1` | `2` | `2` |  |
-| Necro Gardna | `1` | `2` | `2` |  |
-| Lonefire Blossom | `2` | `2` | `1` |  |
-| Archlord Kristya | `2` | `2` | `2` |  |
-| Bottomless Trap Hole | `2` | `2` | `2` |  |
-| Destiny HERO - Malicious | `2` | `2` | `2` |  |
-| Pot of Avarice | `3` | `2` | `1` |  |
-| Dimensional Fissure | `3` | `2` | `3` |  |
-| Macro Cosmos | `3` | `2` | `3` |  |
-| Skill Drain | `3` | `2` | `3` | ⬆️ |
-| Destiny HERO - Disk Commander | `0` | `3` | `0` | 🔄 |
-| Makyura the Destructor | `0` | `3` | `0` | ⬆️ |
-| Temple of the Kings | `0` | `3` | `0` |  |
-| Tribe-Infecting Virus | `0` | `3` | `0` |  |
-| Mind Master | `1` | `3` | `0` | ⬇️ |
-| Allure of Darkness | `1` | `3` | `1` |  |
-| Left Arm of the Forbidden One | `1` | `3` | `1` |  |
-| Left Leg of the Forbidden One | `1` | `3` | `1` |  |
-| Monster Gate | `1` | `3` | `1` |  |
-| Right Arm of the Forbidden One | `1` | `3` | `1` |  |
-| Right Leg of the Forbidden One | `1` | `3` | `1` |  |
-| The Transmigration Prophecy | `1` | `3` | `1` |  |
-| Destiny Draw | `1` | `3` | `2` |  |
-| Summoner Monk | `1` | `3` | `2` |  |
-| Tragoedia | `1` | `3` | `2` |  |
-| Gravity Bind | `1` | `3` | `3` |  |
-| Debris Dragon | `2` | `3` | `1` |  |
-| Card Trooper | `2` | `3` | `2` |  |
-| Magical Stone Excavation | `2` | `3` | `2` |  |
-| Icarus Attack | `2` | `3` | `3` |  |
-| Judgment Dragon | `2` | `3` | `3` |  |
-| Megamorph | `2` | `3` | `3` |  |
-| Overload Fusion | `2` | `3` | `3` |  |
-| Spirit Reaper | `2` | `3` | `3` |  |
-| Formula Synchron | `3` | `3` | `1` |  |
-| Dewloren, Tiger King of the Ice Barrier | `3` | `3` | `2` |  |
+| [Brain Control](https://yugioh.fandom.com/wiki/Brain_Control) | 0 | `0` | 0 |  |
+| [Card of Safe Return](https://yugioh.fandom.com/wiki/Card_of_Safe_Return) | 0 | `0` | 0 |  |
+| [Cold Wave](https://yugioh.fandom.com/wiki/Cold_Wave) | 0 | `0` | 0 |  |
+| [Confiscation](https://yugioh.fandom.com/wiki/Confiscation) | 0 | `0` | 0 |  |
+| [Crush Card Virus](https://yugioh.fandom.com/wiki/Crush_Card_Virus) | 0 | `0` | 0 |  |
+| [Cyber Jar](https://yugioh.fandom.com/wiki/Cyber_Jar) | 0 | `0` | 0 |  |
+| [Delinquent Duo](https://yugioh.fandom.com/wiki/Delinquent_Duo) | 0 | `0` | 0 |  |
+| [Exchange of the Spirit](https://yugioh.fandom.com/wiki/Exchange_of_the_Spirit) | 0 | `0` | 0 |  |
+| [Fiber Jar](https://yugioh.fandom.com/wiki/Fiber_Jar) | 0 | `0` | 0 |  |
+| [Graceful Charity](https://yugioh.fandom.com/wiki/Graceful_Charity) | 0 | `0` | 0 |  |
+| [Harpie's Feather Duster](https://yugioh.fandom.com/wiki/Harpie's_Feather_Duster) | 0 | `0` | 0 |  |
+| [Last Turn](https://yugioh.fandom.com/wiki/Last_Turn) | 0 | `0` | 0 |  |
+| [Mass Driver](https://yugioh.fandom.com/wiki/Mass_Driver) | 0 | `0` | 0 |  |
+| [Mirage of Nightmare](https://yugioh.fandom.com/wiki/Mirage_of_Nightmare) | 0 | `0` | 0 |  |
+| [Pot of Greed](https://yugioh.fandom.com/wiki/Pot_of_Greed) | 0 | `0` | 0 |  |
+| [Raigeki](https://yugioh.fandom.com/wiki/Raigeki) | 0 | `0` | 0 |  |
+| [Snatch Steal](https://yugioh.fandom.com/wiki/Snatch_Steal) | 0 | `0` | 0 |  |
+| [The Forceful Sentry](https://yugioh.fandom.com/wiki/The_Forceful_Sentry) | 0 | `0` | 0 |  |
+| [Thousand-Eyes Restrict](https://yugioh.fandom.com/wiki/Thousand-Eyes_Restrict) | 0 | `0` | 0 |  |
+| [Victory Dragon](https://yugioh.fandom.com/wiki/Victory_Dragon) | 0 | `0` | 0 |  |
+| [Royal Oppression](https://yugioh.fandom.com/wiki/Royal_Oppression) | 1 | `0` | 0 |  |
+| [Exodia the Forbidden One](https://yugioh.fandom.com/wiki/Exodia_the_Forbidden_One) | 1 | `0` | 1 |  |
+| [Level Limit - Area B](https://yugioh.fandom.com/wiki/Level_Limit_-_Area_B) | 1 | `0` | 1 |  |
+| [Monster Reborn](https://yugioh.fandom.com/wiki/Monster_Reborn) | 1 | `0` | 1 |  |
+| [Trap Dustshoot](https://yugioh.fandom.com/wiki/Trap_Dustshoot) | 1 | `0` | 1 |  |
+| [Wall of Revealing Light](https://yugioh.fandom.com/wiki/Wall_of_Revealing_Light) | 1 | `0` | 1 |  |
+| [Final Countdown](https://yugioh.fandom.com/wiki/Final_Countdown) | 3 | `0` | 3 |  |
+| [Gearfried the Iron Knight](https://yugioh.fandom.com/wiki/Gearfried_the_Iron_Knight) | 3 | `0` | 3 |  |
+| [Change of Heart](https://yugioh.fandom.com/wiki/Change_of_Heart) | 0 | `1` | 0 | ⬇️ |
+| [Chaos Emperor Dragon - Envoy of the End](https://yugioh.fandom.com/wiki/Chaos_Emperor_Dragon_-_Envoy_of_the_End) | 0 | `1` | 0 | 🔄 |
+| [Cyber-Stein](https://yugioh.fandom.com/wiki/Cyber-Stein) | 0 | `1` | 0 | 🔄 |
+| [Dark Magician of Chaos](https://yugioh.fandom.com/wiki/Dark_Magician_of_Chaos) | 0 | `1` | 0 | ⬇️ |
+| [Dark Strike Fighter](https://yugioh.fandom.com/wiki/Dark_Strike_Fighter) | 0 | `1` | 0 | ⬇️ |
+| [Dimension Fusion](https://yugioh.fandom.com/wiki/Dimension_Fusion) | 0 | `1` | 0 | ⬇️ |
+| [Goyo Guardian](https://yugioh.fandom.com/wiki/Goyo_Guardian) | 0 | `1` | 0 |  |
+| [Imperial Order](https://yugioh.fandom.com/wiki/Imperial_Order) | 0 | `1` | 0 | ⬇️ |
+| [Last Will](https://yugioh.fandom.com/wiki/Last_Will) | 0 | `1` | 0 | ⬇️ |
+| [Magical Scientist](https://yugioh.fandom.com/wiki/Magical_Scientist) | 0 | `1` | 0 | 🔄 |
+| [Painful Choice](https://yugioh.fandom.com/wiki/Painful_Choice) | 0 | `1` | 0 | ⬇️ |
+| [Premature Burial](https://yugioh.fandom.com/wiki/Premature_Burial) | 0 | `1` | 0 |  |
+| [Rescue Cat](https://yugioh.fandom.com/wiki/Rescue_Cat) | 0 | `1` | 0 |  |
+| [Ring of Destruction](https://yugioh.fandom.com/wiki/Ring_of_Destruction) | 0 | `1` | 0 | 🔄 |
+| [Sinister Serpent](https://yugioh.fandom.com/wiki/Sinister_Serpent) | 0 | `1` | 0 | ⬇️ |
+| [Substitoad](https://yugioh.fandom.com/wiki/Substitoad) | 0 | `1` | 0 |  |
+| [Time Seal](https://yugioh.fandom.com/wiki/Time_Seal) | 0 | `1` | 0 |  |
+| [Tsukuyomi](https://yugioh.fandom.com/wiki/Tsukuyomi) | 0 | `1` | 0 |  |
+| [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | 0 | `1` | 0 | ⬇️ |
+| [Yata-Garasu](https://yugioh.fandom.com/wiki/Yata-Garasu) | 0 | `1` | 0 | ⬇️ |
+| [Black Luster Soldier - Envoy of the Beginning](https://yugioh.fandom.com/wiki/Black_Luster_Soldier_-_Envoy_of_the_Beginning) | 0 | `1` | 1 | ⬇️ |
+| [Heavy Storm](https://yugioh.fandom.com/wiki/Heavy_Storm) | 0 | `1` | 1 |  |
+| [Giant Trunade](https://yugioh.fandom.com/wiki/Giant_Trunade) | 1 | `1` | 0 |  |
+| [Black Whirlwind](https://yugioh.fandom.com/wiki/Black_Whirlwind) | 1 | `1` | 1 |  |
+| [Blackwing - Gale the Whirlwind](https://yugioh.fandom.com/wiki/Blackwing_-_Gale_the_Whirlwind) | 1 | `1` | 1 |  |
+| [Blackwing - Kalut the Moon Shadow](https://yugioh.fandom.com/wiki/Blackwing_-_Kalut_the_Moon_Shadow) | 1 | `1` | 1 |  |
+| [Brionac, Dragon of the Ice Barrier](https://yugioh.fandom.com/wiki/Brionac,_Dragon_of_the_Ice_Barrier) | 1 | `1` | 1 | ⬇️ |
+| [Card Destruction](https://yugioh.fandom.com/wiki/Card_Destruction) | 1 | `1` | 1 |  |
+| [Ceasefire](https://yugioh.fandom.com/wiki/Ceasefire) | 1 | `1` | 1 |  |
+| [Charge of the Light Brigade](https://yugioh.fandom.com/wiki/Charge_of_the_Light_Brigade) | 1 | `1` | 1 |  |
+| [Dark Armed Dragon](https://yugioh.fandom.com/wiki/Dark_Armed_Dragon) | 1 | `1` | 1 |  |
+| [Dark Hole](https://yugioh.fandom.com/wiki/Dark_Hole) | 1 | `1` | 1 | ⬇️ |
+| [Elemental HERO Stratos](https://yugioh.fandom.com/wiki/Elemental_HERO_Stratos) | 1 | `1` | 1 | ⬇️ |
+| [Future Fusion](https://yugioh.fandom.com/wiki/Future_Fusion) | 1 | `1` | 1 |  |
+| [Gateway of the Six](https://yugioh.fandom.com/wiki/Gateway_of_the_Six) | 1 | `1` | 1 | ⬇️ |
+| [Gorz the Emissary of Darkness](https://yugioh.fandom.com/wiki/Gorz_the_Emissary_of_Darkness) | 1 | `1` | 1 |  |
+| [Honest](https://yugioh.fandom.com/wiki/Honest) | 1 | `1` | 1 |  |
+| [Infernity Launcher](https://yugioh.fandom.com/wiki/Infernity_Launcher) | 1 | `1` | 1 |  |
+| [Limiter Removal](https://yugioh.fandom.com/wiki/Limiter_Removal) | 1 | `1` | 1 |  |
+| [Magical Explosion](https://yugioh.fandom.com/wiki/Magical_Explosion) | 1 | `1` | 1 |  |
+| [Marshmallon](https://yugioh.fandom.com/wiki/Marshmallon) | 1 | `1` | 1 |  |
+| [Mind Control](https://yugioh.fandom.com/wiki/Mind_Control) | 1 | `1` | 1 |  |
+| [Mirror Force](https://yugioh.fandom.com/wiki/Mirror_Force) | 1 | `1` | 1 |  |
+| [Morphing Jar](https://yugioh.fandom.com/wiki/Morphing_Jar) | 1 | `1` | 1 |  |
+| [Neo-Spacian Grand Mole](https://yugioh.fandom.com/wiki/Neo-Spacian_Grand_Mole) | 1 | `1` | 1 |  |
+| [Solemn Judgment](https://yugioh.fandom.com/wiki/Solemn_Judgment) | 1 | `1` | 1 |  |
+| [Torrential Tribute](https://yugioh.fandom.com/wiki/Torrential_Tribute) | 1 | `1` | 1 |  |
+| [Mind Crush](https://yugioh.fandom.com/wiki/Mind_Crush) | 1 | `1` | 2 |  |
+| [Swords of Revealing Light](https://yugioh.fandom.com/wiki/Swords_of_Revealing_Light) | 1 | `1` | 2 |  |
+| [Chain Strike](https://yugioh.fandom.com/wiki/Chain_Strike) | 2 | `1` | 2 |  |
+| [Magic Cylinder](https://yugioh.fandom.com/wiki/Magic_Cylinder) | 2 | `1` | 2 |  |
+| [Ojama Trio](https://yugioh.fandom.com/wiki/Ojama_Trio) | 2 | `1` | 2 |  |
+| [Royal Tribute](https://yugioh.fandom.com/wiki/Royal_Tribute) | 2 | `1` | 2 |  |
+| [Solemn Warning](https://yugioh.fandom.com/wiki/Solemn_Warning) | 2 | `1` | 2 | ⬆️ |
+| [Mystical Space Typhoon](https://yugioh.fandom.com/wiki/Mystical_Space_Typhoon) | 2 | `1` | 3 |  |
+| [Fishborg Blaster](https://yugioh.fandom.com/wiki/Fishborg_Blaster) | 3 | `1` | 0 | ⬇️ |
+| [Legendary Six Samurai - Shi En](https://yugioh.fandom.com/wiki/Legendary_Six_Samurai_-_Shi_En) | 3 | `1` | 1 |  |
+| [Primal Seed](https://yugioh.fandom.com/wiki/Primal_Seed) | 3 | `1` | 1 |  |
+| [Shien's Smoke Signal](https://yugioh.fandom.com/wiki/Shien's_Smoke_Signal) | 3 | `1` | 1 |  |
+| [T.G. Hyper Librarian](https://yugioh.fandom.com/wiki/T.G._Hyper_Librarian) | 3 | `1` | 1 |  |
+| [Trishula, Dragon of the Ice Barrier](https://yugioh.fandom.com/wiki/Trishula,_Dragon_of_the_Ice_Barrier) | 3 | `1` | 1 | ⬇️ |
+| [Morphing Jar #2](https://yugioh.fandom.com/wiki/Morphing_Jar_2) | 3 | `1` | 2 |  |
+| [Black Rose Dragon](https://yugioh.fandom.com/wiki/Black_Rose_Dragon) | 3 | `1` | 3 |  |
+| [Deck Devastation Virus](https://yugioh.fandom.com/wiki/Deck_Devastation_Virus) | 3 | `1` | 3 |  |
+| [E - Emergency Call](https://yugioh.fandom.com/wiki/E_-_Emergency_Call) | 3 | `1` | 3 |  |
+| [Eradicator Epidemic Virus](https://yugioh.fandom.com/wiki/Eradicator_Epidemic_Virus) | 3 | `1` | 3 |  |
+| [Gladiator Beast War Chariot](https://yugioh.fandom.com/wiki/Gladiator_Beast_War_Chariot) | 3 | `1` | 3 |  |
+| [Superancient Deepsea King Coelacanth](https://yugioh.fandom.com/wiki/Superancient_Deepsea_King_Coelacanth) | 3 | `1` | 3 |  |
+| [Symbol of Heritage](https://yugioh.fandom.com/wiki/Symbol_of_Heritage) | 3 | `1` | 3 |  |
+| [Butterfly Dagger - Elma](https://yugioh.fandom.com/wiki/Butterfly_Dagger_-_Elma) | 0 | `2` | 0 |  |
+| [Magician of Faith](https://yugioh.fandom.com/wiki/Magician_of_Faith) | 0 | `2` | 0 |  |
+| [Metamorphosis](https://yugioh.fandom.com/wiki/Metamorphosis) | 0 | `2` | 0 |  |
+| [Advanced Ritual Art](https://yugioh.fandom.com/wiki/Advanced_Ritual_Art) | 1 | `2` | 1 |  |
+| [Book of Moon](https://yugioh.fandom.com/wiki/Book_of_Moon) | 1 | `2` | 1 |  |
+| [Burial from a Different Dimension](https://yugioh.fandom.com/wiki/Burial_from_a_Different_Dimension) | 1 | `2` | 1 |  |
+| [Dandylion](https://yugioh.fandom.com/wiki/Dandylion) | 1 | `2` | 1 |  |
+| [Emergency Teleport](https://yugioh.fandom.com/wiki/Emergency_Teleport) | 1 | `2` | 1 |  |
+| [Foolish Burial](https://yugioh.fandom.com/wiki/Foolish_Burial) | 1 | `2` | 1 |  |
+| [Gladiator Beast Bestiari](https://yugioh.fandom.com/wiki/Gladiator_Beast_Bestiari) | 1 | `2` | 1 |  |
+| [Lumina, Lightsworn Summoner](https://yugioh.fandom.com/wiki/Lumina,_Lightsworn_Summoner) | 1 | `2` | 1 |  |
+| [Mezuki](https://yugioh.fandom.com/wiki/Mezuki) | 1 | `2` | 1 |  |
+| [Necroface](https://yugioh.fandom.com/wiki/Necroface) | 1 | `2` | 1 |  |
+| [Night Assailant](https://yugioh.fandom.com/wiki/Night_Assailant) | 1 | `2` | 1 |  |
+| [One for One](https://yugioh.fandom.com/wiki/One_for_One) | 1 | `2` | 1 |  |
+| [Plaguespreader Zombie](https://yugioh.fandom.com/wiki/Plaguespreader_Zombie) | 1 | `2` | 1 |  |
+| [Reasoning](https://yugioh.fandom.com/wiki/Reasoning) | 1 | `2` | 1 |  |
+| [Reinforcement of the Army](https://yugioh.fandom.com/wiki/Reinforcement_of_the_Army) | 1 | `2` | 1 |  |
+| [Return from the Different Dimension](https://yugioh.fandom.com/wiki/Return_from_the_Different_Dimension) | 1 | `2` | 1 |  |
+| [Sangan](https://yugioh.fandom.com/wiki/Sangan) | 1 | `2` | 1 | ⬇️ |
+| [Scapegoat](https://yugioh.fandom.com/wiki/Scapegoat) | 1 | `2` | 1 |  |
+| [Call of the Haunted](https://yugioh.fandom.com/wiki/Call_of_the_Haunted) | 1 | `2` | 2 |  |
+| [Necro Gardna](https://yugioh.fandom.com/wiki/Necro_Gardna) | 1 | `2` | 2 |  |
+| [Lonefire Blossom](https://yugioh.fandom.com/wiki/Lonefire_Blossom) | 2 | `2` | 1 |  |
+| [Archlord Kristya](https://yugioh.fandom.com/wiki/Archlord_Kristya) | 2 | `2` | 2 |  |
+| [Bottomless Trap Hole](https://yugioh.fandom.com/wiki/Bottomless_Trap_Hole) | 2 | `2` | 2 |  |
+| [Destiny HERO - Malicious](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Malicious) | 2 | `2` | 2 |  |
+| [Formula Synchron](https://yugioh.fandom.com/wiki/Formula_Synchron) | 3 | `2` | 1 |  |
+| [Pot of Avarice](https://yugioh.fandom.com/wiki/Pot_of_Avarice) | 3 | `2` | 1 |  |
+| [Dimensional Fissure](https://yugioh.fandom.com/wiki/Dimensional_Fissure) | 3 | `2` | 3 |  |
+| [Macro Cosmos](https://yugioh.fandom.com/wiki/Macro_Cosmos) | 3 | `2` | 3 |  |
+| [Skill Drain](https://yugioh.fandom.com/wiki/Skill_Drain) | 3 | `2` | 3 | ⬆️ |
+| [Destiny HERO - Disk Commander](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Disk_Commander) | 0 | `3` | 0 | 🔄 |
+| [Makyura the Destructor](https://yugioh.fandom.com/wiki/Makyura_the_Destructor) | 0 | `3` | 0 | ⬆️ |
+| [Temple of the Kings](https://yugioh.fandom.com/wiki/Temple_of_the_Kings) | 0 | `3` | 0 |  |
+| [Tribe-Infecting Virus](https://yugioh.fandom.com/wiki/Tribe-Infecting_Virus) | 0 | `3` | 0 |  |
+| [Mind Master](https://yugioh.fandom.com/wiki/Mind_Master) | 1 | `3` | 0 | ⬇️ |
+| [Allure of Darkness](https://yugioh.fandom.com/wiki/Allure_of_Darkness) | 1 | `3` | 1 |  |
+| [Left Arm of the Forbidden One](https://yugioh.fandom.com/wiki/Left_Arm_of_the_Forbidden_One) | 1 | `3` | 1 |  |
+| [Left Leg of the Forbidden One](https://yugioh.fandom.com/wiki/Left_Leg_of_the_Forbidden_One) | 1 | `3` | 1 |  |
+| [Monster Gate](https://yugioh.fandom.com/wiki/Monster_Gate) | 1 | `3` | 1 |  |
+| [Right Arm of the Forbidden One](https://yugioh.fandom.com/wiki/Right_Arm_of_the_Forbidden_One) | 1 | `3` | 1 |  |
+| [Right Leg of the Forbidden One](https://yugioh.fandom.com/wiki/Right_Leg_of_the_Forbidden_One) | 1 | `3` | 1 |  |
+| [The Transmigration Prophecy](https://yugioh.fandom.com/wiki/The_Transmigration_Prophecy) | 1 | `3` | 1 |  |
+| [Destiny Draw](https://yugioh.fandom.com/wiki/Destiny_Draw) | 1 | `3` | 2 |  |
+| [Summoner Monk](https://yugioh.fandom.com/wiki/Summoner_Monk) | 1 | `3` | 2 |  |
+| [Tragoedia](https://yugioh.fandom.com/wiki/Tragoedia) | 1 | `3` | 2 |  |
+| [Gravity Bind](https://yugioh.fandom.com/wiki/Gravity_Bind) | 1 | `3` | 3 |  |
+| [Debris Dragon](https://yugioh.fandom.com/wiki/Debris_Dragon) | 2 | `3` | 1 |  |
+| [Card Trooper](https://yugioh.fandom.com/wiki/Card_Trooper) | 2 | `3` | 2 |  |
+| [Magical Stone Excavation](https://yugioh.fandom.com/wiki/Magical_Stone_Excavation) | 2 | `3` | 2 |  |
+| [Icarus Attack](https://yugioh.fandom.com/wiki/Icarus_Attack) | 2 | `3` | 3 |  |
+| [Judgment Dragon](https://yugioh.fandom.com/wiki/Judgment_Dragon) | 2 | `3` | 3 |  |
+| [Megamorph](https://yugioh.fandom.com/wiki/Megamorph) | 2 | `3` | 3 |  |
+| [Overload Fusion](https://yugioh.fandom.com/wiki/Overload_Fusion) | 2 | `3` | 3 |  |
+| [Spirit Reaper](https://yugioh.fandom.com/wiki/Spirit_Reaper) | 2 | `3` | 3 |  |
+| [Dewloren, Tiger King of the Ice Barrier](https://yugioh.fandom.com/wiki/Dewloren,_Tiger_King_of_the_Ice_Barrier) | 3 | `3` | 2 |  |
 
 </details>
 
