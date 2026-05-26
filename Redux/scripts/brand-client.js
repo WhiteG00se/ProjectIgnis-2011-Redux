@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
+const { patchClientBinary } = require("./patch-client-rules");
+
 const repoRoot = path.resolve(__dirname, "..", "..");
 const source = path.join(repoRoot, "EDOPro.exe");
 const output = path.join(repoRoot, "Ignis-Redux-11.exe");
@@ -77,6 +79,7 @@ replaceExactTerminatedUtf16(
   "Project Ignis: EDOPro, the bleeding-edge automatic duel simulator",
   brandName,
 );
+patchClientBinary(binary);
 
 fs.writeFileSync(output, binary);
 fs.unlinkSync(source);

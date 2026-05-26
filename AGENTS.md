@@ -86,7 +86,9 @@ reapplied or preserved when refreshing files from upstream:
   its upstream `Original filename` metadata remains `EDOPro.exe`. After adding
   a refreshed upstream `EDOPro.exe` at the repository root, run
   `node .\Redux\scripts\brand-client.js` to apply the branding and replace it
-  with the fork-named executable.
+  with the fork-named executable. That script also changes the client's
+  built-in Master Rule 1 duel preset into the default `Redux-11` ruleset:
+  Master Rule 1 with first-turn draw disabled.
 - The custom LF list is generated as `Redux/modded/Redux-11.lflist.conf` and
   displays as `Redux-11`. The intentionally immutable baseline remains
   `Redux/vanilla/2011-Redux.lflist.conf`; its name is transformed only by
