@@ -51,6 +51,9 @@ For new Redux changes:
 5. Verify generated output after the build, and verify behavior in EDOPro when
    runtime load order or effect behavior matters.
 
+In the `README.md` errata table, describe changes in short and simplistic summary phrases (easy language)
+consistent with the existing entries rather than full card-text wording.
+
 Legacy / pre-errata cards may come from supplemental baseline databases such as
 `cards-unofficial.cdb`, not only `cards.cdb`.
 

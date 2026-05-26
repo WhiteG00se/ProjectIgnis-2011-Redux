@@ -16,29 +16,29 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   const lastWillTextResult = db
     .prepare("UPDATE texts SET desc = ?, str2 = ? WHERE id = ?")
     .run(
-      'If a monster on your side of the field was sent to your Graveyard this turn, you can Special Summon 1 monster with an ATK of 1500 points or less from your Deck once during this turn. Then shuffle your Deck. You can only activate 1 "Last Will" per turn. You cannot conduct your Battle Phase the turn you activate this card.',
-      "Cannot conduct your Battle Phase this turn",
+      'If a monster on your side of the field was sent to your Graveyard this turn, you can Special Summon 1 monster with an ATK of 1500 points or less from your Deck once during this turn. Then shuffle your Deck. You can only activate 1 "Last Will" per turn. You cannot inflict battle damage the turn you activate this card.',
+      "You cannot inflict battle damage this turn",
       85602018,
     );
   const changeOfHeartTextResult = db
     .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
     .run(
-      "Discard 1 card, then target 1 monster your opponent controls; take control of it until the End Phase. You cannot conduct your Battle Phase the turn you activate this card.",
-      "Cannot conduct your Battle Phase this turn",
+      "Discard 1 card, then target 1 monster your opponent controls; take control of it until the End Phase. For as long as that monster remains on the field, it cannot inflict battle damage.",
+      "That monster cannot inflict battle damage while it remains on the field",
       4031928,
     );
   const darkHoleTextResult = db
     .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
     .run(
-      "Destroy all monsters on the field. You cannot conduct your Battle Phase the turn you activate this card.",
-      "Cannot conduct your Battle Phase this turn",
+      "Destroy all monsters on the field. You cannot inflict battle damage the turn you activate this card.",
+      "You cannot inflict battle damage this turn",
       53129443,
     );
   const dimensionFusionTextResult = db
     .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
     .run(
-      'Pay half your LP. Both players Special Summon as many of their banished monsters as possible. You can only activate 1 "Dimension Fusion" per turn. You cannot conduct your Battle Phase the turn you activate this card.',
-      "Cannot conduct your Battle Phase this turn",
+      'Pay half your LP. Both players Special Summon as many of their banished monsters as possible. You can only activate 1 "Dimension Fusion" per turn. You cannot inflict battle damage the turn you activate this card.',
+      "You cannot inflict battle damage this turn",
       23557835,
     );
   const cyberSteinTextResult = db
