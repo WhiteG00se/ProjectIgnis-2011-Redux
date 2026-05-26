@@ -28,7 +28,8 @@ const limitChanges = new Map([
   ["42703248", 1], // Giant Trunade
   ["46411259", 2], // Metamorphosis
   ["511000821", 3], // Temple of the Kings (Pre-Errata)
-  ["69243953", 2], // Butterfly Dagger - Elma
+  ["69243953", 3], // Butterfly Dagger - Elma
+  ["22046459", 2], // Megamorph
   ["70828912", 1], // Premature Burial
   ["35316708", 1], // Time Seal
   ["511000824", 1], // Ring of Destruction (Pre-Errata)
@@ -68,7 +69,7 @@ const limitChanges = new Map([
   ["73580471", 1], // Black Rose Dragon
   ["95503687", 2], // Lumina, Lightsworn Summoner
   ["511002631", 2], // Sangan
-  ["48686504", 2], // Lonefire Blossom
+  ["48686504", 3], // Lonefire Blossom
   ["15341821", 2], // Dandylion
   ["16226796", 2], // Night Assailant (Pre-Errata)
   ["33420078", 2], // Plaguespreader Zombie
@@ -88,6 +89,7 @@ const limitChanges = new Map([
   ["67723438", 2], // Emergency Teleport
   ["73915051", 2], // Scapegoat
   ["3136426", 0], // Level Limit - Area B
+  ["85742772", 0], // Gravity Bind
   ["27174286", 2], // Return from the Different Dimension
   ["30241314", 2], // Macro Cosmos
   ["46652477", 3], // The Transmigration Prophecy
@@ -95,6 +97,7 @@ const limitChanges = new Map([
   ["17078030", 0], // Wall of Revealing Light
   ["84749824", 1], // Solemn Warning
   ["82732705", 2], // Skill Drain
+  ["53567095", 2], // Icarus Attack
 ]);
 
 module.exports = function buildLflist({ reduxRoot }) {

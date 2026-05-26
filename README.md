@@ -89,6 +89,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Monster Reborn](https://yugioh.fandom.com/wiki/Monster_Reborn) | 1 | `0` | 1 |  |
 | [Trap Dustshoot](https://yugioh.fandom.com/wiki/Trap_Dustshoot) | 1 | `0` | 1 |  |
 | [Wall of Revealing Light](https://yugioh.fandom.com/wiki/Wall_of_Revealing_Light) | 1 | `0` | 1 |  |
+| [Gravity Bind](https://yugioh.fandom.com/wiki/Gravity_Bind) | 1 | `0` | 3 |  |
 | [Final Countdown](https://yugioh.fandom.com/wiki/Final_Countdown) | 3 | `0` | 3 |  |
 | [Gearfried the Iron Knight](https://yugioh.fandom.com/wiki/Gearfried_the_Iron_Knight) | 3 | `0` | 3 |  |
 | [Change of Heart](https://yugioh.fandom.com/wiki/Change_of_Heart) | 0 | `1` | 0 | ⬇️ |
@@ -160,7 +161,6 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Gladiator Beast War Chariot](https://yugioh.fandom.com/wiki/Gladiator_Beast_War_Chariot) | 3 | `1` | 3 |  |
 | [Superancient Deepsea King Coelacanth](https://yugioh.fandom.com/wiki/Superancient_Deepsea_King_Coelacanth) | 3 | `1` | 3 |  |
 | [Symbol of Heritage](https://yugioh.fandom.com/wiki/Symbol_of_Heritage) | 3 | `1` | 3 |  |
-| [Butterfly Dagger - Elma](https://yugioh.fandom.com/wiki/Butterfly_Dagger_-_Elma) | 0 | `2` | 0 |  |
 | [Magician of Faith](https://yugioh.fandom.com/wiki/Magician_of_Faith) | 0 | `2` | 0 |  |
 | [Metamorphosis](https://yugioh.fandom.com/wiki/Metamorphosis) | 0 | `2` | 0 |  |
 | [Advanced Ritual Art](https://yugioh.fandom.com/wiki/Advanced_Ritual_Art) | 1 | `2` | 1 |  |
@@ -183,15 +183,17 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Scapegoat](https://yugioh.fandom.com/wiki/Scapegoat) | 1 | `2` | 1 |  |
 | [Call of the Haunted](https://yugioh.fandom.com/wiki/Call_of_the_Haunted) | 1 | `2` | 2 |  |
 | [Necro Gardna](https://yugioh.fandom.com/wiki/Necro_Gardna) | 1 | `2` | 2 |  |
-| [Lonefire Blossom](https://yugioh.fandom.com/wiki/Lonefire_Blossom) | 2 | `2` | 1 |  |
 | [Archlord Kristya](https://yugioh.fandom.com/wiki/Archlord_Kristya) | 2 | `2` | 2 |  |
 | [Bottomless Trap Hole](https://yugioh.fandom.com/wiki/Bottomless_Trap_Hole) | 2 | `2` | 2 |  |
 | [Destiny HERO - Malicious](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Malicious) | 2 | `2` | 2 |  |
+| [Icarus Attack](https://yugioh.fandom.com/wiki/Icarus_Attack) | 2 | `2` | 3 |  |
+| [Megamorph](https://yugioh.fandom.com/wiki/Megamorph) | 2 | `2` | 3 |  |
 | [Formula Synchron](https://yugioh.fandom.com/wiki/Formula_Synchron) | 3 | `2` | 1 |  |
 | [Pot of Avarice](https://yugioh.fandom.com/wiki/Pot_of_Avarice) | 3 | `2` | 1 |  |
 | [Dimensional Fissure](https://yugioh.fandom.com/wiki/Dimensional_Fissure) | 3 | `2` | 3 |  |
 | [Macro Cosmos](https://yugioh.fandom.com/wiki/Macro_Cosmos) | 3 | `2` | 3 |  |
 | [Skill Drain](https://yugioh.fandom.com/wiki/Skill_Drain) | 3 | `2` | 3 | ⬆️ |
+| [Butterfly Dagger - Elma](https://yugioh.fandom.com/wiki/Butterfly_Dagger_-_Elma) | 0 | `3` | 0 |  |
 | [Destiny HERO - Disk Commander](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Disk_Commander) | 0 | `3` | 0 | 🔄 |
 | [Makyura the Destructor](https://yugioh.fandom.com/wiki/Makyura_the_Destructor) | 0 | `3` | 0 | ⬆️ |
 | [Temple of the Kings](https://yugioh.fandom.com/wiki/Temple_of_the_Kings) | 0 | `3` | 0 |  |
@@ -207,13 +209,11 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Destiny Draw](https://yugioh.fandom.com/wiki/Destiny_Draw) | 1 | `3` | 2 |  |
 | [Summoner Monk](https://yugioh.fandom.com/wiki/Summoner_Monk) | 1 | `3` | 2 |  |
 | [Tragoedia](https://yugioh.fandom.com/wiki/Tragoedia) | 1 | `3` | 2 |  |
-| [Gravity Bind](https://yugioh.fandom.com/wiki/Gravity_Bind) | 1 | `3` | 3 |  |
 | [Debris Dragon](https://yugioh.fandom.com/wiki/Debris_Dragon) | 2 | `3` | 1 |  |
+| [Lonefire Blossom](https://yugioh.fandom.com/wiki/Lonefire_Blossom) | 2 | `3` | 1 |  |
 | [Card Trooper](https://yugioh.fandom.com/wiki/Card_Trooper) | 2 | `3` | 2 |  |
 | [Magical Stone Excavation](https://yugioh.fandom.com/wiki/Magical_Stone_Excavation) | 2 | `3` | 2 |  |
-| [Icarus Attack](https://yugioh.fandom.com/wiki/Icarus_Attack) | 2 | `3` | 3 |  |
 | [Judgment Dragon](https://yugioh.fandom.com/wiki/Judgment_Dragon) | 2 | `3` | 3 |  |
-| [Megamorph](https://yugioh.fandom.com/wiki/Megamorph) | 2 | `3` | 3 |  |
 | [Overload Fusion](https://yugioh.fandom.com/wiki/Overload_Fusion) | 2 | `3` | 3 |  |
 | [Spirit Reaper](https://yugioh.fandom.com/wiki/Spirit_Reaper) | 2 | `3` | 3 |  |
 | [Dewloren, Tiger King of the Ice Barrier](https://yugioh.fandom.com/wiki/Dewloren,_Tiger_King_of_the_Ice_Barrier) | 3 | `3` | 2 |  |

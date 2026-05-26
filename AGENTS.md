@@ -46,9 +46,10 @@ For new Redux changes:
 2. Do not edit the baseline in `Redux/vanilla/` when making a format change.
 3. Express LF list, database, and future effect-script changes in
    `Redux/scripts/`, then rebuild.
-4. Update `README.md` whenever a card's stats or other card properties change,
-   or its effect / English card text is errataed. Limit-only changes do not
-   require a README entry.
+4. Update `README.md` whenever a card's forbidden / limited status, stats, or
+   other card properties change, or its effect / English card text is errataed.
+   Document all Redux banned-list changes in the banned-list table and all
+   custom errata in the errata table.
 5. Verify generated output after the build, and verify behavior in EDOPro when
    runtime load order or effect behavior matters.
 
