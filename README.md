@@ -4,7 +4,6 @@ This is a fork of Project Ignis<br>
 The cardpool cuts off on 24.06.2011 (last TCG release before XYZs)<br>
 By default, cards use their latest Master Rule 1 version / errata.<br>
 Custom erratas and custom banned list (check below)<br>
-[Googlesheet with cardpool](https://docs.google.com/spreadsheets/d/1NCD4u_KRdl6T0fOKFnFGOmMbWwV9U_HEFP6O4gS5jf8/edit?gid=1008737686#gid=1008737686)
 
 <details>
 <summary><strong><big>How to install</big></strong></summary>
