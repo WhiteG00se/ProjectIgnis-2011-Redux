@@ -3,6 +3,25 @@ const path = require("path");
 
 const { copyFileInRedux } = require("./utils");
 
+const errataMarkers = new Map([
+  [72989439, "⬇️"], // Black Luster Soldier - Envoy of the Beginning
+  [69243953, "⬆️"], // Butterfly Dagger - Elma
+  [4031928, "⬇️"], // Change of Heart
+  [69015963, "♻️"], // Cyber-Stein
+  [53129443, "⬇️"], // Dark Hole
+  [23557835, "⬇️"], // Dimension Fusion
+  [40044918, "⬇️"], // Elemental HERO Stratos
+  [93369354, "⬇️"], // Fishborg Blaster
+  [27970830, "⬇️"], // Gateway of the Six
+  [85602018, "⬇️"], // Last Will
+  [34206604, "♻️"], // Magical Scientist
+  [74191942, "⬇️"], // Painful Choice
+  [82732705, "⬆️"], // Skill Drain
+  [84749824, "⬆️"], // Solemn Warning
+  [52687916, "⬇️"], // Trishula, Dragon of the Ice Barrier
+  [3078576, "⬇️"], // Yata-Garasu
+]);
+
 module.exports = function buildCardsDb({ reduxRoot }) {
   const output = path.join(reduxRoot, "modded", "cards.cdb");
 
@@ -116,6 +135,10 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "The equipped monster gains 800 ATK/DEF. When this card is destroyed and sent to the Graveyard while equipped: You can return this card to the hand.",
       69243953,
     );
+  const markErrataName = db.prepare("UPDATE texts SET name = name || ? WHERE id = ?");
+  const errataNameResults = [...errataMarkers].map(([id, marker]) =>
+    markErrataName.run(` ${marker}`, id),
+  );
   db.close();
 
   if (Number(lastWillTextResult.changes) !== 1) {
@@ -167,5 +190,8 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(butterflyDaggerElmaTextResult.changes) !== 1) {
     throw new Error("Expected to update Butterfly Dagger - Elma text once");
+  }
+  if (errataNameResults.some((result) => Number(result.changes) !== 1)) {
+    throw new Error("Expected to mark each official Redux errata card name once");
   }
 };

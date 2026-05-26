@@ -1,7 +1,24 @@
 const { DatabaseSync } = require("node:sqlite");
+const fs = require("fs");
 const path = require("path");
 
 const { copyFileInRedux } = require("./utils");
+
+const errataMarkers = new Map([
+  [511002993, "⬇️"], // Brionac, Dragon of the Ice Barrier
+  [511000819, "♻️"], // Chaos Emperor Dragon - Envoy of the End
+  [511001039, "⬇️"], // Dark Magician of Chaos
+  [511000229, "⬇️"], // Dark Strike Fighter
+  [511003116, "♻️"], // Destiny HERO - Disk Commander
+  [511002996, "⬇️"], // Imperial Order
+  [21593987, "⬆️"], // Makyura the Destructor
+  [511003019, "⬇️"], // Mind Master
+  [511002992, "⬇️"], // Rescue Cat
+  [511000824, "♻️"], // Ring of Destruction
+  [511002631, "⬇️"], // Sangan
+  [511000818, "⬇️"], // Sinister Serpent
+  [511003012, "⬇️"], // Witch of the Black Forest
+]);
 
 module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   const output = path.join(reduxRoot, "modded", "cards-unofficial.cdb");
@@ -13,6 +30,26 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   });
 
   const db = new DatabaseSync(output);
+  const lflist = fs.readFileSync(
+    path.join(reduxRoot, "modded", "Redux-11.lflist.conf"),
+    "utf8",
+  );
+  const whitelistPasscodes = new Set(
+    [...lflist.matchAll(/^(\d+) [0-3](?= --)/gm)].map((entry) => Number(entry[1])),
+  );
+  // EDOPro labels supplemental legacy cards as Illegal (ot = 8); Redux permits its
+  // selected versions as normal OCG/TCG cards (ot = 3).
+  const allowWhitelistedCard = db.prepare(
+    "UPDATE datas SET ot = 3 WHERE id = ? AND ot = 8",
+  );
+  const removePreErrataSuffix = db.prepare(
+    "UPDATE texts SET name = replace(name, ' (Pre-Errata)', '') WHERE id = ? AND name LIKE '% (Pre-Errata)%'",
+  );
+  for (const passcode of whitelistPasscodes) {
+    allowWhitelistedCard.run(passcode);
+    removePreErrataSuffix.run(passcode);
+  }
+
   const makyuraStatsResult = db
     .prepare("UPDATE datas SET atk = ?, def = ? WHERE id = ?")
     .run(1900, 1900, 21593987); // Makyura the Destructor (Pre-Errata)
@@ -90,8 +127,26 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
       "Pay 1500 LP, then target 1 face-up monster; destroy it, and if you do, both players gain LP equal to its ATK.",
       511000824,
     ); // Ring of Destruction (Pre-Errata)
+  const markErrataName = db.prepare("UPDATE texts SET name = name || ? WHERE id = ?");
+  const errataNameResults = [...errataMarkers].map(([id, marker]) =>
+    markErrataName.run(` ${marker}`, id),
+  );
+  const illegalWhitelistedCards = db
+    .prepare("SELECT id FROM datas WHERE ot = 8")
+    .all()
+    .filter((card) => whitelistPasscodes.has(card.id));
+  const suffixedWhitelistedCards = db
+    .prepare("SELECT id FROM texts WHERE name LIKE '% (Pre-Errata)%'")
+    .all()
+    .filter((card) => whitelistPasscodes.has(card.id));
   db.close();
 
+  if (illegalWhitelistedCards.length > 0) {
+    throw new Error("Expected Redux whitelist cards not to use the Illegal scope");
+  }
+  if (suffixedWhitelistedCards.length > 0) {
+    throw new Error("Expected Redux whitelist card names without Pre-Errata suffixes");
+  }
   if (Number(makyuraStatsResult.changes) !== 1) {
     throw new Error("Expected to update Makyura the Destructor (Pre-Errata) once");
   }
@@ -134,5 +189,8 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   }
   if (Number(ringOfDestructionTextResult.changes) !== 1) {
     throw new Error("Expected to update Ring of Destruction (Pre-Errata) text once");
+  }
+  if (errataNameResults.some((result) => Number(result.changes) !== 1)) {
+    throw new Error("Expected to mark each supplemental Redux errata card name once");
   }
 };
