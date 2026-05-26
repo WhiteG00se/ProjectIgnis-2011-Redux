@@ -105,6 +105,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "Banish up to 2 cards from the field?",
       52687916,
     );
+  const fishborgBlasterTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      'If you control a face-up Level 3 or lower WATER monster: You can discard 1 card; Special Summon this card from your Graveyard. You can only use this effect of "Fishborg Blaster" once per turn. If this card is used as a Synchro Material Monster, all other Synchro Material Monsters must be WATER.',
+      93369354,
+    );
   db.close();
 
   if (Number(lastWillTextResult.changes) !== 1) {
@@ -150,5 +156,8 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(trishulaTextResult.changes) !== 1) {
     throw new Error("Expected to update Trishula, Dragon of the Ice Barrier text once");
+  }
+  if (Number(fishborgBlasterTextResult.changes) !== 1) {
+    throw new Error("Expected to update Fishborg Blaster text once");
   }
 };

@@ -29,6 +29,7 @@ Custom erratas (check below); custom banned list (check in-game)<br>
 | Last Will | 0&nbsp;=&gt;&nbsp;1 | Once per turn; skip your Battle Phase |
 | Dark Strike Fighter | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
 | DMOC | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
+| Fishborg Blaster | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
 | Painful Choice | 0&nbsp;=&gt;&nbsp;1 | Once per turn; half LP; select 2 cards |
 | Sinister Serpent | 0&nbsp;=&gt;&nbsp;1 | Once per turn |
 | Witch of the Black Forest | 0&nbsp;=&gt;&nbsp;1 | Once per turn; searches DEF 600 or less |

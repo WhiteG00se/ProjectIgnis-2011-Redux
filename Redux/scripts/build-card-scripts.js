@@ -17,6 +17,7 @@ const cardScripts = [
   path.join("official", "c82732705.lua"), // Skill Drain
   path.join("official", "c27970830.lua"), // Gateway of the Six
   path.join("official", "c52687916.lua"), // Trishula, Dragon of the Ice Barrier
+  path.join("official", "c93369354.lua"), // Fishborg Blaster
   path.join("pre-errata", "c511001039.lua"), // Dark Magician of Chaos
   path.join("pre-errata", "c511000229.lua"), // Dark Strike Fighter
   path.join("pre-errata", "c511000818.lua"), // Sinister Serpent
