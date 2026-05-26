@@ -72,7 +72,7 @@ const limitChanges = new Map([
   ["15341821", 2], // Dandylion
   ["16226796", 2], // Night Assailant (Pre-Errata)
   ["33420078", 2], // Plaguespreader Zombie
-  ["50091196", 3], // Formula Synchron
+  ["50091196", 2], // Formula Synchron
   ["1475311", 3], // Allure of Darkness
   ["2295440", 2], // One for One
   ["32807846", 2], // Reinforcement of the Army
