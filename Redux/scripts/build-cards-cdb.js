@@ -64,7 +64,7 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   const painfulChoiceTextResult = db
     .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
     .run(
-      'Pay half your LP; select 2 cards from your Deck and show them to your opponent. Your opponent selects 1 card among them. Add that card to your hand and discard the remaining card to the Graveyard. You can only activate 1 "Painful Choice" per turn.',
+      "Pay half your LP; select 2 cards from your Deck and show them to your opponent. Your opponent selects 1 card among them. Add that card to your hand and discard the remaining card to the Graveyard.",
       "Select 2 cards from your Deck",
       74191942,
     );

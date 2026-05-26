@@ -28,6 +28,12 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
       'When this card is sent from the field to the Graveyard: Add 1 monster with 1500 or less ATK from your Deck to your hand. You can only use this effect of "Sangan" once per turn.',
       511002631,
     ); // Sangan (Pre-Errata)
+  const rescueCatTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      'You can send this card to the Graveyard; Special Summon 2 Level 3 or lower Beast-Type monsters from your Deck, but destroy them during the End Phase. You can only use this effect of "Rescue Cat" once per turn.',
+      511002992,
+    ); // Rescue Cat (Pre-Errata)
   const mindMasterTextResult = db
     .prepare("UPDATE texts SET desc = ? WHERE id = ?")
     .run(
@@ -94,6 +100,9 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   }
   if (Number(sanganTextResult.changes) !== 1) {
     throw new Error("Expected to update Sangan (Pre-Errata) text once");
+  }
+  if (Number(rescueCatTextResult.changes) !== 1) {
+    throw new Error("Expected to update Rescue Cat (Pre-Errata) text once");
   }
   if (Number(mindMasterTextResult.changes) !== 1) {
     throw new Error("Expected to update Mind Master (Pre-Errata) text once");

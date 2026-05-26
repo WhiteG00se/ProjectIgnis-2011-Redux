@@ -39,7 +39,8 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `1` [Imperial Order](https://yugioh.fandom.com/wiki/Imperial_Order) | ⬇️ End Phase upkeep; optional 1700 LP |
 | `1` [Last Will](https://yugioh.fandom.com/wiki/Last_Will) | ⬇️ Once per turn; no battle damage |
 | `1` [Magical Scientist](https://yugioh.fandom.com/wiki/Magical_Scientist) | 🔄 Summon/flip trigger; no LP cost; Fusion monster: stays & no battle damage until your next End Phase |
-| `1` [Painful Choice](https://yugioh.fandom.com/wiki/Painful_Choice) | ⬇️ Once per turn; half LP; select 2 cards |
+| `1` [Painful Choice](https://yugioh.fandom.com/wiki/Painful_Choice) | ⬇️ Half LP; select 2 cards |
+| `1` [Rescue Cat](https://yugioh.fandom.com/wiki/Rescue_Cat) | ⬇️ Once per turn |
 | `1` [Ring of Destruction](https://yugioh.fandom.com/wiki/Ring_of_Destruction) | 🔄 Pay 1500 LP; both gain destroyed monster's ATK as LP |
 | `1` [Sinister Serpent](https://yugioh.fandom.com/wiki/Sinister_Serpent) | ⬇️ Once per turn |
 | `1` [Solemn Warning](https://yugioh.fandom.com/wiki/Solemn_Warning) | ⬆️ Cost reduced to 1000 LP |
@@ -105,7 +106,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Magical Scientist](https://yugioh.fandom.com/wiki/Magical_Scientist) | 0 | `1` | 0 | 🔄 |
 | [Painful Choice](https://yugioh.fandom.com/wiki/Painful_Choice) | 0 | `1` | 0 | ⬇️ |
 | [Premature Burial](https://yugioh.fandom.com/wiki/Premature_Burial) | 0 | `1` | 0 |  |
-| [Rescue Cat](https://yugioh.fandom.com/wiki/Rescue_Cat) | 0 | `1` | 0 |  |
+| [Rescue Cat](https://yugioh.fandom.com/wiki/Rescue_Cat) | 0 | `1` | 0 | ⬇️ |
 | [Ring of Destruction](https://yugioh.fandom.com/wiki/Ring_of_Destruction) | 0 | `1` | 0 | 🔄 |
 | [Sinister Serpent](https://yugioh.fandom.com/wiki/Sinister_Serpent) | 0 | `1` | 0 | ⬇️ |
 | [Substitoad](https://yugioh.fandom.com/wiki/Substitoad) | 0 | `1` | 0 |  |
