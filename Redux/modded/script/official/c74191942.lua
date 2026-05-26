@@ -1,4 +1,4 @@
---Painful Choice (2011 Redux errata)
+--Painful Choice (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Reveal 2 cards from your Deck, then your opponent chooses 1 to add to your hand

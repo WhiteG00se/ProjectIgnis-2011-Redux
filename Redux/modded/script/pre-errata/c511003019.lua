@@ -1,4 +1,4 @@
---Mind Master (2011 Redux errata)
+--Mind Master (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Special Summon 1 Level 4 or lower Psychic monster from your Deck

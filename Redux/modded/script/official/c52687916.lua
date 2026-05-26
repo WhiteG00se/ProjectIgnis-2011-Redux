@@ -1,4 +1,4 @@
---Trishula, Dragon of the Ice Barrier (2011 Redux errata)
+--Trishula, Dragon of the Ice Barrier (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Synchro Summon

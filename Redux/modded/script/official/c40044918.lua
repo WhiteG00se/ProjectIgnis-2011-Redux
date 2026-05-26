@@ -1,4 +1,4 @@
---Elemental HERO Stratos (2011 Redux errata)
+--Elemental HERO Stratos (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Activate 1 of these effects

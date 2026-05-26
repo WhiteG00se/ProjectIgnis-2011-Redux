@@ -1,9 +1,9 @@
-## ProjectIgnis-2011-Redux
+## Ignis-Redux-11
 
-This is a fork of Project Ignis<br>
-The cardpool cuts off on 24.06.2011 (last TCG release before XYZs)<br>
+This is a fork of EDOPro by the Project Ignis team.<br>
+The cardpool cuts off on 24.06.2011 (last TCG release before XYZs).<br>
 By default, cards use their latest Master Rule 1 version / errata.<br>
-Custom erratas and custom banned list (check below)<br>
+Ignis-Redux-11 uses custom erratas and a custom banned list (check below)<br>
 
 <details>
 <summary><strong><big>How to install</big></strong></summary>
@@ -11,7 +11,7 @@ Custom erratas and custom banned list (check below)<br>
 - Pick a download method:
   - Clone this repository with Git (easier updates).
   - Download the ZIP from GitHub and extract it.
-- Run `EDOPro.exe`.
+- Run `Ignis-Redux-11.exe`.
 
 </details>
 
@@ -246,7 +246,7 @@ node .\Redux\scripts\build.js
 
 The build recreates `Redux\modded`, copies the vanilla inputs, and applies any
 declared transformations. EDOPro reads the generated folder through
-`config\configs.json`; the local `2011 Redux` entry is readable but not
+`config\configs.json`; the local `Redux-11` entry is readable but not
 auto-updated.
 
 The LF list is both the forbidden / limited list and the format card pool.

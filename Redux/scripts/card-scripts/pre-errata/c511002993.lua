@@ -1,4 +1,4 @@
---Brionac, Dragon of the Ice Barrier (Pre-Errata) (2011 Redux errata)
+--Brionac, Dragon of the Ice Barrier (Pre-Errata) (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Synchro Summon

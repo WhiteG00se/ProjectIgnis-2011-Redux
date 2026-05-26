@@ -1,4 +1,4 @@
---Gateway of the Six (2011 Redux errata)
+--Gateway of the Six (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	c:EnableCounterPermit(COUNTER_BUSHIDO)

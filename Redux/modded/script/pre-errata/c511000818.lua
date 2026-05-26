@@ -1,4 +1,4 @@
---Sinister Serpent (2011 Redux errata)
+--Sinister Serpent (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Add this card from your GY to your hand

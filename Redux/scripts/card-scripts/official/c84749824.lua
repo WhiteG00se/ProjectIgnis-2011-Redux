@@ -1,4 +1,4 @@
---Solemn Warning (2011 Redux errata)
+--Solemn Warning (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Activate(summon)

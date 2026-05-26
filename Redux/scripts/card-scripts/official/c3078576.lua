@@ -1,4 +1,4 @@
---Yata-Garasu (2011 Redux errata)
+--Yata-Garasu (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	Spirit.AddProcedure(c,EVENT_SUMMON_SUCCESS,EVENT_FLIP)

@@ -1,4 +1,4 @@
---Destiny HERO - Disk Commander (2011 Redux errata)
+--Destiny HERO - Disk Commander (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Draw 1 card when Special Summoned

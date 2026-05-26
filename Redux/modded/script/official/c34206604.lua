@@ -1,4 +1,4 @@
---Magical Scientist (2011 Redux errata)
+--Magical Scientist (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Special Summon 1 Level 6 or lower Fusion Monster from your Extra Deck

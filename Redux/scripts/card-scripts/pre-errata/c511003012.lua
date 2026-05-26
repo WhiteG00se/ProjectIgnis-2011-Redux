@@ -1,4 +1,4 @@
---Witch of the Black Forest (2011 Redux errata)
+--Witch of the Black Forest (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Search

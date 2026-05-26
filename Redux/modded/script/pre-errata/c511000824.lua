@@ -1,4 +1,4 @@
---Ring of Destruction (Pre-Errata) (2011 Redux errata)
+--Ring of Destruction (Pre-Errata) (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Destroy 1 monster and recover its ATK for both players

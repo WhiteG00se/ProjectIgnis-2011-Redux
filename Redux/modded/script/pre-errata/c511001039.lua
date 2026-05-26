@@ -1,4 +1,4 @@
---Dark Magician of Chaos (2011 Redux errata)
+--Dark Magician of Chaos (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Add 1 Spell from your GY to your hand

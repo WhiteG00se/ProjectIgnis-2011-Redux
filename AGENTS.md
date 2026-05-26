@@ -1,7 +1,8 @@
 # Project Context
 
-This project is a fork-style customization of ProjectIgnis, started from the
-distributable / portable release rather than a git fork of the upstream repo.
+This project is a fork-style customization of EDOPro, made by the Project
+Ignis team, started from its distributable / portable release rather than a
+git fork of the upstream repo.
 
 The current goal is to build a pre-XYZ era Yu-Gi-Oh! experience through data
 customization only:
@@ -10,7 +11,7 @@ customization only:
 - limit the playable card pool
 - apply custom card erratas
 
-In ProjectIgnis / EDOPro, `.lflist.conf` files hold the combined forbidden /
+In EDOPro, `.lflist.conf` files hold the combined forbidden /
 limited list data and the allowed card-pool data for a format.
 
 # Development Workflow
@@ -64,9 +65,27 @@ modern-version IDs merely because the modern record appears in `cards.cdb`.
 For example, the list intentionally uses the pre-errata Makyura the Destructor
 passcode (`21593987`) instead of its post-errata passcode (`21593977`).
 
-Do not change the ProjectIgnis client, engine, or software behavior unless the
+Do not change the EDOPro client, engine, or software behavior unless the
 user explicitly asks for that. Treat this as a card-pool and card-data project,
 not a client development project.
+
+# Upstream Refresh Checklist
+
+These deliberate differences from the portable EDOPro release must be
+reapplied or preserved when refreshing files from upstream:
+
+- The distributed client executable is `Ignis-Redux-11.exe`, not `EDOPro.exe`.
+  Its window title, Product name, and File description are `Ignis-Redux-11`;
+  its upstream `Original filename` metadata remains `EDOPro.exe`. After adding
+  a refreshed upstream `EDOPro.exe` at the repository root, run
+  `node .\Redux\scripts\brand-client.js` to apply the branding and replace it
+  with the fork-named executable.
+- The custom LF list is generated as `Redux/modded/Redux-11.lflist.conf` and
+  displays as `Redux-11`. The intentionally immutable baseline remains
+  `Redux/vanilla/2011-Redux.lflist.conf`; its name is transformed only by
+  `Redux/scripts/build-lflist.js`.
+- The local generated-data repository label in `config/configs.json` is
+  `Redux-11`, matching the LF list.
 
 # User Context
 

@@ -1,4 +1,4 @@
---Last Will (2011 Redux errata)
+--Last Will (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Activate

@@ -98,7 +98,7 @@ const limitChanges = new Map([
 ]);
 
 module.exports = function buildLflist({ reduxRoot }) {
-  const output = path.join(reduxRoot, "modded", "2011-Redux.lflist.conf");
+  const output = path.join(reduxRoot, "modded", "Redux-11.lflist.conf");
 
   copyFileInRedux({
     reduxRoot,
@@ -108,6 +108,8 @@ module.exports = function buildLflist({ reduxRoot }) {
 
   const updatedPasscodes = new Map();
   let lflist = fs.readFileSync(output, "utf8");
+
+  lflist = lflist.replace(/^#\[2011-Redux\]\r?\n!2011-Redux$/m, "#[Redux-11]\n!Redux-11");
 
   lflist = lflist.replace(/^(\d+) ([0-3])(?= --)/gm, (entry, passcode) => {
     if (!limitChanges.has(passcode)) {

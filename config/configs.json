@@ -12,7 +12,7 @@
 			"should_read": true
 		},
 		{
-			"repo_name": "2011 Redux",
+			"repo_name": "Redux-11",
 			"repo_path": "./Redux/modded",
 			"data_path": ".",
 			"script_path": "script",

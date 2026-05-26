@@ -1,4 +1,4 @@
---Change of Heart (2011 Redux errata)
+--Change of Heart (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Take control of an opponent's monster until the End Phase

@@ -1,4 +1,4 @@
---Dark Strike Fighter (2011 Redux errata)
+--Dark Strike Fighter (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Synchro Summon

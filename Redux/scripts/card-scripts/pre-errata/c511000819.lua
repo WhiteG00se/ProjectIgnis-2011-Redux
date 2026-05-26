@@ -1,4 +1,4 @@
---Chaos Emperor Dragon - Envoy of the End (2011 Redux errata)
+--Chaos Emperor Dragon - Envoy of the End (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	c:EnableReviveLimit()

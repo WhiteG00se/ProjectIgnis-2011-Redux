@@ -1,4 +1,4 @@
---Black Luster Soldier - Envoy of the Beginning (2011 Redux errata)
+--Black Luster Soldier - Envoy of the Beginning (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Must be properly summoned before reviving

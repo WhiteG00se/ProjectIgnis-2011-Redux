@@ -1,4 +1,4 @@
---Dark Hole (2011 Redux errata)
+--Dark Hole (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Destroy all monsters on the field

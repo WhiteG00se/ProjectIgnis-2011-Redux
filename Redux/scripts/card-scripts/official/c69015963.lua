@@ -1,4 +1,4 @@
---Cyber-Stein (2011 Redux errata)
+--Cyber-Stein (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Special Summon 1 Fusion Monster from your Extra Deck

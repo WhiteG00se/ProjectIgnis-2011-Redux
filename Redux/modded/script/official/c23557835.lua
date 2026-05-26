@@ -1,4 +1,4 @@
---Dimension Fusion (2011 Redux errata)
+--Dimension Fusion (Redux-11 errata)
 local s,id=GetID()
 function s.initial_effect(c)
 	--Special Summon as many banished monsters as possible
