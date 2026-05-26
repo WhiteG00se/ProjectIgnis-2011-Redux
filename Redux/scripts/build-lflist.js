@@ -27,11 +27,11 @@ const limitChanges = new Map([
   ["511002994", 1], // Goyo Guardian
   ["42703248", 1], // Giant Trunade
   ["46411259", 2], // Metamorphosis
-  ["29762407", 3], // Temple of the Kings
+  ["511000821", 3], // Temple of the Kings (Pre-Errata)
   ["69243953", 2], // Butterfly Dagger - Elma
   ["70828912", 1], // Premature Burial
   ["35316708", 1], // Time Seal
-  ["83555666", 1], // Ring of Destruction
+  ["511000824", 1], // Ring of Destruction (Pre-Errata)
   ["423705", 0], // Gearfried the Iron Knight
   ["21593987", 3], // Makyura the Destructor (Pre-Errata)
   ["511001039", 1], // Dark Magician of Chaos
@@ -70,7 +70,7 @@ const limitChanges = new Map([
   ["511002631", 2], // Sangan
   ["48686504", 2], // Lonefire Blossom
   ["15341821", 2], // Dandylion
-  ["16226786", 2], // Night Assailant
+  ["16226796", 2], // Night Assailant (Pre-Errata)
   ["33420078", 2], // Plaguespreader Zombie
   ["50091196", 3], // Formula Synchron
   ["1475311", 3], // Allure of Darkness

@@ -15,7 +15,6 @@ const cardScripts = [
   path.join("official", "c40044918.lua"), // Elemental HERO Stratos
   path.join("official", "c84749824.lua"), // Solemn Warning
   path.join("official", "c82732705.lua"), // Skill Drain
-  path.join("official", "c83555666.lua"), // Ring of Destruction
   path.join("official", "c27970830.lua"), // Gateway of the Six
   path.join("official", "c52687916.lua"), // Trishula, Dragon of the Ice Barrier
   path.join("pre-errata", "c511001039.lua"), // Dark Magician of Chaos
@@ -28,6 +27,7 @@ const cardScripts = [
   path.join("pre-errata", "c511002996.lua"), // Imperial Order
   path.join("pre-errata", "c511000819.lua"), // Chaos Emperor Dragon - Envoy of the End
   path.join("pre-errata", "c511002993.lua"), // Brionac, Dragon of the Ice Barrier
+  path.join("pre-errata", "c511000824.lua"), // Ring of Destruction
 ];
 
 module.exports = function buildCardScripts({ reduxRoot }) {

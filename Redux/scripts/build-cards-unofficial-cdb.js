@@ -78,6 +78,12 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
       '1 Tuner + 1+ non-Tuner monsters\r\nYou can discard any number of cards, then target an equal number of cards on the field; return them to the hand. You can only use this effect of "Brionac, Dragon of the Ice Barrier" once per turn.',
       511002993,
     ); // Brionac, Dragon of the Ice Barrier (Pre-Errata)
+  const ringOfDestructionTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      "Pay 1500 LP, then target 1 face-up monster; destroy it, and if you do, both players gain LP equal to its ATK.",
+      511000824,
+    ); // Ring of Destruction (Pre-Errata)
   db.close();
 
   if (Number(makyuraStatsResult.changes) !== 1) {
@@ -116,5 +122,8 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   }
   if (Number(brionacTextResult.changes) !== 1) {
     throw new Error("Expected to update Brionac, Dragon of the Ice Barrier (Pre-Errata) text once");
+  }
+  if (Number(ringOfDestructionTextResult.changes) !== 1) {
+    throw new Error("Expected to update Ring of Destruction (Pre-Errata) text once");
   }
 };

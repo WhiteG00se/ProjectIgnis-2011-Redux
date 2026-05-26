@@ -92,12 +92,6 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "Negate the effects of all face-up monsters while they are face-up on the field (but their effects can still be activated).",
       82732705,
     );
-  const ringOfDestructionTextResult = db
-    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
-    .run(
-      'During your opponent\'s turn: Pay 1500 LP; target 1 face-up monster your opponent controls whose ATK is less than or equal to their LP; destroy that face-up monster, and if you do, both players gain LP equal to its original ATK. You can only activate 1 "Ring of Destruction" per turn.',
-      83555666,
-    );
   const gatewayOfTheSixTextResult = db
     .prepare("UPDATE texts SET desc = ? WHERE id = ?")
     .run(
@@ -150,9 +144,6 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(skillDrainTextResult.changes) !== 1) {
     throw new Error("Expected to update Skill Drain text once");
-  }
-  if (Number(ringOfDestructionTextResult.changes) !== 1) {
-    throw new Error("Expected to update Ring of Destruction text once");
   }
   if (Number(gatewayOfTheSixTextResult.changes) !== 1) {
     throw new Error("Expected to update Gateway of the Six text once");
