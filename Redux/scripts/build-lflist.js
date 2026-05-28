@@ -39,7 +39,7 @@ const limitChanges = new Map([
   ["511001039", 1], // Dark Magician of Chaos
   ["35027493", 1], // Deck Devastation Virus
   ["54974237", 1], // Eradicator Epidemic Virus
-  ["83764718", 0], // Monster Reborn
+  ["83764718", 2], // Monster Reborn
   ["5318639", 1], // Mystical Space Typhoon
   ["88307361", 1], // Superancient Deepsea King Coelacanth
   ["98777036", 3], // Tragoedia

@@ -48,6 +48,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `1` [Trishula, Dragon of the Ice Barrier](https://yugioh.fandom.com/wiki/Trishula,_Dragon_of_the_Ice_Barrier) | ⬇️ Once per turn |
 | `1` [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | ⬇️ Once per turn; searches DEF 600 or less |
 | `1` [Yata-Garasu](https://yugioh.fandom.com/wiki/Yata-Garasu) | ⬇️ Skips Draw Phase unless opponent has 1 or fewer cards in hand |
+| `2` [Monster Reborn](https://yugioh.fandom.com/wiki/Monster_Reborn) | ⬇️ Discard 1 |
 | `2` [Sangan](https://yugioh.fandom.com/wiki/Sangan) | ⬇️ Once per turn |
 | `2` [Skill Drain](https://yugioh.fandom.com/wiki/Skill_Drain) | ⬆️ No LP cost |
 | `3` [Butterfly Dagger - Elma](https://yugioh.fandom.com/wiki/Butterfly_Dagger_-_Elma) | ⬆️ Equipped monster gains 800 ATK/DEF |
@@ -91,7 +92,6 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Royal Oppression](https://yugioh.fandom.com/wiki/Royal_Oppression) | 1 | `0` | 0 |  |
 | [Exodia the Forbidden One](https://yugioh.fandom.com/wiki/Exodia_the_Forbidden_One) | 1 | `0` | 1 |  |
 | [Level Limit - Area B](https://yugioh.fandom.com/wiki/Level_Limit_-_Area_B) | 1 | `0` | 1 |  |
-| [Monster Reborn](https://yugioh.fandom.com/wiki/Monster_Reborn) | 1 | `0` | 1 |  |
 | [Trap Dustshoot](https://yugioh.fandom.com/wiki/Trap_Dustshoot) | 1 | `0` | 1 |  |
 | [Wall of Revealing Light](https://yugioh.fandom.com/wiki/Wall_of_Revealing_Light) | 1 | `0` | 1 |  |
 | [Gravity Bind](https://yugioh.fandom.com/wiki/Gravity_Bind) | 1 | `0` | 3 |  |
@@ -178,6 +178,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Gladiator Beast Bestiari](https://yugioh.fandom.com/wiki/Gladiator_Beast_Bestiari) | 1 | `2` | 1 |  |
 | [Lumina, Lightsworn Summoner](https://yugioh.fandom.com/wiki/Lumina,_Lightsworn_Summoner) | 1 | `2` | 1 |  |
 | [Mezuki](https://yugioh.fandom.com/wiki/Mezuki) | 1 | `2` | 1 |  |
+| [Monster Reborn](https://yugioh.fandom.com/wiki/Monster_Reborn) | 1 | `2` | 1 | ⬇️ |
 | [Necroface](https://yugioh.fandom.com/wiki/Necroface) | 1 | `2` | 1 |  |
 | [Night Assailant](https://yugioh.fandom.com/wiki/Night_Assailant) | 1 | `2` | 1 |  |
 | [One for One](https://yugioh.fandom.com/wiki/One_for_One) | 1 | `2` | 1 |  |

@@ -8,6 +8,7 @@ const cardScripts = [
   path.join("official", "c4031928.lua"), // Change of Heart
   path.join("official", "c53129443.lua"), // Dark Hole
   path.join("official", "c12580477.lua"), // Raigeki
+  path.join("official", "c83764718.lua"), // Monster Reborn
   path.join("official", "c69015963.lua"), // Cyber-Stein
   path.join("official", "c3897065.lua"), // Super Vehicroid - Stealth Union
   path.join("official", "c76263644.lua"), // Destiny End Dragoon
