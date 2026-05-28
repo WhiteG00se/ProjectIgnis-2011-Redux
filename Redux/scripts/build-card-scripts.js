@@ -24,6 +24,7 @@ const cardScripts = [
   path.join("official", "c52687916.lua"), // Trishula, Dragon of the Ice Barrier
   path.join("official", "c93369354.lua"), // Fishborg Blaster
   path.join("official", "c69243953.lua"), // Butterfly Dagger - Elma
+  path.join("official", "c9126351.lua"), // Swap Frog
   path.join("pre-errata", "c511001039.lua"), // Dark Magician of Chaos
   path.join("pre-errata", "c511000229.lua"), // Dark Strike Fighter
   path.join("pre-errata", "c511000818.lua"), // Sinister Serpent

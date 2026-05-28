@@ -59,6 +59,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `3` [Mind Master](https://yugioh.fandom.com/wiki/Mind_Master) | ⬇️ Once per turn |
 | `3` [Raigeki](https://yugioh.fandom.com/wiki/Raigeki) | ⬇️ Discard 1; no battle damage |
 | `3` [Super Vehicroid - Stealth Union](https://yugioh.fandom.com/wiki/Super_Vehicroid_-_Stealth_Union) | ⬇️ Must first be Fusion Summoned |
+| `3` [Swap Frog](https://yugioh.fandom.com/wiki/Swap_Frog) | ⬆️ Revert to Master Rule 1 version |
 
 </details>
 

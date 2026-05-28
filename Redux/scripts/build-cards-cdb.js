@@ -25,6 +25,7 @@ const errataMarkers = new Map([
   [12580477, "\u2b07\ufe0f"], // Raigeki
   [83764718, "\u2b07\ufe0f"], // Monster Reborn
   [79571449, "\u2b07\ufe0f"], // Graceful Charity
+  [9126351, "\u2b06\ufe0f"], // Swap Frog
 ]);
 
 module.exports = function buildCardsDb({ reduxRoot }) {
@@ -171,6 +172,14 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "The equipped monster gains 800 ATK/DEF. When this card is destroyed and sent to the Graveyard while equipped: You can return this card to the hand.",
       69243953,
     );
+  const swapFrogTextResult = db
+    .prepare("UPDATE texts SET desc = ?, str1 = ?, str2 = ? WHERE id = ?")
+    .run(
+      'You can discard 1 WATER monster to Special Summon this card from your hand. When this card is Summoned, you can select and send 1 Level 2 or lower Aqua-Type WATER monster from your Deck or your side of the field to the Graveyard. Once per turn, you can return 1 monster you control to your hand to Normal Summon 1 "Frog" monster, except "Swap Frog", in addition to your Normal Summon or Set this turn.',
+      "Send 1 Level 2 or lower Aqua-Type WATER monster to the Graveyard",
+      "Return 1 monster to gain an additional Normal Summon",
+      9126351,
+    );
   const markErrataName = db.prepare("UPDATE texts SET name = name || ? WHERE id = ?");
   const errataNameResults = [...errataMarkers].map(([id, marker]) =>
     markErrataName.run(` ${marker}`, id),
@@ -241,6 +250,9 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(butterflyDaggerElmaTextResult.changes) !== 1) {
     throw new Error("Expected to update Butterfly Dagger - Elma text once");
+  }
+  if (Number(swapFrogTextResult.changes) !== 1) {
+    throw new Error("Expected to update Swap Frog text once");
   }
   if (errataNameResults.some((result) => Number(result.changes) !== 1)) {
     throw new Error("Expected to mark each official Redux errata card name once");
