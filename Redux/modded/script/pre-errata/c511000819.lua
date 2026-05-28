@@ -2,7 +2,7 @@
 local s,id=GetID()
 function s.initial_effect(c)
 	c:EnableReviveLimit()
-	--Special Summon by banishing 2 LIGHT and 2 DARK monsters from your GY
+	--Special Summon by banishing 3 LIGHT or DARK monsters from your GY
 	local e1=Effect.CreateEffect(c)
 	e1:SetDescription(aux.Stringid(id,0))
 	e1:SetType(EFFECT_TYPE_FIELD)
@@ -28,21 +28,20 @@ function s.spfilter(c,att)
 	return c:IsAttribute(att) and c:IsAbleToRemoveAsCost() and aux.SpElimFilter(c,true)
 end
 function s.rescon(sg)
-	return sg:FilterCount(Card.IsAttribute,nil,ATTRIBUTE_LIGHT)==2
-		and sg:FilterCount(Card.IsAttribute,nil,ATTRIBUTE_DARK)==2
+	local lightct=sg:FilterCount(Card.IsAttribute,nil,ATTRIBUTE_LIGHT)
+	local darkct=sg:FilterCount(Card.IsAttribute,nil,ATTRIBUTE_DARK)
+	return (lightct==2 and darkct==1) or (lightct==1 and darkct==2)
 end
 function s.spcon(e,c)
 	if c==nil then return true end
 	local tp=c:GetControler()
 	local rg=Duel.GetMatchingGroup(s.spfilter,tp,LOCATION_GRAVE,0,nil,ATTRIBUTE_LIGHT+ATTRIBUTE_DARK)
-	local lg=rg:Filter(Card.IsAttribute,nil,ATTRIBUTE_LIGHT)
-	local dg=rg:Filter(Card.IsAttribute,nil,ATTRIBUTE_DARK)
-	return Duel.GetLocationCount(tp,LOCATION_MZONE)>0 and #lg>=2 and #dg>=2
-		and aux.SelectUnselectGroup(rg,e,tp,4,4,s.rescon,0)
+	return Duel.GetLocationCount(tp,LOCATION_MZONE)>0
+		and aux.SelectUnselectGroup(rg,e,tp,3,3,s.rescon,0)
 end
 function s.sptg(e,tp,eg,ep,ev,re,r,rp,c)
 	local rg=Duel.GetMatchingGroup(s.spfilter,tp,LOCATION_GRAVE,0,nil,ATTRIBUTE_LIGHT+ATTRIBUTE_DARK)
-	local g=aux.SelectUnselectGroup(rg,e,tp,4,4,s.rescon,1,tp,HINTMSG_REMOVE,nil,nil,true)
+	local g=aux.SelectUnselectGroup(rg,e,tp,3,3,s.rescon,1,tp,HINTMSG_REMOVE,nil,nil,true)
 	if #g>0 then
 		g:KeepAlive()
 		e:SetLabelObject(g)
@@ -65,7 +64,7 @@ function s.destg(e,tp,eg,ep,ev,re,r,rp,chk)
 	local g=Duel.GetFieldGroup(tp,LOCATION_ONFIELD,LOCATION_ONFIELD)
 	g:RemoveCard(e:GetHandler())
 	Duel.SetOperationInfo(0,CATEGORY_DESTROY,g,#g,PLAYER_ALL,LOCATION_ONFIELD)
-	Duel.SetOperationInfo(0,CATEGORY_RECOVER,nil,0,PLAYER_ALL,#g*600)
+	Duel.SetOperationInfo(0,CATEGORY_RECOVER,nil,0,PLAYER_ALL,#g*500)
 end
 function s.desop(e,tp,eg,ep,ev,re,r,rp)
 	local g=Duel.GetFieldGroup(tp,LOCATION_ONFIELD,LOCATION_ONFIELD)
@@ -73,7 +72,7 @@ function s.desop(e,tp,eg,ep,ev,re,r,rp)
 	local ct=Duel.Destroy(g,REASON_EFFECT)
 	if ct>0 then
 		Duel.BreakEffect()
-		Duel.Recover(tp,ct*600,REASON_EFFECT)
-		Duel.Recover(1-tp,ct*600,REASON_EFFECT)
+		Duel.Recover(tp,ct*500,REASON_EFFECT)
+		Duel.Recover(1-tp,ct*500,REASON_EFFECT)
 	end
 end
