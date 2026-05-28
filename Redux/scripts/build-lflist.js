@@ -27,6 +27,7 @@ const limitChanges = new Map([
   ["511000229", 1], // Dark Strike Fighter
   ["511002994", 1], // Goyo Guardian
   ["42703248", 1], // Giant Trunade
+  ["79571449", 2], // Graceful Charity
   ["46411259", 2], // Metamorphosis
   ["511000821", 3], // Temple of the Kings (Pre-Errata)
   ["69243953", 3], // Butterfly Dagger - Elma

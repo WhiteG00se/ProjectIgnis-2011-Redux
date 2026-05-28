@@ -24,6 +24,7 @@ const errataMarkers = new Map([
   [3078576, "⬇️"], // Yata-Garasu
   [12580477, "\u2b07\ufe0f"], // Raigeki
   [83764718, "\u2b07\ufe0f"], // Monster Reborn
+  [79571449, "\u2b07\ufe0f"], // Graceful Charity
 ]);
 
 module.exports = function buildCardsDb({ reduxRoot }) {
@@ -69,6 +70,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
     .run(
       "Discard 1 card, then target 1 monster in either GY; Special Summon it.",
       83764718,
+    );
+  const gracefulCharityTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      "Draw 3 cards, then banish 3 cards from your hand.",
+      79571449,
     );
   const dimensionFusionTextResult = db
     .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
@@ -184,6 +191,9 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(monsterRebornTextResult.changes) !== 1) {
     throw new Error("Expected to update Monster Reborn text once");
+  }
+  if (Number(gracefulCharityTextResult.changes) !== 1) {
+    throw new Error("Expected to update Graceful Charity text once");
   }
   if (Number(dimensionFusionTextResult.changes) !== 1) {
     throw new Error("Expected to update Dimension Fusion text once");

@@ -48,6 +48,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `1` [Trishula, Dragon of the Ice Barrier](https://yugioh.fandom.com/wiki/Trishula,_Dragon_of_the_Ice_Barrier) | ⬇️ Once per turn |
 | `1` [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | ⬇️ Once per turn; searches DEF 600 or less |
 | `1` [Yata-Garasu](https://yugioh.fandom.com/wiki/Yata-Garasu) | ⬇️ Skips Draw Phase unless opponent has 1 or fewer cards in hand |
+| `2` [Graceful Charity](https://yugioh.fandom.com/wiki/Graceful_Charity) | ⬇️ Draw 3; banish 3 |
 | `2` [Monster Reborn](https://yugioh.fandom.com/wiki/Monster_Reborn) | ⬇️ Discard 1 |
 | `2` [Sangan](https://yugioh.fandom.com/wiki/Sangan) | ⬇️ Once per turn |
 | `2` [Skill Drain](https://yugioh.fandom.com/wiki/Skill_Drain) | ⬆️ No LP cost |
@@ -79,7 +80,6 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Delinquent Duo](https://yugioh.fandom.com/wiki/Delinquent_Duo) | 0 | `0` | 0 |  |
 | [Exchange of the Spirit](https://yugioh.fandom.com/wiki/Exchange_of_the_Spirit) | 0 | `0` | 0 |  |
 | [Fiber Jar](https://yugioh.fandom.com/wiki/Fiber_Jar) | 0 | `0` | 0 |  |
-| [Graceful Charity](https://yugioh.fandom.com/wiki/Graceful_Charity) | 0 | `0` | 0 |  |
 | [Harpie's Feather Duster](https://yugioh.fandom.com/wiki/Harpie's_Feather_Duster) | 0 | `0` | 0 |  |
 | [Last Turn](https://yugioh.fandom.com/wiki/Last_Turn) | 0 | `0` | 0 |  |
 | [Mass Driver](https://yugioh.fandom.com/wiki/Mass_Driver) | 0 | `0` | 0 |  |
@@ -167,6 +167,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Maxx "C"](https://yugioh.fandom.com/wiki/Maxx_%22C%22) | 3 | `1` | 3 |  |
 | [Superancient Deepsea King Coelacanth](https://yugioh.fandom.com/wiki/Superancient_Deepsea_King_Coelacanth) | 3 | `1` | 3 |  |
 | [Symbol of Heritage](https://yugioh.fandom.com/wiki/Symbol_of_Heritage) | 3 | `1` | 3 |  |
+| [Graceful Charity](https://yugioh.fandom.com/wiki/Graceful_Charity) | 0 | `2` | 0 | ⬇️ |
 | [Magician of Faith](https://yugioh.fandom.com/wiki/Magician_of_Faith) | 0 | `2` | 0 |  |
 | [Metamorphosis](https://yugioh.fandom.com/wiki/Metamorphosis) | 0 | `2` | 0 |  |
 | [Advanced Ritual Art](https://yugioh.fandom.com/wiki/Advanced_Ritual_Art) | 1 | `2` | 1 |  |
