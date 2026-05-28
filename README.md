@@ -164,6 +164,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [E - Emergency Call](https://yugioh.fandom.com/wiki/E_-_Emergency_Call) | 3 | `1` | 3 |  |
 | [Eradicator Epidemic Virus](https://yugioh.fandom.com/wiki/Eradicator_Epidemic_Virus) | 3 | `1` | 3 |  |
 | [Gladiator Beast War Chariot](https://yugioh.fandom.com/wiki/Gladiator_Beast_War_Chariot) | 3 | `1` | 3 |  |
+| [Maxx "C"](https://yugioh.fandom.com/wiki/Maxx_%22C%22) | 3 | `1` | 3 |  |
 | [Superancient Deepsea King Coelacanth](https://yugioh.fandom.com/wiki/Superancient_Deepsea_King_Coelacanth) | 3 | `1` | 3 |  |
 | [Symbol of Heritage](https://yugioh.fandom.com/wiki/Symbol_of_Heritage) | 3 | `1` | 3 |  |
 | [Magician of Faith](https://yugioh.fandom.com/wiki/Magician_of_Faith) | 0 | `2` | 0 |  |
