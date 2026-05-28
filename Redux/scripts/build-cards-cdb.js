@@ -22,6 +22,7 @@ const errataMarkers = new Map([
   [84749824, "⬆️"], // Solemn Warning
   [52687916, "⬇️"], // Trishula, Dragon of the Ice Barrier
   [3078576, "⬇️"], // Yata-Garasu
+  [12580477, "\u2b07\ufe0f"], // Raigeki
 ]);
 
 module.exports = function buildCardsDb({ reduxRoot }) {
@@ -54,6 +55,13 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "Destroy all monsters on the field. You cannot inflict battle damage the turn you activate this card.",
       "You cannot inflict battle damage this turn",
       53129443,
+    );
+  const raigekiTextResult = db
+    .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
+    .run(
+      "Discard 1 card; destroy all monsters your opponent controls. You cannot inflict battle damage the turn you activate this card.",
+      "You cannot inflict battle damage this turn",
+      12580477,
     );
   const dimensionFusionTextResult = db
     .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
@@ -163,6 +171,9 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(darkHoleTextResult.changes) !== 1) {
     throw new Error("Expected to update Dark Hole text once");
+  }
+  if (Number(raigekiTextResult.changes) !== 1) {
+    throw new Error("Expected to update Raigeki text once");
   }
   if (Number(dimensionFusionTextResult.changes) !== 1) {
     throw new Error("Expected to update Dimension Fusion text once");

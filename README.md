@@ -55,6 +55,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `3` [Destiny HERO - Disk Commander](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Disk_Commander) | 🔄 Once per turn; draw 1 on any Special Summon |
 | `3` [Makyura the Destructor](https://yugioh.fandom.com/wiki/Makyura_the_Destructor) | ⬆️ ATK/DEF: 1600/1200 to 1900/1900 |
 | `3` [Mind Master](https://yugioh.fandom.com/wiki/Mind_Master) | ⬇️ Once per turn |
+| `3` [Raigeki](https://yugioh.fandom.com/wiki/Raigeki) | ⬇️ Discard 1; no battle damage |
 | `3` [Super Vehicroid - Stealth Union](https://yugioh.fandom.com/wiki/Super_Vehicroid_-_Stealth_Union) | ⬇️ Must first be Fusion Summoned |
 
 </details>
@@ -83,7 +84,6 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Mass Driver](https://yugioh.fandom.com/wiki/Mass_Driver) | 0 | `0` | 0 |  |
 | [Mirage of Nightmare](https://yugioh.fandom.com/wiki/Mirage_of_Nightmare) | 0 | `0` | 0 |  |
 | [Pot of Greed](https://yugioh.fandom.com/wiki/Pot_of_Greed) | 0 | `0` | 0 |  |
-| [Raigeki](https://yugioh.fandom.com/wiki/Raigeki) | 0 | `0` | 0 |  |
 | [Snatch Steal](https://yugioh.fandom.com/wiki/Snatch_Steal) | 0 | `0` | 0 |  |
 | [The Forceful Sentry](https://yugioh.fandom.com/wiki/The_Forceful_Sentry) | 0 | `0` | 0 |  |
 | [Thousand-Eyes Restrict](https://yugioh.fandom.com/wiki/Thousand-Eyes_Restrict) | 0 | `0` | 0 |  |
@@ -202,6 +202,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Butterfly Dagger - Elma](https://yugioh.fandom.com/wiki/Butterfly_Dagger_-_Elma) | 0 | `3` | 0 | ⬆️ |
 | [Destiny HERO - Disk Commander](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Disk_Commander) | 0 | `3` | 0 | 🔄 |
 | [Makyura the Destructor](https://yugioh.fandom.com/wiki/Makyura_the_Destructor) | 0 | `3` | 0 | ⬆️ |
+| [Raigeki](https://yugioh.fandom.com/wiki/Raigeki) | 0 | `3` | 0 | ⬇️ |
 | [Temple of the Kings](https://yugioh.fandom.com/wiki/Temple_of_the_Kings) | 0 | `3` | 0 |  |
 | [Tribe-Infecting Virus](https://yugioh.fandom.com/wiki/Tribe-Infecting_Virus) | 0 | `3` | 0 |  |
 | [Mind Master](https://yugioh.fandom.com/wiki/Mind_Master) | 1 | `3` | 0 | ⬇️ |

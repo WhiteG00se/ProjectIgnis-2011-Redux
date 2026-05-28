@@ -11,6 +11,7 @@ const limitChanges = new Map([
   ["511003012", 1], // Witch of the Black Forest (Pre-Errata)
   ["69015963", 1], // Cyber-Stein
   ["3078576", 1], // Yata-Garasu
+  ["12580477", 3], // Raigeki
   ["34206604", 1], // Magical Scientist
   ["74191942", 1], // Painful Choice
   ["511003019", 3], // Mind Master (Pre-Errata)
