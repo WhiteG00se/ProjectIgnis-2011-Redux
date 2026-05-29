@@ -42,7 +42,6 @@ const limitChanges = new Map([
   ["54974237", 1], // Eradicator Epidemic Virus
   ["83764718", 2], // Monster Reborn
   ["5318639", 1], // Mystical Space Typhoon
-  ["88307361", 1], // Superancient Deepsea King Coelacanth
   ["98777036", 3], // Tragoedia
   ["423585", 3], // Summoner Monk
   ["79106360", 1], // Morphing Jar #2
