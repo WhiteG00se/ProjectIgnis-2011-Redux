@@ -32,7 +32,7 @@
 	],
 	"urls": [
 		{
-			"url": "default",
+			"url": "https://images.ygoprodeck.com/images/cards/{}.jpg",
 			"type": "pic"
 		},
 		{
