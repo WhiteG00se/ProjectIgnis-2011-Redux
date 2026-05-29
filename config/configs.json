@@ -16,6 +16,7 @@
 			"repo_path": "./Redux/modded",
 			"data_path": ".",
 			"script_path": "script",
+			"pics_path": "pics",
 			"lflist_path": ".",
 			"should_update": false,
 			"should_read": true,

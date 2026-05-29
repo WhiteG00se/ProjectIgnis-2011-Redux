@@ -5,6 +5,8 @@ The cardpool cuts off on 24.06.2011 (last TCG release before XYZs).<br>
 Duels default to the `Redux-11` ruleset: Master Rule 1 with `First turn draw` disabled.<br>
 By default, cards use their latest Master Rule 1 version / errata.<br>
 Ignis-Redux-11 uses custom erratas and a custom banned list (check below)<br>
+Redux-owned card image overrides live in `Redux/assets/pics/` and are copied
+to `Redux/modded/pics/` by the build; root `/pics` is only a local cache.<br>
 
 <details>
 <summary><strong><big>How to install</big></strong></summary>
@@ -49,7 +51,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `1` [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | ⬇️ Once per turn; searches DEF 600 or less |
 | `1` [Yata-Garasu](https://yugioh.fandom.com/wiki/Yata-Garasu) | ⬇️ Skips Draw Phase unless opponent has 1 or fewer cards in hand |
 | `2` [Graceful Charity](https://yugioh.fandom.com/wiki/Graceful_Charity) | ⬇️ Draw 3; banish 3 |
-| `2` [Monster Reborn](https://yugioh.fandom.com/wiki/Monster_Reborn) | ⬇️ Discard 1 |
+| `2` [Monster Reborn](https://yugioh.fandom.com/wiki/Monster_Reborn) | ⬇️ Discard 1; becomes Equip Spell; destroys revived monster if it leaves |
 | `2` [Sangan](https://yugioh.fandom.com/wiki/Sangan) | ⬇️ Once per turn |
 | `2` [Skill Drain](https://yugioh.fandom.com/wiki/Skill_Drain) | ⬆️ No LP cost |
 | `3` [Butterfly Dagger - Elma](https://yugioh.fandom.com/wiki/Butterfly_Dagger_-_Elma) | ⬆️ Equipped monster gains 800 ATK/DEF |

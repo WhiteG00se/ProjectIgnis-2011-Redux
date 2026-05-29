@@ -24,6 +24,7 @@ const errataMarkers = new Map([
   [3078576, "⬇️"], // Yata-Garasu
   [12580477, "\u2b07\ufe0f"], // Raigeki
   [83764718, "\u2b07\ufe0f"], // Monster Reborn
+  [83764719, "\u2b07\ufe0f"], // Monster Reborn alternate art
   [79571449, "\u2b07\ufe0f"], // Graceful Charity
   [9126351, "\u2b06\ufe0f"], // Swap Frog
 ]);
@@ -67,11 +68,15 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       12580477,
     );
   const monsterRebornTextResult = db
-    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .prepare("UPDATE texts SET desc = ? WHERE id IN (?, ?)")
     .run(
-      "Discard 1 card, then target 1 monster in either GY; Special Summon it.",
+      "Discard 1 card, then target 1 monster in either GY; Special Summon it in Attack Position, and equip it with this card. When this card leaves the field, destroy the equipped monster.",
       83764718,
+      83764719,
     );
+  const monsterRebornTypeResult = db
+    .prepare("UPDATE datas SET type = ? WHERE id IN (?, ?)")
+    .run(0x40002, 83764718, 83764719);
   const gracefulCharityTextResult = db
     .prepare("UPDATE texts SET desc = ? WHERE id = ?")
     .run(
@@ -198,8 +203,11 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   if (Number(raigekiTextResult.changes) !== 1) {
     throw new Error("Expected to update Raigeki text once");
   }
-  if (Number(monsterRebornTextResult.changes) !== 1) {
-    throw new Error("Expected to update Monster Reborn text once");
+  if (Number(monsterRebornTextResult.changes) !== 2) {
+    throw new Error("Expected to update Monster Reborn text twice");
+  }
+  if (Number(monsterRebornTypeResult.changes) !== 2) {
+    throw new Error("Expected to update Monster Reborn type twice");
   }
   if (Number(gracefulCharityTextResult.changes) !== 1) {
     throw new Error("Expected to update Graceful Charity text once");

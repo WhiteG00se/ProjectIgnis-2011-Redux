@@ -2,6 +2,7 @@ const path = require("path");
 
 const buildCardsDb = require("./build-cards-cdb");
 const buildCardsUnofficialDb = require("./build-cards-unofficial-cdb");
+const buildCardPics = require("./build-card-pics");
 const buildCardScripts = require("./build-card-scripts");
 const buildLflist = require("./build-lflist");
 const { cleanDirectory } = require("./utils");
@@ -14,6 +15,7 @@ const buildTargets = [
   buildCardsDb,
   buildCardsUnofficialDb,
   buildCardScripts,
+  buildCardPics,
 ];
 
 cleanDirectory(reduxRoot, moddedDir);
