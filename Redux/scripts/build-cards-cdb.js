@@ -13,6 +13,7 @@ const errataMarkers = new Map([
   [53129443, "⬇️"], // Dark Hole
   [23557835, "⬇️"], // Dimension Fusion
   [40044918, "⬇️"], // Elemental HERO Stratos
+  [40044919, "⬇️"], // Elemental HERO Stratos alternate art
   [93369354, "⬇️"], // Fishborg Blaster
   [27970830, "⬇️"], // Gateway of the Six
   [85602018, "⬇️"], // Last Will
@@ -23,6 +24,7 @@ const errataMarkers = new Map([
   [52687916, "⬇️"], // Trishula, Dragon of the Ice Barrier
   [3078576, "⬇️"], // Yata-Garasu
   [12580477, "\u2b07\ufe0f"], // Raigeki
+  [12580478, "\u2b07\ufe0f"], // Raigeki alternate art
   [83764718, "\u2b07\ufe0f"], // Monster Reborn
   [83764719, "\u2b07\ufe0f"], // Monster Reborn alternate art
   [79571449, "\u2b07\ufe0f"], // Graceful Charity
@@ -61,11 +63,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       53129443,
     );
   const raigekiTextResult = db
-    .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
+    .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id IN (?, ?)")
     .run(
       "Discard 1 card; destroy all monsters your opponent controls. You cannot inflict battle damage the turn you activate this card.",
       "You cannot inflict battle damage this turn",
       12580477,
+      12580478,
     );
   const monsterRebornTextResult = db
     .prepare("UPDATE texts SET desc = ? WHERE id IN (?, ?)")
@@ -136,10 +139,11 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       72989439,
     );
   const elementalHeroStratosTextResult = db
-    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .prepare("UPDATE texts SET desc = ? WHERE id IN (?, ?)")
     .run(
       'When this card is Normal or Special Summoned: You can activate 1 of these effects.\r\n\u25cf Destroy Spells/Traps on the field, up to the number of "HERO" monsters you control, except this card.\r\n\u25cf Add 1 "HERO" monster from your Deck to your hand.\r\nYou can only use this effect of "Elemental HERO Stratos" once per turn.',
       40044918,
+      40044919,
     );
   const solemnWarningTextResult = db
     .prepare("UPDATE texts SET desc = ? WHERE id = ?")
@@ -200,8 +204,8 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   if (Number(darkHoleTextResult.changes) !== 1) {
     throw new Error("Expected to update Dark Hole text once");
   }
-  if (Number(raigekiTextResult.changes) !== 1) {
-    throw new Error("Expected to update Raigeki text once");
+  if (Number(raigekiTextResult.changes) !== 2) {
+    throw new Error("Expected to update Raigeki text twice");
   }
   if (Number(monsterRebornTextResult.changes) !== 2) {
     throw new Error("Expected to update Monster Reborn text twice");
@@ -238,8 +242,8 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "Expected to update Black Luster Soldier - Envoy of the Beginning text once",
     );
   }
-  if (Number(elementalHeroStratosTextResult.changes) !== 1) {
-    throw new Error("Expected to update Elemental HERO Stratos text once");
+  if (Number(elementalHeroStratosTextResult.changes) !== 2) {
+    throw new Error("Expected to update Elemental HERO Stratos text twice");
   }
   if (Number(solemnWarningTextResult.changes) !== 1) {
     throw new Error("Expected to update Solemn Warning text once");

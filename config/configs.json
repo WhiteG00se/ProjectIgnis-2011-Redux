@@ -13,11 +13,11 @@
 		},
 		{
 			"repo_name": "Redux-11",
-			"repo_path": "./Redux/modded",
-			"data_path": ".",
-			"script_path": "script",
-			"pics_path": "pics",
-			"lflist_path": ".",
+			"repo_path": "./Redux",
+			"data_path": "modded",
+			"script_path": "scripts/card-scripts",
+			"pics_path": "assets/pics",
+			"lflist_path": "modded",
 			"should_update": false,
 			"should_read": true,
 			"not_git_repo": true

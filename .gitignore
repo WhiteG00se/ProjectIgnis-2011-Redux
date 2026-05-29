@@ -5,3 +5,10 @@
 /replay
 /deck
 config/system.conf
+/Redux/modded/script/
+/Redux/modded/pics/
+/Redux/incoming/*
+!/Redux/incoming/README.md
+!/Redux/incoming/pics/
+/Redux/incoming/pics/*
+!/Redux/incoming/pics/.gitkeep

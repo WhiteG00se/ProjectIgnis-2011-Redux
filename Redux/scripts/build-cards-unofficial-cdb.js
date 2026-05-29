@@ -15,6 +15,7 @@ const errataMarkers = new Map([
   [511003019, "⬇️"], // Mind Master
   [511002992, "⬇️"], // Rescue Cat
   [511000824, "♻️"], // Ring of Destruction
+  [511000825, "♻️"], // Ring of Destruction alternate art
   [511002631, "⬇️"], // Sangan
   [511000818, "⬇️"], // Sinister Serpent
   [511003012, "⬇️"], // Witch of the Black Forest
@@ -37,6 +38,10 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   const whitelistPasscodes = new Set(
     [...lflist.matchAll(/^(\d+) [0-3](?= --)/gm)].map((entry) => Number(entry[1])),
   );
+  const whitelistedPrintPasscodes = new Set([
+    ...whitelistPasscodes,
+    511000825, // Ring of Destruction (Pre-Errata) alternate art
+  ]);
   // EDOPro labels supplemental legacy cards as Illegal (ot = 8); Redux permits its
   // selected versions as normal OCG/TCG cards (ot = 3).
   const allowWhitelistedCard = db.prepare(
@@ -45,7 +50,7 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   const removePreErrataSuffix = db.prepare(
     "UPDATE texts SET name = replace(name, ' (Pre-Errata)', '') WHERE id = ? AND name LIKE '% (Pre-Errata)%'",
   );
-  for (const passcode of whitelistPasscodes) {
+  for (const passcode of whitelistedPrintPasscodes) {
     allowWhitelistedCard.run(passcode);
     removePreErrataSuffix.run(passcode);
   }
@@ -122,10 +127,11 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
       511002993,
     ); // Brionac, Dragon of the Ice Barrier (Pre-Errata)
   const ringOfDestructionTextResult = db
-    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .prepare("UPDATE texts SET desc = ? WHERE id IN (?, ?)")
     .run(
       "Pay 1500 LP, then target 1 face-up monster; destroy it, and if you do, both players gain LP equal to its ATK.",
       511000824,
+      511000825,
     ); // Ring of Destruction (Pre-Errata)
   const markErrataName = db.prepare("UPDATE texts SET name = name || ? WHERE id = ?");
   const errataNameResults = [...errataMarkers].map(([id, marker]) =>
@@ -134,11 +140,11 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   const illegalWhitelistedCards = db
     .prepare("SELECT id FROM datas WHERE ot = 8")
     .all()
-    .filter((card) => whitelistPasscodes.has(card.id));
+    .filter((card) => whitelistedPrintPasscodes.has(card.id));
   const suffixedWhitelistedCards = db
     .prepare("SELECT id FROM texts WHERE name LIKE '% (Pre-Errata)%'")
     .all()
-    .filter((card) => whitelistPasscodes.has(card.id));
+    .filter((card) => whitelistedPrintPasscodes.has(card.id));
   db.close();
 
   if (illegalWhitelistedCards.length > 0) {
@@ -187,8 +193,8 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   if (Number(brionacTextResult.changes) !== 1) {
     throw new Error("Expected to update Brionac, Dragon of the Ice Barrier (Pre-Errata) text once");
   }
-  if (Number(ringOfDestructionTextResult.changes) !== 1) {
-    throw new Error("Expected to update Ring of Destruction (Pre-Errata) text once");
+  if (Number(ringOfDestructionTextResult.changes) !== 2) {
+    throw new Error("Expected to update Ring of Destruction (Pre-Errata) text twice");
   }
   if (errataNameResults.some((result) => Number(result.changes) !== 1)) {
     throw new Error("Expected to mark each supplemental Redux errata card name once");

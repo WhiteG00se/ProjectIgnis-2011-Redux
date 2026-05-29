@@ -24,9 +24,9 @@ The custom format is built from project-owned inputs under `Redux/`:
 - `Redux/scripts/` contains the readable build / transformation scripts. Future
   card errata, stat edits, text edits, and card-pool changes should be expressed
   here so Git history explains the project changes.
-- `Redux/modded/` is generated output. EDOPro reads this folder through
-  `config/configs.json`. Do not hand-edit generated files here; update the
-  scripts and rebuild instead.
+- `Redux/assets/pics/` contains tracked Redux-owned card-image overrides.
+- `Redux/modded/` is generated data output for databases and the LF list. Do
+  not hand-edit generated files here; update the scripts and rebuild instead.
 
 Run the build from the repository root:
 
@@ -37,8 +37,9 @@ node .\Redux\scripts\build.js
 The build deletes and recreates `Redux/modded/`, copies baseline databases and
 the LF list from `Redux/vanilla/`, and then applies transformations declared in
 `Redux/scripts/`. The EDOPro local repo entry in `config/configs.json` reads
-`./Redux/modded` for `.cdb` data, scripts, and the `.lflist.conf`; it must stay
-local-only with updates disabled.
+generated `.cdb` and `.lflist.conf` files from `Redux/modded/`, Lua overrides
+from `Redux/scripts/card-scripts/`, and card-image overrides from
+`Redux/assets/pics/`; it must stay local-only with updates disabled.
 
 On Windows in Codex, a sandboxed build may report `EPERM` while deleting a
 generated `.cdb` file in `Redux/modded/`, even when EDOPro is not running. If
@@ -50,8 +51,9 @@ For new Redux changes:
 
 1. Do not edit files in `Redux/modded/` by hand.
 2. Do not edit the baseline in `Redux/vanilla/` when making a format change.
-3. Express LF list, database, and future effect-script changes in
-   `Redux/scripts/`, then rebuild.
+3. Express LF list and database changes in `Redux/scripts/`, then rebuild.
+   Express effect-script overrides in `Redux/scripts/card-scripts/`, which
+   EDOPro reads directly.
 4. Update `README.md` whenever a card's forbidden / limited status, stats, or
    other card properties change, or its effect / English card text is errataed.
    Document all Redux banned-list changes in the banned-list table and all
@@ -61,6 +63,31 @@ For new Redux changes:
 
 In the `README.md` errata table, describe changes in short and simplistic summary phrases (easy language)
 consistent with the existing entries rather than full card-text wording.
+
+When changing a card, check whether the selected passcode has alternate-art or
+alias print rows in the relevant `.cdb`. Apply Redux name markers, text changes,
+type/stat/property changes, and needed image metadata fixes to every print row
+for that same card, not only the first passcode found.
+
+Redux-owned card image overrides belong only in `Redux/assets/pics/`; EDOPro
+reads that folder directly through `config/configs.json`. Root `/pics` is only
+a local client cache.
+Do not create or hand-edit finished card images in Codex. When an image override
+is needed, give the user the vanilla image file(s), explain exactly which
+visible metadata should change, and ask the user to create the final image with
+ChatGPT. Remind the user to download the finished image into
+`Redux/incoming/pics/` instead of pasting it into chat, so the real image bytes
+and resolution are preserved. After the user provides the downloaded file,
+validate its dimensions and file signature, convert it to the expected format if
+needed, then move it into `Redux/assets/pics/` so the incoming copy is gone.
+Only ask for visible card-image metadata changes such as name, attribute,
+Level/Rank, ATK/DEF, monster type,
+Tuner/Fusion/Synchro/etc. labels, and Spell/Trap subtype. Do not ask ChatGPT to
+rewrite or modernize printed effect text in card images. "Vanilla image" means
+the source image exactly as supplied or extracted, including its original effect
+text; preserve that effect box unless the user explicitly asks otherwise. The
+authoritative Redux effect text belongs in the generated `.cdb`, not in the
+image override.
 
 Legacy / pre-errata cards may come from supplemental baseline databases such as
 `cards-unofficial.cdb`, not only `cards.cdb`.
@@ -94,7 +121,9 @@ reapplied or preserved when refreshing files from upstream:
   `Redux/vanilla/2011-Redux.lflist.conf`; its name is transformed only by
   `Redux/scripts/build-lflist.js`.
 - The local generated-data repository label in `config/configs.json` is
-  `Redux-11`, matching the LF list.
+  `Redux-11`, matching the LF list. Its repo path is `./Redux`, with generated
+  data and LF list files in `modded`, script overrides in
+  `scripts/card-scripts`, and image overrides in `assets/pics`.
 
 # User Context
 

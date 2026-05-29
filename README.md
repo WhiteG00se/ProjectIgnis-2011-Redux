@@ -5,8 +5,8 @@ The cardpool cuts off on 24.06.2011 (last TCG release before XYZs).<br>
 Duels default to the `Redux-11` ruleset: Master Rule 1 with `First turn draw` disabled.<br>
 By default, cards use their latest Master Rule 1 version / errata.<br>
 Ignis-Redux-11 uses custom erratas and a custom banned list (check below)<br>
-Redux-owned card image overrides live in `Redux/assets/pics/` and are copied
-to `Redux/modded/pics/` by the build; root `/pics` is only a local cache.<br>
+Redux-owned card image overrides live in `Redux/assets/pics/`; root `/pics` is
+only a local cache.<br>
 
 <details>
 <summary><strong><big>How to install</big></strong></summary>
@@ -240,14 +240,17 @@ reviewable in Git through the build scripts that apply them.
 
 Development requires [Node.js LTS 22](https://nodejs.org/).
 
-The Redux folders have three roles:
+The Redux folders have these roles:
 
 - `Redux\vanilla`: original baseline inputs, including the list and card
   databases required by selected pre-errata cards. Do not edit these after they
   have been captured.
 - `Redux\scripts`: readable build and transformation scripts. Implement format
-  changes here.
-- `Redux\modded`: generated EDOPro input files. Do not edit these directly.
+  changes here. EDOPro also reads Lua card overrides from
+  `Redux\scripts\card-scripts`.
+- `Redux\assets\pics`: tracked source folder for Redux card-image overrides.
+- `Redux\modded`: generated database and LF-list files. Do not edit these
+  directly.
 
 Run the build from the repository root with Node.js:
 
@@ -256,9 +259,8 @@ node .\Redux\scripts\build.js
 ```
 
 The build recreates `Redux\modded`, copies the vanilla inputs, and applies any
-declared transformations. EDOPro reads the generated folder through
-`config\configs.json`; the local `Redux-11` entry is readable but not
-auto-updated.
+declared transformations. EDOPro reads Redux paths through `config\configs.json`;
+the local `Redux-11` entry is readable but not auto-updated.
 
 The LF list is both the forbidden / limited list and the format card pool.
 Its selected passcodes are intentional, including pre-errata card versions.
