@@ -37,6 +37,10 @@
 		},
 		{
 			"url": "default",
+			"type": "pic"
+		},
+		{
+			"url": "default",
 			"type": "field"
 		},
 		{
