@@ -205,7 +205,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Butterfly Dagger - Elma](https://yugioh.fandom.com/wiki/Butterfly_Dagger_-_Elma) | 0 | `3` | 0 | ⬆️ |
 | [Destiny HERO - Disk Commander](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Disk_Commander) | 0 | `3` | 0 | 🔄 |
 | [Makyura the Destructor](https://yugioh.fandom.com/wiki/Makyura_the_Destructor) | 0 | `3` | 0 | ⬆️ |
-| [Raigeki](https://yugioh.fandom.com/wiki/Raigeki) | 0 | `3` | 0 | ⬇️ |
+| [Raigeki](https://yugioh.fandom.com/wiki/Raigeki) | 0 | `1` | 0 | ⬇️ |
 | [Temple of the Kings](https://yugioh.fandom.com/wiki/Temple_of_the_Kings) | 0 | `3` | 0 |  |
 | [Tribe-Infecting Virus](https://yugioh.fandom.com/wiki/Tribe-Infecting_Virus) | 0 | `3` | 0 |  |
 | [Mind Master](https://yugioh.fandom.com/wiki/Mind_Master) | 1 | `3` | 0 | ⬇️ |
