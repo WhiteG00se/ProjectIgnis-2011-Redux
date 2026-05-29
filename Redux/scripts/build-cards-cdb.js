@@ -30,6 +30,7 @@ const errataMarkers = new Map([
   [79571449, "\u2b07\ufe0f"], // Graceful Charity
   [9126351, "\u2b06\ufe0f"], // Swap Frog
 ]);
+const errataNamePrefix = "[Redux] ";
 
 module.exports = function buildCardsDb({ reduxRoot }) {
   const output = path.join(reduxRoot, "modded", "cards.cdb");
@@ -189,9 +190,9 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       "Return 1 monster to gain an additional Normal Summon",
       9126351,
     );
-  const markErrataName = db.prepare("UPDATE texts SET name = name || ? WHERE id = ?");
+  const markErrataName = db.prepare("UPDATE texts SET name = ? || name || ? WHERE id = ?");
   const errataNameResults = [...errataMarkers].map(([id, marker]) =>
-    markErrataName.run(` ${marker}`, id),
+    markErrataName.run(errataNamePrefix, ` ${marker}`, id),
   );
   db.close();
 

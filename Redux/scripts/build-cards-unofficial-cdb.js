@@ -20,6 +20,7 @@ const errataMarkers = new Map([
   [511000818, "⬇️"], // Sinister Serpent
   [511003012, "⬇️"], // Witch of the Black Forest
 ]);
+const errataNamePrefix = "[Redux] ";
 
 module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   const output = path.join(reduxRoot, "modded", "cards-unofficial.cdb");
@@ -133,9 +134,9 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
       511000824,
       511000825,
     ); // Ring of Destruction (Pre-Errata)
-  const markErrataName = db.prepare("UPDATE texts SET name = name || ? WHERE id = ?");
+  const markErrataName = db.prepare("UPDATE texts SET name = ? || name || ? WHERE id = ?");
   const errataNameResults = [...errataMarkers].map(([id, marker]) =>
-    markErrataName.run(` ${marker}`, id),
+    markErrataName.run(errataNamePrefix, ` ${marker}`, id),
   );
   const illegalWhitelistedCards = db
     .prepare("SELECT id FROM datas WHERE ot = 8")
