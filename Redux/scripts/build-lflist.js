@@ -46,7 +46,7 @@ const limitChanges = new Map([
   ["423585", 3], // Summoner Monk
   ["79106360", 1], // Morphing Jar #2
   ["85087012", 3], // Card Trooper
-  ["70583996", 3], // Dewloren, Tiger King of the Ice Barrier
+  ["70583986", 3], // Dewloren, Tiger King of the Ice Barrier
   ["45305419", 1], // Symbol of Heritage
   ["45809008", 3], // Destiny Draw
   ["72302403", 1], // Swords of Revealing Light
@@ -55,7 +55,7 @@ const limitChanges = new Map([
   ["91623717", 1], // Chain Strike
   ["29843091", 1], // Ojama Trio
   ["62279055", 1], // Magic Cylinder
-  ["511003026", 1], // Mind Crush
+  ["15800838", 1], // Mind Crush
   ["95308449", 0], // Final Countdown
   ["33396948", 0], // Exodia the Forbidden One
   ["7902349", 3], // Left Arm of the Forbidden One
