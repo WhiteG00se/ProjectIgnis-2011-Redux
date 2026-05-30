@@ -72,22 +72,19 @@ for that same card, not only the first passcode found.
 Redux-owned card image overrides belong only in `Redux/assets/pics/`; EDOPro
 reads that folder directly through `config/configs.json`. Root `/pics` is only
 a local client cache.
-Do not create or hand-edit finished card images in Codex. When an image override
-is needed, give the user the vanilla image file(s), explain exactly which
-visible metadata should change, and ask the user to create the final image with
-ChatGPT. Remind the user to download the finished image into
-`Redux/incoming/pics/` instead of pasting it into chat, so the real image bytes
-and resolution are preserved. After the user provides the downloaded file,
-validate its dimensions and file signature, convert it to the expected format if
-needed, then move it into `Redux/assets/pics/` so the incoming copy is gone.
-Only ask for visible card-image metadata changes such as name, attribute,
-Level/Rank, ATK/DEF, monster type,
-Tuner/Fusion/Synchro/etc. labels, and Spell/Trap subtype. Do not ask ChatGPT to
-rewrite or modernize printed effect text in card images. "Vanilla image" means
-the source image exactly as supplied or extracted, including its original effect
-text; preserve that effect box unless the user explicitly asks otherwise. The
-authoritative Redux effect text belongs in the generated `.cdb`, not in the
-image override.
+When an image override is needed, prefer deterministic local editing in Codex
+from a high-resolution source image. Find or download clean source art directly
+when possible. Validate dimensions and file signatures, convert to the expected
+format if needed, then place final overrides in `Redux/assets/pics/`. Update all
+visible card-image metadata changes such as name, attribute, Level/Rank,
+ATK/DEF, monster type, Tuner/Fusion/Synchro/etc. labels, and Spell/Trap
+subtype. For Redux errata, render the generated `.cdb` effect text onto the
+image for every same-card print/alternate artwork, instead of preserving
+outdated printed source text. If a legacy or pre-official-errata passcode only
+has a blurry source image, check whether it aliases to a newer official passcode
+and use that cleaner art as the base when it preserves the intended artwork/card
+identity. Only ask the user for image-source help when local files, aliases,
+configured download sources, and reasonable automated fixes are not enough.
 
 Legacy / pre-errata cards may come from supplemental baseline databases such as
 `cards-unofficial.cdb`, not only `cards.cdb`.
