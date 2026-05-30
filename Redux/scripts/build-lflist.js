@@ -6,6 +6,7 @@ const { copyFileInRedux } = require("./utils");
 const limitChanges = new Map([
   ["85602018", 1], // Last Will
   ["23557835", 1], // Dimension Fusion
+  ["17484499", 3], // Exchange of the Spirit
   ["4031928", 1], // Change of Heart
   ["511000819", 1], // Chaos Emperor Dragon - Envoy of the End (Pre-Errata)
   ["511003012", 1], // Witch of the Black Forest (Pre-Errata)

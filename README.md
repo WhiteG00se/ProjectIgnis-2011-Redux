@@ -81,7 +81,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Crush Card Virus](https://yugioh.fandom.com/wiki/Crush_Card_Virus) | 0 | `0` | 0 |  |
 | [Cyber Jar](https://yugioh.fandom.com/wiki/Cyber_Jar) | 0 | `0` | 0 |  |
 | [Delinquent Duo](https://yugioh.fandom.com/wiki/Delinquent_Duo) | 0 | `0` | 0 |  |
-| [Exchange of the Spirit](https://yugioh.fandom.com/wiki/Exchange_of_the_Spirit) | 0 | `0` | 0 |  |
+| [Exchange of the Spirit](https://yugioh.fandom.com/wiki/Exchange_of_the_Spirit) | 0 | `3` | 0 |  |
 | [Fiber Jar](https://yugioh.fandom.com/wiki/Fiber_Jar) | 0 | `0` | 0 |  |
 | [Harpie's Feather Duster](https://yugioh.fandom.com/wiki/Harpie's_Feather_Duster) | 0 | `0` | 0 |  |
 | [Last Turn](https://yugioh.fandom.com/wiki/Last_Turn) | 0 | `0` | 0 |  |
