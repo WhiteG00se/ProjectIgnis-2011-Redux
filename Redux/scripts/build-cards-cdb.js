@@ -15,6 +15,7 @@ const errataMarkers = new Map([
   [40044918, "⬇️"], // Elemental HERO Stratos
   [40044919, "⬇️"], // Elemental HERO Stratos alternate art
   [17484499, "⬇️"], // Exchange of the Spirit
+  [78706415, "\u267b\ufe0f"], // Fiber Jar
   [93369354, "⬇️"], // Fishborg Blaster
   [27970830, "⬇️"], // Gateway of the Six
   [85602018, "⬇️"], // Last Will
@@ -127,6 +128,12 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       'If this card is Normal or Special Summoned, or flipped face-up: You can Special Summon 1 Level 6 or lower Fusion Monster from your Extra Deck in face-up Attack or Defense Position, but it cannot inflict battle damage until your next End Phase.',
       34206604,
     );
+  const fiberJarTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      "If this card is Normal or Special Summoned, or flipped face-up: Set both players' LP to 8000.",
+      78706415,
+    );
   const painfulChoiceTextResult = db
     .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
     .run(
@@ -235,6 +242,9 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   }
   if (Number(magicalScientistTextResult.changes) !== 1) {
     throw new Error("Expected to update Magical Scientist text once");
+  }
+  if (Number(fiberJarTextResult.changes) !== 1) {
+    throw new Error("Expected to update Fiber Jar text once");
   }
   if (Number(painfulChoiceTextResult.changes) !== 1) {
     throw new Error("Expected to update Painful Choice text once");

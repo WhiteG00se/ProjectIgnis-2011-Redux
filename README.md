@@ -37,6 +37,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `1` [Dark Magician of Chaos](https://yugioh.fandom.com/wiki/Dark_Magician_of_Chaos) | ⬇️ Once per turn |
 | `1` [Dark Strike Fighter](https://yugioh.fandom.com/wiki/Dark_Strike_Fighter) | ⬇️ Once per turn |
 | `1` [Elemental HERO Stratos](https://yugioh.fandom.com/wiki/Elemental_HERO_Stratos) | ⬇️ Once per turn |
+| `1` [Fiber Jar](https://yugioh.fandom.com/wiki/Fiber_Jar) | 🔄 Summon/flip trigger; sets both players to 8000 LP |
 | `1` [Fishborg Blaster](https://yugioh.fandom.com/wiki/Fishborg_Blaster) | ⬇️ Once per turn |
 | `1` [Gateway of the Six](https://yugioh.fandom.com/wiki/Gateway_of_the_Six) | ⬇️ Only 1 counter per summon |
 | `1` [Imperial Order](https://yugioh.fandom.com/wiki/Imperial_Order) | ⬇️ End Phase upkeep; optional 1700 LP |
@@ -84,7 +85,6 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Cyber Jar](https://yugioh.fandom.com/wiki/Cyber_Jar) | 0 | `0` | 0 |  |
 | [Delinquent Duo](https://yugioh.fandom.com/wiki/Delinquent_Duo) | 0 | `0` | 0 |  |
 | [Exchange of the Spirit](https://yugioh.fandom.com/wiki/Exchange_of_the_Spirit) | 0 | `3` | 0 | ⬇️ |
-| [Fiber Jar](https://yugioh.fandom.com/wiki/Fiber_Jar) | 0 | `0` | 0 |  |
 | [Harpie's Feather Duster](https://yugioh.fandom.com/wiki/Harpie's_Feather_Duster) | 0 | `0` | 0 |  |
 | [Last Turn](https://yugioh.fandom.com/wiki/Last_Turn) | 0 | `0` | 0 |  |
 | [Mass Driver](https://yugioh.fandom.com/wiki/Mass_Driver) | 0 | `0` | 0 |  |
@@ -107,6 +107,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Cyber-Stein](https://yugioh.fandom.com/wiki/Cyber-Stein) | 0 | `1` | 0 | 🔄 |
 | [Dark Magician of Chaos](https://yugioh.fandom.com/wiki/Dark_Magician_of_Chaos) | 0 | `1` | 0 | ⬇️ |
 | [Dark Strike Fighter](https://yugioh.fandom.com/wiki/Dark_Strike_Fighter) | 0 | `1` | 0 | ⬇️ |
+| [Fiber Jar](https://yugioh.fandom.com/wiki/Fiber_Jar) | 0 | `1` | 0 | 🔄 |
 | [Goyo Guardian](https://yugioh.fandom.com/wiki/Goyo_Guardian) | 0 | `1` | 0 |  |
 | [Imperial Order](https://yugioh.fandom.com/wiki/Imperial_Order) | 0 | `1` | 0 | ⬇️ |
 | [Last Will](https://yugioh.fandom.com/wiki/Last_Will) | 0 | `1` | 0 | ⬇️ |

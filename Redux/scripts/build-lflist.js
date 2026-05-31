@@ -14,6 +14,7 @@ const limitChanges = new Map([
   ["3078576", 1], // Yata-Garasu
   ["12580477", 1], // Raigeki
   ["34206604", 1], // Magical Scientist
+  ["78706415", 1], // Fiber Jar
   ["74191942", 1], // Painful Choice
   ["511003019", 3], // Mind Master (Pre-Errata)
   ["511003116", 3], // Destiny HERO - Disk Commander (Pre-Errata)
