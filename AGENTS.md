@@ -72,6 +72,10 @@ for that same card, not only the first passcode found.
 Redux-owned card image overrides belong only in `Redux/assets/pics/`; EDOPro
 reads that folder directly through `config/configs.json`. Root `/pics` is only
 a local client cache.
+Redux card-image rendering should use clean vanilla source images from
+`Redux/cache/pics/`, not generated images from `Redux/assets/pics/`, so repeated
+render runs do not stack edits on top of previous Redux artwork. Keep
+`Redux/cache/` ignored; it is a local source cache, not a tracked asset folder.
 When an image override is needed, prefer deterministic local editing in Codex
 from a high-resolution source image. Find or download clean source art directly
 when possible. Validate dimensions and file signatures, convert to the expected
@@ -85,6 +89,19 @@ has a blurry source image, check whether it aliases to a newer official passcode
 and use that cleaner art as the base when it preserves the intended artwork/card
 identity. Only ask the user for image-source help when local files, aliases,
 configured download sources, and reasonable automated fixes are not enough.
+Redux errata card images use a visual marker: a rounded gold inset frame from
+pixels 15 through 28 on the normalized `813x1185` image, plus a shiny gold `R`
+below the card title, centered near `(91, 191)` and rotated 7 degrees clockwise.
+Keep this marker deterministic in `Redux/scripts/render-card-image-text.ps1`.
+Do not keep preview experiments under `Redux/previews/` once a marker style is
+chosen.
+For Spell/Trap errata image text replacement, keep the textbox overwrite simple:
+use the card's sampled textbox background color and the requested text-box shape
+only. Do not invent extra borders, outlines, or separately colored corner
+patches.
+For monster errata image text replacement, repaint the generated effect area
+from the clean source and redraw the monster type line plus ATK/DEF from `.cdb`
+metadata, not only the effect text.
 
 Legacy / pre-errata cards may come from supplemental baseline databases such as
 `cards-unofficial.cdb`, not only `cards.cdb`.

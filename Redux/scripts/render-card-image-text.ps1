@@ -2,14 +2,16 @@ param(
   [int[]]$OfficialIds = @(
     72989439, 69243953, 4031928, 69015963, 3897065, 76263644, 53129443,
     23557835, 40044918, 40044919, 93369354, 27970830, 85602018, 34206604,
-    74191942, 82732705, 84749824, 52687916, 3078576, 12580477,
+    74191942, 82732705, 84749824, 52687916, 3078576, 12580477, 12580478,
     83764718, 83764719, 79571449, 9126351
   ),
   [int[]]$UnofficialIds = @(
     511002993, 511000819, 511001039, 511000229, 511003116, 511002996,
-    511003019, 511002992, 511000824, 511000825, 511002631,
+    21593987, 511003019, 511002992, 511000824, 511000825, 511002631,
     511000818, 511003012
-  )
+  ),
+  [switch]$OnlySpellTrap,
+  [switch]$OnlyMonster
 )
 
 $ErrorActionPreference = "Stop"
@@ -17,9 +19,13 @@ Add-Type -AssemblyName System.Drawing
 
 $repoRoot = Resolve-Path -LiteralPath (Join-Path $PSScriptRoot "..\..")
 $assetsDir = Join-Path $repoRoot "Redux\assets\pics"
+$vanillaPicsDir = Join-Path $repoRoot "Redux\cache\pics"
 $cacheDir = Join-Path $repoRoot "pics"
+$targetWidth = 813
+$targetHeight = 1185
 
 New-Item -ItemType Directory -Force -Path $assetsDir | Out-Null
+New-Item -ItemType Directory -Force -Path $vanillaPicsDir | Out-Null
 
 $officialIdsJson = $OfficialIds -join ","
 $unofficialIdsJson = $UnofficialIds -join ","
@@ -34,7 +40,7 @@ const jobs = [
 const rows = [];
 for (const [dbPath, ids] of jobs) {
   const db = new DatabaseSync(dbPath);
-  const stmt = db.prepare("SELECT texts.id, texts.name, texts.desc, datas.type FROM texts JOIN datas ON datas.id = texts.id WHERE texts.id = ?");
+  const stmt = db.prepare("SELECT texts.id, texts.name, texts.desc, datas.type, datas.race, datas.atk, datas.def, datas.level, datas.attribute FROM texts JOIN datas ON datas.id = texts.id WHERE texts.id = ?");
   for (const id of ids) {
     const row = stmt.get(id);
     if (!row) throw new Error("Missing card metadata for " + id);
@@ -50,6 +56,16 @@ $metadataPath = Join-Path ([System.IO.Path]::GetTempPath()) "redux-card-image-me
 $metadataJson = node $metadataPath
 Remove-Item -LiteralPath $metadataPath -Force
 $cards = $metadataJson | ConvertFrom-Json
+if ($OnlySpellTrap) {
+  $cards = @($cards | Where-Object {
+    (([int64]$_.type -band 0x2) -ne 0) -or (([int64]$_.type -band 0x4) -ne 0)
+  })
+}
+if ($OnlyMonster) {
+  $cards = @($cards | Where-Object {
+    ([int64]$_.type -band 0x1) -ne 0
+  })
+}
 
 $jpegCodec = [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() |
   Where-Object { $_.MimeType -eq "image/jpeg" }
@@ -61,13 +77,26 @@ $encoderParams.Param[0] = New-Object System.Drawing.Imaging.EncoderParameter(
 
 function Get-SourcePath([int]$id) {
   $candidates = @(
-    (Join-Path $assetsDir "$id.jpg"),
+    (Join-Path $vanillaPicsDir "$id.jpg"),
     (Join-Path $cacheDir "$id.jpg")
   )
 
   foreach ($candidate in $candidates) {
     if (Test-Path -LiteralPath $candidate) {
       return (Resolve-Path -LiteralPath $candidate).Path
+    }
+  }
+
+  $download = Join-Path $vanillaPicsDir "$id.jpg"
+  $url = "https://images.ygoprodeck.com/images/cards/$id.jpg"
+  try {
+    Invoke-WebRequest -Uri $url -OutFile $download -UseBasicParsing | Out-Null
+    if (Test-Path -LiteralPath $download) {
+      return (Resolve-Path -LiteralPath $download).Path
+    }
+  } catch {
+    if (Test-Path -LiteralPath $download) {
+      Remove-Item -LiteralPath $download -Force
     }
   }
 
@@ -108,6 +137,57 @@ function Get-WrappedLines(
   return $output
 }
 
+function Get-FittedTextBlock(
+  [System.Drawing.Graphics]$graphics,
+  [string]$text,
+  [int]$maxWidth,
+  [int]$maxHeight,
+  [float]$minFontSize,
+  [float]$maxFontSize
+) {
+  $fontSize = [float]$minFontSize
+  $bestFontSize = [float]$minFontSize
+  $bestLines = $null
+  $bestLineHeight = 0
+
+  while ($true) {
+    $testFont = New-Object System.Drawing.Font("Times New Roman", $fontSize, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
+    $testLines = Get-WrappedLines $graphics $text $testFont $maxWidth
+    $testLineHeight = [int][Math]::Ceiling($testFont.GetHeight($graphics) * 1.02)
+    $testTotalHeight = $testLines.Count * $testLineHeight
+    $testFont.Dispose()
+
+    if ($testTotalHeight -gt $maxHeight) {
+      break
+    }
+
+    $bestFontSize = $fontSize
+    $bestLines = $testLines
+    $bestLineHeight = $testLineHeight
+    $fontSize += [float]0.75
+
+    if ($fontSize -gt $maxFontSize) {
+      break
+    }
+  }
+
+  if ($null -eq $bestLines) {
+    $font = New-Object System.Drawing.Font("Times New Roman", $minFontSize, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
+    $bestLines = Get-WrappedLines $graphics $text $font $maxWidth
+    $bestLineHeight = [int][Math]::Ceiling($font.GetHeight($graphics) * 1.02)
+    $bestFontSize = $minFontSize
+  } else {
+    $font = New-Object System.Drawing.Font("Times New Roman", $bestFontSize, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
+  }
+
+  return [PSCustomObject]@{
+    Font = $font
+    FontSize = $bestFontSize
+    Lines = $bestLines
+    LineHeight = $bestLineHeight
+  }
+}
+
 function Get-LightAverageBrush(
   [System.Drawing.Bitmap]$bitmap,
   [System.Drawing.Rectangle]$rect
@@ -144,23 +224,220 @@ function Get-LightAverageBrush(
   return New-Object System.Drawing.SolidBrush($color)
 }
 
+function Get-RaceName([int64]$race) {
+  $raceNames = @{
+    1 = "WARRIOR"
+    2 = "SPELLCASTER"
+    4 = "FAIRY"
+    8 = "FIEND"
+    16 = "ZOMBIE"
+    32 = "MACHINE"
+    64 = "AQUA"
+    128 = "PYRO"
+    256 = "ROCK"
+    512 = "WINGED BEAST"
+    1024 = "PLANT"
+    2048 = "INSECT"
+    4096 = "THUNDER"
+    8192 = "DRAGON"
+    16384 = "BEAST"
+    32768 = "BEAST-WARRIOR"
+    65536 = "DINOSAUR"
+    131072 = "FISH"
+    262144 = "SEA SERPENT"
+    524288 = "REPTILE"
+    1048576 = "PSYCHIC"
+    2097152 = "DIVINE-BEAST"
+    4194304 = "CREATOR GOD"
+    8388608 = "WYRM"
+    16777216 = "CYBERSE"
+  }
+
+  if ($raceNames.ContainsKey([int]$race)) {
+    return $raceNames[[int]$race]
+  }
+
+  return "UNKNOWN"
+}
+
+function Get-MonsterTypeLine([int64]$type, [int64]$race) {
+  $labels = New-Object System.Collections.Generic.List[string]
+  $labels.Add((Get-RaceName $race))
+
+  if (($type -band 0x40) -ne 0) { $labels.Add("FUSION") }
+  if (($type -band 0x80) -ne 0) { $labels.Add("RITUAL") }
+  if (($type -band 0x2000) -ne 0) { $labels.Add("SYNCHRO") }
+  if (($type -band 0x800000) -ne 0) { $labels.Add("XYZ") }
+  if (($type -band 0x1000000) -ne 0) { $labels.Add("PENDULUM") }
+  if (($type -band 0x200) -ne 0) { $labels.Add("SPIRIT") }
+  if (($type -band 0x400) -ne 0) { $labels.Add("UNION") }
+  if (($type -band 0x800) -ne 0) { $labels.Add("GEMINI") }
+  if (($type -band 0x1000) -ne 0) { $labels.Add("TUNER") }
+  if (($type -band 0x200000) -ne 0) { $labels.Add("FLIP") }
+  if (($type -band 0x20) -ne 0) { $labels.Add("EFFECT") }
+  if (($type -band 0x10) -ne 0) { $labels.Add("NORMAL") }
+
+  return "[$($labels -join ' / ')]"
+}
+
+function Add-GoldErrataFrame(
+  [System.Drawing.Graphics]$graphics,
+  [int]$width,
+  [int]$height
+) {
+  $outer = New-Object System.Drawing.Rectangle(
+    [int]($width * 15 / 813),
+    [int]($height * 15 / 1185),
+    [int]($width * 783 / 813),
+    [int]($height * 1155 / 1185)
+  )
+  $inner = New-Object System.Drawing.Rectangle(
+    [int]($width * 29 / 813),
+    [int]($height * 29 / 1185),
+    [int]($width * 755 / 813),
+    [int]($height * 1127 / 1185)
+  )
+  $outerRadius = [int]($width * 22 / 813)
+  $innerRadius = [int]($width * 12 / 813)
+  $path = New-Object System.Drawing.Drawing2D.GraphicsPath
+  $path.AddArc($outer.Left, $outer.Top, $outerRadius, $outerRadius, 180, 90)
+  $path.AddArc(($outer.Right - $outerRadius), $outer.Top, $outerRadius, $outerRadius, 270, 90)
+  $path.AddArc(($outer.Right - $outerRadius), ($outer.Bottom - $outerRadius), $outerRadius, $outerRadius, 0, 90)
+  $path.AddArc($outer.Left, ($outer.Bottom - $outerRadius), $outerRadius, $outerRadius, 90, 90)
+  $path.CloseFigure()
+  $path.AddArc($inner.Left, $inner.Top, $innerRadius, $innerRadius, 180, 90)
+  $path.AddArc(($inner.Right - $innerRadius), $inner.Top, $innerRadius, $innerRadius, 270, 90)
+  $path.AddArc(($inner.Right - $innerRadius), ($inner.Bottom - $innerRadius), $innerRadius, $innerRadius, 0, 90)
+  $path.AddArc($inner.Left, ($inner.Bottom - $innerRadius), $innerRadius, $innerRadius, 90, 90)
+  $path.CloseFigure()
+
+  $brush = New-Object System.Drawing.Drawing2D.LinearGradientBrush(
+    $outer,
+    [System.Drawing.Color]::FromArgb(255, 255, 238, 142),
+    [System.Drawing.Color]::FromArgb(255, 118, 76, 5),
+    45
+  )
+  $blend = New-Object System.Drawing.Drawing2D.ColorBlend 4
+  $blend.Colors = @(
+    [System.Drawing.Color]::FromArgb(255, 255, 238, 142),
+    [System.Drawing.Color]::FromArgb(255, 224, 167, 35),
+    [System.Drawing.Color]::FromArgb(255, 118, 76, 5),
+    [System.Drawing.Color]::FromArgb(255, 255, 238, 142)
+  )
+  $blend.Positions = @(0.0, 0.35, 0.75, 1.0)
+  $brush.InterpolationColors = $blend
+  $graphics.FillPath($brush, $path)
+
+  $path.Dispose()
+  $brush.Dispose()
+}
+
+function Add-GoldErrataLetter(
+  [System.Drawing.Graphics]$graphics
+) {
+  $fontSize = 74
+  $font = New-Object System.Drawing.Font("Times New Roman", $fontSize, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
+  $text = "R"
+  $size = $graphics.MeasureString($text, $font)
+  $rect = New-Object System.Drawing.RectangleF(
+    [float](-($size.Width / 2)),
+    [float](-($size.Height / 2)),
+    [float]$size.Width,
+    [float]$size.Height
+  )
+  $path = New-Object System.Drawing.Drawing2D.GraphicsPath
+  $path.AddString(
+    $text,
+    $font.FontFamily,
+    [int][System.Drawing.FontStyle]::Bold,
+    [float]$fontSize,
+    $rect,
+    [System.Drawing.StringFormat]::GenericDefault
+  )
+
+  $brush = New-Object System.Drawing.Drawing2D.LinearGradientBrush(
+    $rect,
+    [System.Drawing.Color]::FromArgb(255, 255, 238, 142),
+    [System.Drawing.Color]::FromArgb(255, 118, 76, 5),
+    45
+  )
+  $blend = New-Object System.Drawing.Drawing2D.ColorBlend 4
+  $blend.Colors = @(
+    [System.Drawing.Color]::FromArgb(255, 255, 246, 177),
+    [System.Drawing.Color]::FromArgb(255, 224, 167, 35),
+    [System.Drawing.Color]::FromArgb(255, 118, 76, 5),
+    [System.Drawing.Color]::FromArgb(255, 255, 238, 142)
+  )
+  $blend.Positions = @(0.0, 0.36, 0.72, 1.0)
+  $brush.InterpolationColors = $blend
+  $shadowPen = New-Object System.Drawing.Pen([System.Drawing.Color]::FromArgb(190, 79, 45, 0), 3)
+  $shinePen = New-Object System.Drawing.Pen([System.Drawing.Color]::FromArgb(235, 255, 252, 190), 2)
+  $shineRect = New-Object System.Drawing.RectangleF(
+    [float]-36,
+    [float]-50,
+    [float]($size.Width + 30),
+    [float]($size.Height + 30)
+  )
+  $shineBrush = New-Object System.Drawing.Drawing2D.LinearGradientBrush(
+    $shineRect,
+    [System.Drawing.Color]::FromArgb(245, 255, 255, 218),
+    [System.Drawing.Color]::FromArgb(0, 255, 255, 214),
+    135
+  )
+
+  $state = $graphics.Save()
+  $graphics.TranslateTransform(91, 174)
+  $graphics.RotateTransform(7)
+  $graphics.FillPath($brush, $path)
+  $graphics.DrawPath($shadowPen, $path)
+  $graphics.DrawPath($shinePen, $path)
+  $graphics.FillPath($shineBrush, $path)
+  $graphics.Restore($state)
+
+  $shineBrush.Dispose()
+  $shinePen.Dispose()
+  $shadowPen.Dispose()
+  $brush.Dispose()
+  $path.Dispose()
+  $font.Dispose()
+}
+
+function Add-ErrataMarker(
+  [System.Drawing.Graphics]$graphics,
+  [int]$width,
+  [int]$height
+) {
+  Add-GoldErrataFrame $graphics $width $height
+  Add-GoldErrataLetter $graphics
+}
+
 function Get-TextLayout([int]$width, [int]$height, [int64]$type) {
   $isSpellOrTrap = (($type -band 0x2) -ne 0) -or (($type -band 0x4) -ne 0)
 
   if ($isSpellOrTrap) {
     return @{
       Patch = New-Object System.Drawing.Rectangle(
-        [int]($width * 0.073),
-        [int]($height * 0.744),
-        [int]($width * 0.854),
-        [int]($height * 0.196)
+        [int]($width * 56 / 813),
+        [int]($height * 892 / 1185),
+        [int]($width * 701 / 813),
+        [int]($height * 218 / 1185)
       )
-      TextX = [int]($width * 0.079)
-      TextY = [int]($height * 0.756)
-      TextW = [int]($width * 0.825)
-      TextH = [int]($height * 0.170)
-      StartFont = [float]($height * 0.020)
+      TextMaskPoints = @(
+        [System.Drawing.Point]::new([int]($width * 66 / 813), [int]($height * 892 / 1185)),
+        [System.Drawing.Point]::new([int]($width * 747 / 813), [int]($height * 892 / 1185)),
+        [System.Drawing.Point]::new([int]($width * 757 / 813), [int]($height * 902 / 1185)),
+        [System.Drawing.Point]::new([int]($width * 757 / 813), [int]($height * 1100 / 1185)),
+        [System.Drawing.Point]::new([int]($width * 747 / 813), [int]($height * 1110 / 1185)),
+        [System.Drawing.Point]::new([int]($width * 66 / 813), [int]($height * 1110 / 1185)),
+        [System.Drawing.Point]::new([int]($width * 56 / 813), [int]($height * 1100 / 1185)),
+        [System.Drawing.Point]::new([int]($width * 56 / 813), [int]($height * 902 / 1185))
+      )
+      TextX = [int]($width * 0.083)
+      TextY = [int]($height * 0.762)
+      TextW = [int]($width * 0.816)
+      TextH = [int]($height * 0.158)
       MinFont = [float]($height * 0.011)
+      MaxFont = [float]($height * 0.026)
       IsMonster = $false
     }
   }
@@ -168,16 +445,23 @@ function Get-TextLayout([int]$width, [int]$height, [int64]$type) {
   return @{
     Patch = New-Object System.Drawing.Rectangle(
       [int]($width * 0.074),
-      [int]($height * 0.775),
+      [int]($height * 0.755),
       [int]($width * 0.850),
-      [int]($height * 0.138)
+      [int]($height * 0.180)
     )
     TextX = [int]($width * 0.080)
-    TextY = [int]($height * 0.780)
+    TextY = [int]($height * 0.790)
     TextW = [int]($width * 0.825)
-    TextH = [int]($height * 0.112)
-    StartFont = [float]($height * 0.018)
+    TextH = [int]($height * 0.116)
+    TypeX = [int]($width * 0.080)
+    TypeY = [int]($height * 0.755)
+    TypeW = [int]($width * 0.825)
+    TypeFont = [float]($height * 0.023 + 3)
+    StatY = [int]($height * 0.913)
+    StatRight = [int]($width * 0.908)
+    StatFont = [float]($height * 0.021 + 4)
     MinFont = [float]($height * 0.009)
+    MaxFont = [float]($height * 0.022)
     IsMonster = $true
   }
 }
@@ -196,32 +480,63 @@ foreach ($card in $cards) {
   $bytes = [System.IO.File]::ReadAllBytes($source)
   $inputStream = New-Object System.IO.MemoryStream @(,$bytes)
   $src = [System.Drawing.Image]::FromStream($inputStream)
-  $bitmap = New-Object System.Drawing.Bitmap($src.Width, $src.Height, [System.Drawing.Imaging.PixelFormat]::Format24bppRgb)
+  $bitmap = New-Object System.Drawing.Bitmap($targetWidth, $targetHeight, [System.Drawing.Imaging.PixelFormat]::Format24bppRgb)
   $graphics = [System.Drawing.Graphics]::FromImage($bitmap)
   $graphics.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::HighQuality
   $graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
   $graphics.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
   $graphics.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::AntiAliasGridFit
-  $graphics.DrawImage($src, 0, 0, $src.Width, $src.Height)
+  $graphics.DrawImage($src, 0, 0, $targetWidth, $targetHeight)
 
-  $layout = Get-TextLayout $src.Width $src.Height ([int64]$card.type)
+  $layout = Get-TextLayout $bitmap.Width $bitmap.Height ([int64]$card.type)
+  $preserved = $null
+  if ($layout.ContainsKey("Preserve")) {
+    $preserved = $bitmap.Clone($layout.Preserve, $bitmap.PixelFormat)
+  }
+  $preservedRects = @()
+  if ($layout.ContainsKey("PreserveRects")) {
+    foreach ($rect in $layout.PreserveRects) {
+      $preservedRects += [PSCustomObject]@{
+        Rect = $rect
+        Bitmap = $bitmap.Clone($rect, $bitmap.PixelFormat)
+      }
+    }
+  }
   $background = Get-LightAverageBrush $bitmap $layout.Patch
-  $graphics.FillRectangle($background, $layout.Patch)
+  if ($layout.ContainsKey("TextMaskPoints")) {
+    $graphics.FillPolygon($background, $layout.TextMaskPoints)
+  } else {
+    $graphics.FillRectangle($background, $layout.Patch)
+  }
   $background.Dispose()
+  if ($preserved) {
+    $graphics.DrawImage($preserved, $layout.Preserve)
+    $preserved.Dispose()
+  }
+  foreach ($entry in $preservedRects) {
+    $graphics.DrawImage($entry.Bitmap, $entry.Rect)
+    $entry.Bitmap.Dispose()
+  }
 
-  $fontSize = [float]$layout.StartFont
-  $font = $null
-  do {
-    if ($font) { $font.Dispose() }
-    $font = New-Object System.Drawing.Font("Times New Roman", $fontSize, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
-    $lines = Get-WrappedLines $graphics ([string]$card.desc) $font ([int]$layout.TextW)
-    $lineHeight = [int][Math]::Ceiling($font.GetHeight($graphics) * 1.02)
-    $totalHeight = $lines.Count * $lineHeight
-    if ($totalHeight -le $layout.TextH) { break }
-    $fontSize -= [float]0.75
-  } while ($fontSize -ge $layout.MinFont)
+  $textBlock = Get-FittedTextBlock $graphics ([string]$card.desc) ([int]$layout.TextW) ([int]$layout.TextH) ([float]$layout.MinFont) ([float]$layout.MaxFont)
+  $font = $textBlock.Font
+  $fontSize = [float]$textBlock.FontSize
+  $lines = $textBlock.Lines
+  $lineHeight = [int]$textBlock.LineHeight
 
   $brush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::Black)
+  if ($layout.IsMonster) {
+    $typeFont = New-Object System.Drawing.Font("Times New Roman", [float]$layout.TypeFont, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
+    $graphics.DrawString(
+      (Get-MonsterTypeLine ([int64]$card.type) ([int64]$card.race)),
+      $typeFont,
+      $brush,
+      [float]$layout.TypeX,
+      [float]$layout.TypeY
+    )
+    $typeFont.Dispose()
+  }
+
   $y = [int]$layout.TextY
   foreach ($line in $lines) {
     $graphics.DrawString($line, $font, $brush, [float]$layout.TextX, [float]$y)
@@ -229,17 +544,33 @@ foreach ($card in $cards) {
   }
 
   if ($layout.IsMonster) {
-    $pen = New-Object System.Drawing.Pen([System.Drawing.Color]::Black, [Math]::Max(1.0, $src.Height * 0.002))
-    $lineY = [int]($src.Height * 0.912)
+    $pen = New-Object System.Drawing.Pen([System.Drawing.Color]::Black, [Math]::Max(1.0, $bitmap.Height * 0.002))
+    $lineY = [int]($bitmap.Height * 0.912)
     $graphics.DrawLine(
       $pen,
-      [int]($src.Width * 0.074),
+      [int]($bitmap.Width * 0.074),
       $lineY,
-      [int]($src.Width * 0.920),
+      [int]($bitmap.Width * 0.920),
       $lineY
     )
     $pen.Dispose()
+
+    $statFont = New-Object System.Drawing.Font("Times New Roman", [float]$layout.StatFont, [System.Drawing.FontStyle]::Bold, [System.Drawing.GraphicsUnit]::Pixel)
+    $atk = if ([int]$card.atk -lt 0) { "?" } else { [string][int]$card.atk }
+    $def = if ([int]$card.def -lt 0) { "?" } else { [string][int]$card.def }
+    $statText = "ATK/  $atk DEF/  $def"
+    $statSize = $graphics.MeasureString($statText, $statFont)
+    $graphics.DrawString(
+      $statText,
+      $statFont,
+      $brush,
+      [float]($layout.StatRight - $statSize.Width),
+      [float]$layout.StatY
+    )
+    $statFont.Dispose()
   }
+
+  Add-ErrataMarker $graphics $bitmap.Width $bitmap.Height
 
   $out = New-Object System.IO.MemoryStream
   $bitmap.Save($out, $jpegCodec, $encoderParams)
