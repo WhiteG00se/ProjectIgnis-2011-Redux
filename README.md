@@ -36,7 +36,6 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `1` [Dark Hole](https://yugioh.fandom.com/wiki/Dark_Hole) | ⬇️ No battle damage |
 | `1` [Dark Magician of Chaos](https://yugioh.fandom.com/wiki/Dark_Magician_of_Chaos) | ⬇️ Once per turn |
 | `1` [Dark Strike Fighter](https://yugioh.fandom.com/wiki/Dark_Strike_Fighter) | ⬇️ Once per turn |
-| `1` [Dimension Fusion](https://yugioh.fandom.com/wiki/Dimension_Fusion) | ⬇️ Once per turn; half LP; no battle damage |
 | `1` [Elemental HERO Stratos](https://yugioh.fandom.com/wiki/Elemental_HERO_Stratos) | ⬇️ Once per turn |
 | `1` [Fishborg Blaster](https://yugioh.fandom.com/wiki/Fishborg_Blaster) | ⬇️ Once per turn |
 | `1` [Gateway of the Six](https://yugioh.fandom.com/wiki/Gateway_of_the_Six) | ⬇️ Only 1 counter per summon |
@@ -52,6 +51,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `1` [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | ⬇️ Once per turn; searches DEF 600 or less |
 | `1` [Yata-Garasu](https://yugioh.fandom.com/wiki/Yata-Garasu) | ⬇️ Skips Draw Phase unless opponent has 1 or fewer cards in hand |
 | `2` [Graceful Charity](https://yugioh.fandom.com/wiki/Graceful_Charity) | ⬇️ Draw 3; banish 3 |
+| `2` [Dimension Fusion](https://yugioh.fandom.com/wiki/Dimension_Fusion) | 🔄 Once per turn; banishes itself and 1 hand card; no battle damage |
 | `2` [Monster Reborn](https://yugioh.fandom.com/wiki/Monster_Reborn) | ⬇️ Discard 1; becomes Equip Spell; destroys revived monster if it leaves |
 | `2` [Sangan](https://yugioh.fandom.com/wiki/Sangan) | ⬇️ Once per turn |
 | `2` [Skill Drain](https://yugioh.fandom.com/wiki/Skill_Drain) | ⬆️ No LP cost |
@@ -107,7 +107,6 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Cyber-Stein](https://yugioh.fandom.com/wiki/Cyber-Stein) | 0 | `1` | 0 | 🔄 |
 | [Dark Magician of Chaos](https://yugioh.fandom.com/wiki/Dark_Magician_of_Chaos) | 0 | `1` | 0 | ⬇️ |
 | [Dark Strike Fighter](https://yugioh.fandom.com/wiki/Dark_Strike_Fighter) | 0 | `1` | 0 | ⬇️ |
-| [Dimension Fusion](https://yugioh.fandom.com/wiki/Dimension_Fusion) | 0 | `1` | 0 | ⬇️ |
 | [Goyo Guardian](https://yugioh.fandom.com/wiki/Goyo_Guardian) | 0 | `1` | 0 |  |
 | [Imperial Order](https://yugioh.fandom.com/wiki/Imperial_Order) | 0 | `1` | 0 | ⬇️ |
 | [Last Will](https://yugioh.fandom.com/wiki/Last_Will) | 0 | `1` | 0 | ⬇️ |
@@ -172,6 +171,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Maxx "C"](https://yugioh.fandom.com/wiki/Maxx_%22C%22) | 3 | `1` | 3 |  |
 | [Symbol of Heritage](https://yugioh.fandom.com/wiki/Symbol_of_Heritage) | 3 | `1` | 3 |  |
 | [Graceful Charity](https://yugioh.fandom.com/wiki/Graceful_Charity) | 0 | `2` | 0 | ⬇️ |
+| [Dimension Fusion](https://yugioh.fandom.com/wiki/Dimension_Fusion) | 0 | `2` | 0 | 🔄 |
 | [Magician of Faith](https://yugioh.fandom.com/wiki/Magician_of_Faith) | 0 | `2` | 0 |  |
 | [Metamorphosis](https://yugioh.fandom.com/wiki/Metamorphosis) | 0 | `2` | 0 |  |
 | [Advanced Ritual Art](https://yugioh.fandom.com/wiki/Advanced_Ritual_Art) | 1 | `2` | 1 |  |

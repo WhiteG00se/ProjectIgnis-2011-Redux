@@ -11,7 +11,7 @@ const errataMarkers = new Map([
   [3897065, "⬇️"], // Super Vehicroid - Stealth Union
   [76263644, "⬇️"], // Destiny End Dragoon
   [53129443, "⬇️"], // Dark Hole
-  [23557835, "⬇️"], // Dimension Fusion
+  [23557835, "♻️"], // Dimension Fusion
   [40044918, "⬇️"], // Elemental HERO Stratos
   [40044919, "⬇️"], // Elemental HERO Stratos alternate art
   [17484499, "⬇️"], // Exchange of the Spirit
@@ -91,7 +91,7 @@ module.exports = function buildCardsDb({ reduxRoot }) {
   const dimensionFusionTextResult = db
     .prepare("UPDATE texts SET desc = ?, str1 = ? WHERE id = ?")
     .run(
-      'Pay half your LP. Both players Special Summon as many of their banished monsters as possible. You can only activate 1 "Dimension Fusion" per turn. You cannot inflict battle damage the turn you activate this card.',
+      'Both players Special Summon as many of their banished monsters as possible, then banish this card and 1 card from your hand. You must have 1 card in your hand to resolve this effect. You can only activate 1 "Dimension Fusion" per turn. You cannot inflict battle damage the turn you activate this card.',
       "You cannot inflict battle damage this turn",
       23557835,
     );
