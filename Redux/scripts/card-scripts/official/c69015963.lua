@@ -20,7 +20,9 @@ function s.initial_effect(c)
 	c:RegisterEffect(e3)
 end
 function s.filter(c,e,tp)
+	--Destiny End Dragoon and Super Vehicroid - Stealth Union carry this note in their text, but the enforcement lives here.
 	return c:IsType(TYPE_FUSION) and Duel.GetLocationCountFromEx(tp,tp,nil,c)>0
+		and not c:IsCode(76263644,3897065)
 		and c:IsCanBeSpecialSummoned(e,0,tp,false,false,POS_FACEUP)
 end
 function s.target(e,tp,eg,ep,ev,re,r,rp,chk)

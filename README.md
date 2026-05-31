@@ -57,14 +57,14 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `2` [Skill Drain](https://yugioh.fandom.com/wiki/Skill_Drain) | ⬆️ No LP cost |
 | `2` [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | ⬇️ Once per turn; searches less than 1000 DEF |
 | `3` [Butterfly Dagger - Elma](https://yugioh.fandom.com/wiki/Butterfly_Dagger_-_Elma) | ⬆️ Equipped monster gains 800 ATK/DEF |
-| `3` [Destiny End Dragoon](https://yugioh.fandom.com/wiki/Destiny_End_Dragoon) | ⬇️ Must first be Fusion Summoned |
+| `3` [Destiny End Dragoon](https://yugioh.fandom.com/wiki/Destiny_End_Dragoon) | ⬇️ Cannot be Special Summoned by Cyber-Stein |
 | `3` [Destiny HERO - Disk Commander](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Disk_Commander) | 🔄 Once per turn; draw 1 on any Special Summon |
 | `3` [Exchange of the Spirit](https://yugioh.fandom.com/wiki/Exchange_of_the_Spirit) | ⬇️ once per duel (later format official errata) |
 | `3` [Makyura the Destructor](https://yugioh.fandom.com/wiki/Makyura_the_Destructor) | ⬆️ ATK/DEF: 1600/1200 to 1900/1900 |
 | `3` [Mind Master](https://yugioh.fandom.com/wiki/Mind_Master) | ⬇️ Once per turn |
 | `3` [Night Assailant](https://yugioh.fandom.com/wiki/Night_Assailant) | ⬇️ Once per turn |
 | `3` [Raigeki](https://yugioh.fandom.com/wiki/Raigeki) | ⬇️ Discard 1; no battle damage |
-| `3` [Super Vehicroid - Stealth Union](https://yugioh.fandom.com/wiki/Super_Vehicroid_-_Stealth_Union) | ⬇️ Must first be Fusion Summoned |
+| `3` [Super Vehicroid - Stealth Union](https://yugioh.fandom.com/wiki/Super_Vehicroid_-_Stealth_Union) | ⬇️ Cannot be Special Summoned by Cyber-Stein |
 | `3` [Swap Frog](https://yugioh.fandom.com/wiki/Swap_Frog) | ⬆️ Revert to Master Rule 1 version |
 
 </details>

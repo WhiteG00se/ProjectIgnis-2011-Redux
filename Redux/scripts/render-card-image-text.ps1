@@ -576,7 +576,9 @@ foreach ($card in $cards) {
     $statFont.Dispose()
   }
 
-  Add-ErrataMarker $graphics $bitmap.Width $bitmap.Height
+  if ([string]$card.name -like "[[]Redux[]]*") {
+    Add-ErrataMarker $graphics $bitmap.Width $bitmap.Height
+  }
 
   $out = New-Object System.IO.MemoryStream
   $bitmap.Save($out, $jpegCodec, $encoderParams)

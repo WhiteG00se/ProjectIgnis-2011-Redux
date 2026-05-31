@@ -33,6 +33,8 @@ const errataMarkers = new Map([
   [9126351, "\u2b06\ufe0f"], // Swap Frog
 ]);
 const errataNamePrefix = "[Redux] ";
+const cyberSteinExclusionNote =
+  'Cannot be Special Summoned by the effect of "Cyber-Stein".';
 
 module.exports = function buildCardsDb({ reduxRoot }) {
   const output = path.join(reduxRoot, "modded", "cards.cdb");
@@ -103,15 +105,20 @@ module.exports = function buildCardsDb({ reduxRoot }) {
       69015963,
     );
   const superVehicroidStealthUnionTextResult = db
-    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .prepare("UPDATE texts SET desc = replace(replace(desc, ?, ''), ?, ? || '\r\n' || ?) WHERE id = ?")
     .run(
-      '"Truckroid" + "Expressroid" + "Drillroid" + "Stealthroid"\r\nMust first be Fusion Summoned.\r\nOnce per turn: You can target 1 face-up non-Machine monster on the field; equip that target to this card. While equipped with a monster by this effect, this card can attack all monsters your opponent controls, once each. If this card attacks, its original ATK is halved until the end of the Damage Step. If this card attacks a Defense Position monster, inflict piercing battle damage.\r\n\r\n* The above text is unofficial and describes the card\'s functionality in the OCG.',
+      "\r\n\r\n* The above text is unofficial and describes the card's functionality in the OCG.",
+      '"Truckroid" + "Expressroid" + "Drillroid" + "Stealthroid"',
+      '"Truckroid" + "Expressroid" + "Drillroid" + "Stealthroid"',
+      cyberSteinExclusionNote,
       3897065,
     );
   const destinyEndDragoonTextResult = db
-    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .prepare("UPDATE texts SET desc = replace(desc, ?, ? || '\n' || ?) WHERE id = ?")
     .run(
-      '"Destiny HERO - Plasma" + "Destiny HERO - Dogma"\nMust first be Fusion Summoned using the above Fusion Materials. Once per turn: You can target 1 monster your opponent controls; destroy that target, and if it was face-up, inflict damage to your opponent equal to the ATK it had on the field. You cannot conduct your Battle Phase the turn you activate this effect. Once per turn, during your Standby Phase, if this card is in your GY: You can banish 1 "Destiny HERO" card from your GY; Special Summon this card.',
+      '"Destiny HERO - Plasma" + "Destiny HERO - Dogma"',
+      '"Destiny HERO - Plasma" + "Destiny HERO - Dogma"',
+      cyberSteinExclusionNote,
       76263644,
     );
   const yataGarasuTextResult = db
