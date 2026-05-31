@@ -49,19 +49,20 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `1` [Sinister Serpent](https://yugioh.fandom.com/wiki/Sinister_Serpent) | ⬇️ Once per turn |
 | `1` [Solemn Warning](https://yugioh.fandom.com/wiki/Solemn_Warning) | ⬆️ Cost reduced to 1000 LP |
 | `1` [Trishula, Dragon of the Ice Barrier](https://yugioh.fandom.com/wiki/Trishula,_Dragon_of_the_Ice_Barrier) | ⬇️ Once per turn |
-| `1` [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | ⬇️ Once per turn; searches DEF 600 or less |
 | `1` [Yata-Garasu](https://yugioh.fandom.com/wiki/Yata-Garasu) | ⬇️ Skips Draw Phase unless opponent has 1 or fewer cards in hand |
 | `2` [Graceful Charity](https://yugioh.fandom.com/wiki/Graceful_Charity) | ⬇️ Draw 3; banish 3 |
 | `2` [Dimension Fusion](https://yugioh.fandom.com/wiki/Dimension_Fusion) | 🔄 Once per turn; banishes itself and 1 hand card; no battle damage |
 | `2` [Monster Reborn](https://yugioh.fandom.com/wiki/Monster_Reborn) | ⬇️ Discard 1; becomes Equip Spell; destroys revived monster if it leaves |
 | `2` [Sangan](https://yugioh.fandom.com/wiki/Sangan) | ⬇️ Once per turn |
 | `2` [Skill Drain](https://yugioh.fandom.com/wiki/Skill_Drain) | ⬆️ No LP cost |
+| `2` [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | ⬇️ Once per turn; searches less than 1000 DEF |
 | `3` [Butterfly Dagger - Elma](https://yugioh.fandom.com/wiki/Butterfly_Dagger_-_Elma) | ⬆️ Equipped monster gains 800 ATK/DEF |
 | `3` [Destiny End Dragoon](https://yugioh.fandom.com/wiki/Destiny_End_Dragoon) | ⬇️ Must first be Fusion Summoned |
 | `3` [Destiny HERO - Disk Commander](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Disk_Commander) | 🔄 Once per turn; draw 1 on any Special Summon |
 | `3` [Exchange of the Spirit](https://yugioh.fandom.com/wiki/Exchange_of_the_Spirit) | ⬇️ once per duel (later format official errata) |
 | `3` [Makyura the Destructor](https://yugioh.fandom.com/wiki/Makyura_the_Destructor) | ⬆️ ATK/DEF: 1600/1200 to 1900/1900 |
 | `3` [Mind Master](https://yugioh.fandom.com/wiki/Mind_Master) | ⬇️ Once per turn |
+| `3` [Night Assailant](https://yugioh.fandom.com/wiki/Night_Assailant) | ⬇️ Once per turn |
 | `3` [Raigeki](https://yugioh.fandom.com/wiki/Raigeki) | ⬇️ Discard 1; no battle damage |
 | `3` [Super Vehicroid - Stealth Union](https://yugioh.fandom.com/wiki/Super_Vehicroid_-_Stealth_Union) | ⬇️ Must first be Fusion Summoned |
 | `3` [Swap Frog](https://yugioh.fandom.com/wiki/Swap_Frog) | ⬆️ Revert to Master Rule 1 version |
@@ -120,7 +121,6 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Substitoad](https://yugioh.fandom.com/wiki/Substitoad) | 0 | `1` | 0 |  |
 | [Time Seal](https://yugioh.fandom.com/wiki/Time_Seal) | 0 | `1` | 0 |  |
 | [Tsukuyomi](https://yugioh.fandom.com/wiki/Tsukuyomi) | 0 | `1` | 0 |  |
-| [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | 0 | `1` | 0 | ⬇️ |
 | [Yata-Garasu](https://yugioh.fandom.com/wiki/Yata-Garasu) | 0 | `1` | 0 | ⬇️ |
 | [Black Luster Soldier - Envoy of the Beginning](https://yugioh.fandom.com/wiki/Black_Luster_Soldier_-_Envoy_of_the_Beginning) | 0 | `1` | 1 | ⬇️ |
 | [Heavy Storm](https://yugioh.fandom.com/wiki/Heavy_Storm) | 0 | `1` | 1 |  |
@@ -174,7 +174,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Graceful Charity](https://yugioh.fandom.com/wiki/Graceful_Charity) | 0 | `2` | 0 | ⬇️ |
 | [Dimension Fusion](https://yugioh.fandom.com/wiki/Dimension_Fusion) | 0 | `2` | 0 | 🔄 |
 | [Magician of Faith](https://yugioh.fandom.com/wiki/Magician_of_Faith) | 0 | `2` | 0 |  |
-| [Metamorphosis](https://yugioh.fandom.com/wiki/Metamorphosis) | 0 | `2` | 0 |  |
+| [Witch of the Black Forest](https://yugioh.fandom.com/wiki/Witch_of_the_Black_Forest) | 0 | `2` | 0 | ⬇️ |
 | [Advanced Ritual Art](https://yugioh.fandom.com/wiki/Advanced_Ritual_Art) | 1 | `2` | 1 |  |
 | [Book of Moon](https://yugioh.fandom.com/wiki/Book_of_Moon) | 1 | `2` | 1 |  |
 | [Burial from a Different Dimension](https://yugioh.fandom.com/wiki/Burial_from_a_Different_Dimension) | 1 | `2` | 1 |  |
@@ -186,7 +186,6 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Mezuki](https://yugioh.fandom.com/wiki/Mezuki) | 1 | `2` | 1 |  |
 | [Monster Reborn](https://yugioh.fandom.com/wiki/Monster_Reborn) | 1 | `2` | 1 | ⬇️ |
 | [Necroface](https://yugioh.fandom.com/wiki/Necroface) | 1 | `2` | 1 |  |
-| [Night Assailant](https://yugioh.fandom.com/wiki/Night_Assailant) | 1 | `2` | 1 |  |
 | [One for One](https://yugioh.fandom.com/wiki/One_for_One) | 1 | `2` | 1 |  |
 | [Plaguespreader Zombie](https://yugioh.fandom.com/wiki/Plaguespreader_Zombie) | 1 | `2` | 1 |  |
 | [Reasoning](https://yugioh.fandom.com/wiki/Reasoning) | 1 | `2` | 1 |  |
@@ -209,6 +208,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Butterfly Dagger - Elma](https://yugioh.fandom.com/wiki/Butterfly_Dagger_-_Elma) | 0 | `3` | 0 | ⬆️ |
 | [Destiny HERO - Disk Commander](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Disk_Commander) | 0 | `3` | 0 | 🔄 |
 | [Makyura the Destructor](https://yugioh.fandom.com/wiki/Makyura_the_Destructor) | 0 | `3` | 0 | ⬆️ |
+| [Metamorphosis](https://yugioh.fandom.com/wiki/Metamorphosis) | 0 | `3` | 0 |  |
 | [Raigeki](https://yugioh.fandom.com/wiki/Raigeki) | 0 | `1` | 0 | ⬇️ |
 | [Temple of the Kings](https://yugioh.fandom.com/wiki/Temple_of_the_Kings) | 0 | `3` | 0 |  |
 | [Tribe-Infecting Virus](https://yugioh.fandom.com/wiki/Tribe-Infecting_Virus) | 0 | `3` | 0 |  |
@@ -217,6 +217,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Left Arm of the Forbidden One](https://yugioh.fandom.com/wiki/Left_Arm_of_the_Forbidden_One) | 1 | `3` | 1 |  |
 | [Left Leg of the Forbidden One](https://yugioh.fandom.com/wiki/Left_Leg_of_the_Forbidden_One) | 1 | `3` | 1 |  |
 | [Monster Gate](https://yugioh.fandom.com/wiki/Monster_Gate) | 1 | `3` | 1 |  |
+| [Night Assailant](https://yugioh.fandom.com/wiki/Night_Assailant) | 1 | `3` | 1 | ⬇️ |
 | [Right Arm of the Forbidden One](https://yugioh.fandom.com/wiki/Right_Arm_of_the_Forbidden_One) | 1 | `3` | 1 |  |
 | [Right Leg of the Forbidden One](https://yugioh.fandom.com/wiki/Right_Leg_of_the_Forbidden_One) | 1 | `3` | 1 |  |
 | [The Transmigration Prophecy](https://yugioh.fandom.com/wiki/The_Transmigration_Prophecy) | 1 | `3` | 1 |  |
