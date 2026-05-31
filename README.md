@@ -58,6 +58,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | `3` [Butterfly Dagger - Elma](https://yugioh.fandom.com/wiki/Butterfly_Dagger_-_Elma) | ⬆️ Equipped monster gains 800 ATK/DEF |
 | `3` [Destiny End Dragoon](https://yugioh.fandom.com/wiki/Destiny_End_Dragoon) | ⬇️ Must first be Fusion Summoned |
 | `3` [Destiny HERO - Disk Commander](https://yugioh.fandom.com/wiki/Destiny_HERO_-_Disk_Commander) | 🔄 Once per turn; draw 1 on any Special Summon |
+| `3` [Exchange of the Spirit](https://yugioh.fandom.com/wiki/Exchange_of_the_Spirit) | ⬇️ once per duel (later format official errata) |
 | `3` [Makyura the Destructor](https://yugioh.fandom.com/wiki/Makyura_the_Destructor) | ⬆️ ATK/DEF: 1600/1200 to 1900/1900 |
 | `3` [Mind Master](https://yugioh.fandom.com/wiki/Mind_Master) | ⬇️ Once per turn |
 | `3` [Raigeki](https://yugioh.fandom.com/wiki/Raigeki) | ⬇️ Discard 1; no battle damage |
@@ -82,7 +83,7 @@ Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimite
 | [Crush Card Virus](https://yugioh.fandom.com/wiki/Crush_Card_Virus) | 0 | `0` | 0 |  |
 | [Cyber Jar](https://yugioh.fandom.com/wiki/Cyber_Jar) | 0 | `0` | 0 |  |
 | [Delinquent Duo](https://yugioh.fandom.com/wiki/Delinquent_Duo) | 0 | `0` | 0 |  |
-| [Exchange of the Spirit](https://yugioh.fandom.com/wiki/Exchange_of_the_Spirit) | 0 | `3` | 0 |  |
+| [Exchange of the Spirit](https://yugioh.fandom.com/wiki/Exchange_of_the_Spirit) | 0 | `3` | 0 | ⬇️ |
 | [Fiber Jar](https://yugioh.fandom.com/wiki/Fiber_Jar) | 0 | `0` | 0 |  |
 | [Harpie's Feather Duster](https://yugioh.fandom.com/wiki/Harpie's_Feather_Duster) | 0 | `0` | 0 |  |
 | [Last Turn](https://yugioh.fandom.com/wiki/Last_Turn) | 0 | `0` | 0 |  |

@@ -14,6 +14,7 @@ const errataMarkers = new Map([
   [23557835, "⬇️"], // Dimension Fusion
   [40044918, "⬇️"], // Elemental HERO Stratos
   [40044919, "⬇️"], // Elemental HERO Stratos alternate art
+  [17484499, "⬇️"], // Exchange of the Spirit
   [93369354, "⬇️"], // Fishborg Blaster
   [27970830, "⬇️"], // Gateway of the Six
   [85602018, "⬇️"], // Last Will
