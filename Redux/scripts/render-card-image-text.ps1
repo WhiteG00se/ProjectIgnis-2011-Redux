@@ -23,6 +23,10 @@ $vanillaPicsDir = Join-Path $repoRoot "Redux\cache\pics"
 $cacheDir = Join-Path $repoRoot "pics"
 $targetWidth = 813
 $targetHeight = 1185
+$sourceImageIds = @{
+  511000824 = 83555666 # Ring of Destruction pre-errata source is low-res.
+  511000825 = 83555667 # Ring of Destruction pre-errata alternate art source is low-res.
+}
 
 New-Item -ItemType Directory -Force -Path $assetsDir | Out-Null
 New-Item -ItemType Directory -Force -Path $vanillaPicsDir | Out-Null
@@ -76,9 +80,10 @@ $encoderParams.Param[0] = New-Object System.Drawing.Imaging.EncoderParameter(
 )
 
 function Get-SourcePath([int]$id) {
+  $sourceId = if ($sourceImageIds.ContainsKey($id)) { $sourceImageIds[$id] } else { $id }
   $candidates = @(
-    (Join-Path $vanillaPicsDir "$id.jpg"),
-    (Join-Path $cacheDir "$id.jpg")
+    (Join-Path $vanillaPicsDir "$sourceId.jpg"),
+    (Join-Path $cacheDir "$sourceId.jpg")
   )
 
   foreach ($candidate in $candidates) {
@@ -87,8 +92,8 @@ function Get-SourcePath([int]$id) {
     }
   }
 
-  $download = Join-Path $vanillaPicsDir "$id.jpg"
-  $url = "https://images.ygoprodeck.com/images/cards/$id.jpg"
+  $download = Join-Path $vanillaPicsDir "$sourceId.jpg"
+  $url = "https://images.ygoprodeck.com/images/cards/$sourceId.jpg"
   try {
     Invoke-WebRequest -Uri $url -OutFile $download -UseBasicParsing | Out-Null
     if (Test-Path -LiteralPath $download) {

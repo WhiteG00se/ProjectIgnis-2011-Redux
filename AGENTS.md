@@ -87,7 +87,8 @@ image for every same-card print/alternate artwork, instead of preserving
 outdated printed source text. If a legacy or pre-official-errata passcode only
 has a blurry source image, check whether it aliases to a newer official passcode
 and use that cleaner art as the base when it preserves the intended artwork/card
-identity. Only ask the user for image-source help when local files, aliases,
+identity; this may include using a newer official print as the source because
+Redux renders the generated `.cdb` text over it anyway. Only ask the user for image-source help when local files, aliases,
 configured download sources, and reasonable automated fixes are not enough.
 Redux errata card images use a visual marker: a rounded gold inset frame from
 pixels 15 through 28 on the normalized `813x1185` image, plus a shiny gold `R`
