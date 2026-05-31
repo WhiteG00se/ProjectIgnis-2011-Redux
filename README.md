@@ -21,6 +21,7 @@ only a local cache.<br>
 <details>
 <summary><strong><big>Errata</big></strong></summary>
 
+Errataed cards are marked with golden frame and a golden "R" below the card name. Their name also starts with "[Redux]".<br>
 Redux Limits: `0` = forbidden; `1` = limited; `2` = semi-limited; `3` = unlimited. Errata: `⬇️ nerf`; `⬆️ buff`; `🔄 rework`.
 
 <!-- ORDER BY Redux Limit, Cardname-->
