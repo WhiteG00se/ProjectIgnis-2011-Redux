@@ -9,7 +9,7 @@ const limitChanges = new Map([
   ["17484499", 3], // Exchange of the Spirit
   ["4031928", 1], // Change of Heart
   ["511000819", 1], // Chaos Emperor Dragon - Envoy of the End (Pre-Errata)
-  ["511003012", 1], // Witch of the Black Forest (Pre-Errata)
+  ["511003012", 2], // Witch of the Black Forest (Pre-Errata)
   ["69015963", 1], // Cyber-Stein
   ["3078576", 1], // Yata-Garasu
   ["12580477", 1], // Raigeki
@@ -30,7 +30,7 @@ const limitChanges = new Map([
   ["511002994", 1], // Goyo Guardian
   ["42703248", 1], // Giant Trunade
   ["79571449", 2], // Graceful Charity
-  ["46411259", 2], // Metamorphosis
+  ["46411259", 3], // Metamorphosis
   ["511000821", 3], // Temple of the Kings (Pre-Errata)
   ["69243953", 3], // Butterfly Dagger - Elma
   ["22046459", 2], // Megamorph
@@ -74,7 +74,7 @@ const limitChanges = new Map([
   ["511002631", 2], // Sangan
   ["48686504", 3], // Lonefire Blossom
   ["15341821", 2], // Dandylion
-  ["16226796", 2], // Night Assailant (Pre-Errata)
+  ["16226796", 3], // Night Assailant (Pre-Errata)
   ["33420078", 2], // Plaguespreader Zombie
   ["50091196", 2], // Formula Synchron
   ["1475311", 3], // Allure of Darkness

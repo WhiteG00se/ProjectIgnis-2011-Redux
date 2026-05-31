@@ -7,7 +7,7 @@ param(
   ),
   [int[]]$UnofficialIds = @(
     511002993, 511000819, 511001039, 511000229, 511003116, 511002996,
-    21593987, 511003019, 511002992, 511000824, 511000825, 511002631,
+    21593987, 511003019, 16226796, 511002992, 511000824, 511000825, 511002631,
     511000818, 511003012
   ),
   [switch]$OnlySpellTrap,
@@ -26,6 +26,7 @@ $targetHeight = 1185
 $sourceImageIds = @{
   511000824 = 83555666 # Ring of Destruction pre-errata source is low-res.
   511000825 = 83555667 # Ring of Destruction pre-errata alternate art source is low-res.
+  16226796 = 16226786 # Night Assailant pre-errata source is low-res.
 }
 
 New-Item -ItemType Directory -Force -Path $assetsDir | Out-Null

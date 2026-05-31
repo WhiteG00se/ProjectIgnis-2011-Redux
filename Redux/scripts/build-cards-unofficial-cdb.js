@@ -13,6 +13,7 @@ const errataMarkers = new Map([
   [511002996, "⬇️"], // Imperial Order
   [21593987, "⬆️"], // Makyura the Destructor
   [511003019, "⬇️"], // Mind Master
+  [16226796, "⬇️"], // Night Assailant
   [511002992, "⬇️"], // Rescue Cat
   [511000824, "♻️"], // Ring of Destruction
   [511000825, "♻️"], // Ring of Destruction alternate art
@@ -62,9 +63,15 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   const witchTextResult = db
     .prepare("UPDATE texts SET desc = ? WHERE id = ?")
     .run(
-      'When this card is sent from the field to the Graveyard: Add 1 monster with 600 or less DEF from your Deck to your hand. You can only use this effect of "Witch of the Black Forest" once per turn.',
+      'When this card is sent from the field to the Graveyard: Add 1 monster with less than 1000 DEF from your Deck to your hand. You can only use this effect of "Witch of the Black Forest" once per turn.',
       511003012,
     ); // Witch of the Black Forest (Pre-Errata)
+  const nightAssailantTextResult = db
+    .prepare("UPDATE texts SET desc = ? WHERE id = ?")
+    .run(
+      'FLIP: Target 1 monster your opponent controls; destroy that target.\r\nWhen this card is sent from the hand to the GY: Target 1 Flip monster in your GY, except this card; return that target to the hand. You can only use this effect of "Night Assailant" once per turn.',
+      16226796,
+    ); // Night Assailant (Pre-Errata)
   const sanganTextResult = db
     .prepare("UPDATE texts SET desc = ? WHERE id = ?")
     .run(
@@ -159,6 +166,9 @@ module.exports = function buildCardsUnofficialDb({ reduxRoot }) {
   }
   if (Number(witchTextResult.changes) !== 1) {
     throw new Error("Expected to update Witch of the Black Forest (Pre-Errata) text once");
+  }
+  if (Number(nightAssailantTextResult.changes) !== 1) {
+    throw new Error("Expected to update Night Assailant (Pre-Errata) text once");
   }
   if (Number(sanganTextResult.changes) !== 1) {
     throw new Error("Expected to update Sangan (Pre-Errata) text once");
